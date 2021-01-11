@@ -1,0 +1,9 @@
+{% extends '_default/page.html.twig' %}
+
+{% block content %}
+	{% for product in site.pages.all|filterBy('section', 'products')|sortByWeight %}
+      <div class="products">
+        {% include 'partials/product.html.twig' with {'product': product} %}
+      </div>
+	{% endfor %}
+{% endblock %}

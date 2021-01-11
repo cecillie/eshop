@@ -1,6 +1,13 @@
+---
+title: Home
+---
+
 C'est pas encore prêt ! La boutique en ligne... bientôt en ligne !
+
 cecillie
 
+<!--
+```
                                           $"   ****.
               d$$$$$$$P""""               $    J
                   ^$.                     4r  "
@@ -18,3 +25,5 @@ $       $$$$$       $   4$$$$$$$     L       *$$$"      4
   ".             .P                    %.             @
     %.         z*"                      ^%.        .r"
        "*==*""                             ^"*==*""   
+```
+-->

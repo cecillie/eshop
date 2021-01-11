@@ -1,0 +1,26 @@
+{% set title = product.name %}
+<div>
+  <label for="{{ product.id }}-size">Taille :</label>
+  <select id="{{ product.id }}-size" class="size">
+    <option value="Affiche A3">Affiche A3 (25&nbsp;€)</option>
+    <option value="Affiche A4">Affiche A4 (20&nbsp;€)</option>
+    <option value="Carte A5">Carte A5 (10&nbsp;€)</option>
+  </select>
+  <label for="{{ product.id }}-qty">Quantité :</label>
+  <input type="number" id="{{ product.id }}-qty" class="qty" min="1" value="1" />
+  <button
+    class="buy-button snipcart-add-item"
+    data-item-quantity="1"
+    data-item-max-quantity="5"
+    data-item-stackable="auto"
+    data-item-id="{{ product.id }}"
+    data-item-name="{{ product.name }}"
+    data-item-price="{{ product.price }}"
+    data-item-image="{{ product.image }}"
+    data-item-url="{{ url(product) }}"
+    data-item-description="{{ product.content }}"
+    data-item-custom1-name="Taille"
+    data-item-custom1-options="Affiche A3|Affiche A4[-5.00]|Carte A5[-15.00]">
+    Commmander 1
+  </button>
+</div>

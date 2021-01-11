@@ -1,0 +1,19 @@
+title: "cecillie shop"
+baseline: "La boutique de cecillie."
+baseurl: https://shop.cecillie.fr/
+description: "La boutique de cecillie."
+author:
+  name: Cécile Ricordeau
+  url: https://cecillie.fr
+languages:
+  - code: en
+    name: English
+    locale: en_US
+  - code: fr
+    name: Français
+    locale: fr_FR
+language: fr
+snipcart:
+  version: 3.0.27
+  api_key: MDU3OWNmMmMtNDJhMi00MTViLTg3NWYtNjNkM2EzMmFmNjhhNjM3MDg2NzcwOTEzNDc4Nzc1
+#googleanalytics: 1234

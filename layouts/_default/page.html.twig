@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html lang="{{ page.language|default(site.language)|default('fr') }}">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ page.description|default(site.description) }}">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ page.description|default(site.description) }}" />
     {%~ include 'partials/metatags.html.twig' ~%}
     <script src="{{ asset('main.js')|url }}"></script>
-    <link rel="stylesheet" href="{{ asset('main.scss')|url }}">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,700&display=swap">
-    <link rel="preconnect" href="https://app.snipcart.com">
-    <link rel="preconnect" href="https://cdn.snipcart.com">
-    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v{{ site.snipcart.version }}/default/snipcart.css">
+    <link rel="stylesheet" href="{{ asset('main.scss')|url }}" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:400,700&display=swap" />
+    <link rel="preconnect" href="https://app.snipcart.com" />
+    <link rel="preconnect" href="https://cdn.snipcart.com" />
+    <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v{{ site.snipcart.version }}/default/snipcart.css" />
   </head>
   <body>
     <header class="header">
       <div class="header__container">
-        <a class="header__branding" href="/">
+        <a class="header__branding" href="{{ url() }}">
           <img src="{{ asset('images/logo.svg')|url }}" alt="" class="header__logo">
           <span class="header__title">{{ site.title }}</span>
         </a>
@@ -32,16 +32,16 @@
       </div>
     </header>
     <main class="main">
-      {% block content %}
-      {{ page.content }}
-      {% endblock %}
+      {%~ block content ~%}
+      {{- page.content -}}
+      {%~ endblock ~%}
     </main>
     <footer class="footer">
       <div class="footer__content">
         <div class="footer__copyright"><a href="{{ cecil.url }}">Cecil</a> static site with a <a href="https://snipcart.com/">Snipcart</a> powered store</div>
-        <div class="footer__socials">
+        <!--<div class="footer__socials">
           <a href="https://twitter.com/#">Twitter</a> | <a href="https://github.com/#">Github</a>
-        </div>
+        </div>-->
       </div>
     </footer>
     <div hidden id="snipcart" data-api-key="{{ site.snipcart.api_key }}" data-config-modal-style="side"></div>

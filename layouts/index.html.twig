@@ -1,9 +1,9 @@
 {% extends '_default/page.html.twig' %}
 
 {% block content %}
-	{% for product in site.pages.all|filterBy('section', 'products')|sortByWeight %}
       <div class="products">
-        {% include 'partials/product.html.twig' with {'product': product} %}
+        {%- for product in site.pages.all|filterBy('section', 'products')|sortByWeight ~%}
+          {%~ include 'partials/product.html.twig' with {'product': product} ~%}
+        {%- endfor ~%}
       </div>
-	{% endfor %}
 {% endblock %}

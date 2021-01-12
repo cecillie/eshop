@@ -44,7 +44,25 @@
         </div>-->
       </div>
     </footer>
-    <div hidden id="snipcart" data-api-key="{{ site.snipcart.api_key }}" data-config-modal-style="side"></div>
+    <div hidden id="snipcart" data-api-key="{{ site.snipcart.api_key }}" data-config-modal-style="side">
+      {% verbatim %}
+      <cart-summary-item item="<CartItem>">
+        <slot v-bind="item">
+          <li class="snipcart-cart-summary-item">
+            <span class="snipcart-cart-summary-item__name snipcart__font--slim">
+              {{ item.name }} ({{ item.customFields[0].value }})
+            </span>
+            <span class="snipcart-cart-summary-item__quantity snipcart__font--slim">
+              {{ $localize('cart_summary.quantity') }}{{ item.quantity }}
+            </span>
+            <span class="snipcart-cart-summary-item__price snipcart__font--slim">
+              {{ item.totalPrice | money(currency) }}
+            </span>
+          </li>
+        </slot>
+      </cart-summary-item>
+      {% endverbatim %}
+    </div>
     <script src="https://cdn.snipcart.com/themes/v{{ site.snipcart.version }}/default/snipcart.js" defer></script>
     {%~ include 'partials/googleanalytics.js.twig' ~%}
   </body>

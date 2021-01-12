@@ -158,7 +158,7 @@ body {
     flex-direction: row-reverse;
   }
 
-  &:nth-last-of-type(odd) & {
+  &:nth-last-of-type(even) & {
     &__information {
       margin-left: 0;
       margin-right: $size--unit * 4;

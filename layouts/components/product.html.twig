@@ -9,7 +9,7 @@
                 {%- for variant in product.variants ~%}
                 <option value="{{ variant.value }}">{{ variant.html }}</option>
                 {%- endfor ~%}
-              </select>
+              </select><br>
               <label for="{{ product.id }}-qty">Quantité :</label>
               <input type="number" id="{{ product.id }}-qty" class="qty" min="1" value="1" />
               <button

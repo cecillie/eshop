@@ -145,6 +145,12 @@ html, body {
   }
 }
 
+.snipcart-total-price {
+  @include sm {
+    display: none;
+  }
+}
+
 .main {
   @include fit-to-layout-and-center;
 }

@@ -168,7 +168,7 @@ body {
     }
 
     &__image {
-      transform: perspective(650px) rotateZ(5deg) rotateX(-2.5deg) rotateY(-15deg) scale(0.8) translateX(30px);
+      //transform: perspective(650px) rotateZ(5deg) rotateX(-2.5deg) rotateY(-15deg) scale(0.8) translateX(30px);
       box-shadow: 30px 30px 50px transparentize(darken($color--primary, 50%), 0.9);
       @include sm {
         transform: perspective(650px) rotateZ(5deg) rotateX(-2.5deg) rotateY(-15deg) scale(0.8) translateX(-30px);
@@ -203,7 +203,7 @@ body {
     max-width: 500px;
     max-height: 400px;
     background-size: cover;
-    transform: perspective(650px) rotateZ(-5deg) rotateX(2.5deg) rotateY(15deg) scale(0.8) translateX(-30px);
+    //transform: perspective(650px) rotateZ(-5deg) rotateX(2.5deg) rotateY(15deg) scale(0.8) translateX(-30px);
     box-shadow: -30px 30px 50px transparentize(darken($color--primary, 50%), 0.9);
     @include sm {
       transform: perspective(650px) rotateZ(5deg) rotateX(-2.5deg) rotateY(-15deg) scale(0.8) translateX(-30px);
@@ -233,13 +233,16 @@ body {
   }
 }
 
-.qty{
+.qty, .size {
   background-color: transparent;
   border-radius: 3px;
-  padding:3px 5px;
+  padding: 3px 5px;
   border: solid 1px $color--primary;
+  text-align: center;
+}
+
+.qty {
   width: 45px;
-  text-align:center;
 }
 
 .buy-button {

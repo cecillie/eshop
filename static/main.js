@@ -5,9 +5,9 @@ window.addEventListener('DOMContentLoaded', function (event) {
       var button = evt.target.parentNode.querySelector('.buy-button')
       var qty = parseInt(evt.target.value)
       button.setAttribute('data-item-quantity', qty)
-      var label = button.innerHTML
-      label = label.replace(/\d+/, evt.target.value)
-      button.innerHTML = label;
+      //var label = button.innerHTML
+      //label = label.replace(/\d+/, evt.target.value)
+      //button.innerHTML = label;
     }
     if (evt.target.classList.contains('size')) {
       var button = evt.target.parentNode.querySelector('.buy-button')

@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="{{ page.language|default(site.language)|default('fr') }}">
   <head>
-    {%~ include 'partials/head.html.twig' ~%}
+    {%~ include 'partials/head.html.twig' with {'page':page} only ~%}
   </head>
   <body>
-    {%~ include 'partials/header.html.twig' ~%}
+    {%~ include 'partials/header.html.twig' only ~%}
     <main class="main">
       {%~ block content ~%}
       {{- page.content -}}
       {%~ endblock ~%}
     </main>
-    {%~ include 'partials/footer.html.twig' ~%}
+    {%~ include 'partials/footer.html.twig' only ~%}
     <div hidden id="snipcart" data-api-key="{{ site.snipcart.api_key }}" data-config-modal-style="side" data-templates-url="/snipcart-templates.html"></div>
     <script src="https://cdn.snipcart.com/themes/v{{ site.snipcart.version }}/default/snipcart.js" defer></script>
     {%~ include 'partials/googleanalytics.js.twig' ~%}

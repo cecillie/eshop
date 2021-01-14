@@ -3,7 +3,7 @@
 {% block content %}
       <div class="products">
         {%- for product in site.pages.all|filterBy('section', 'products')|sortByWeight ~%}
-          {%~ include 'partials/product.html.twig' with {'product': product} ~%}
+          {%~ include 'components/product.html.twig' with {'product': product} only ~%}
         {%- endfor ~%}
       </div>
 {% endblock %}

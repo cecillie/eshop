@@ -14,11 +14,11 @@
               <input type="number" id="{{ product.id }}-qty" class="qty" min="1" value="1" />
               <button
                 class="buy-button snipcart-add-item"
-                data-item-id="{{ product.id }}"
+                data-item-id="{{ product.id|replace({'products/':''}) }}"
                 data-item-price="{{ product.price }}"
                 data-item-url="{{ url(product,{canonical:true}) }}"
                 data-item-name="{{ product.name }}"
-                data-item-description="{{ product.content|striptags }}"
+                data-item-description="{{ product.description }}"
                 data-item-image="{{ product.image }}"
                 data-item-quantity="1"
                 data-item-max-quantity="99"

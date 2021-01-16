@@ -2,7 +2,7 @@
           <div class="product__information">
             <h2 class="product__title">{{ product.name }}</h2>
             <img src="{{ product.image|default('images/default.png') }}" alt="Image de {{ product.name }}" class="product__image">
-            <p class="product__description">{{ product.content }}</p>
+            <p class="product__description">{{ product.content|striptags }}</p>
             <div>
               <label for="{{ product.id }}-size">Taille :</label>
               <select id="{{ product.id }}-size" class="size">

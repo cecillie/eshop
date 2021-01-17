@@ -109,6 +109,7 @@ html, body {
   &__logo {
     max-height: $size--unit*4;
     margin-right: $size--unit*1;
+    fill: $color--primary;
   }
 
   &__title {
@@ -246,7 +247,7 @@ html, body {
   }
 }
 
-input, select {
+.product input, .product select {
   background-color: transparent;
   border-radius: 3px;
   padding: 3px 5px;
@@ -283,10 +284,11 @@ input, select {
 .login-button {
   all: unset;
   color: white;
-  background-color: #429bfc;
-  border: 1px solid #3393fc;
-  text-shadow: 2px 2px 5px #3393fc;
-  border-radius: 3px; font-weight: bold;
+  background-color: $color--primary;
+  border: 1px solid darken($color--primary, 3%);
+  text-shadow: 2px 2px 5px darken($color--primary, 3%);
+  border-radius: 3px;
+  font-weight: bold;
   text-transform: uppercase;
   font-size: $size--unit * 1.5;
   letter-spacing: 2px;
@@ -300,7 +302,7 @@ input, select {
 
 .login-button:hover {
   transition: 0.2s all;
-  background-color: #1080fb;
+  background-color: $color--primary;
 }
 
 .login-button:hover:before {
@@ -310,7 +312,7 @@ input, select {
 .login-button:before {
   content: " ";
   position: absolute;
-  background-color: #429bfc;
+  background-color: $color--primary;
   top: 0;
   left: 0;
   border-radius: 4px;

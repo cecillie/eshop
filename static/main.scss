@@ -26,9 +26,9 @@ html, body {
 // Mixins
 
 @mixin xsm {
-    @media (max-width: 724px) {
-        @content;
-    }
+  @media (max-width: 724px) {
+    @content;
+  }
 }
 
 @mixin sm {

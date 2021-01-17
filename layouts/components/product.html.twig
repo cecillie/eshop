@@ -4,10 +4,10 @@
             <img src="{{ product.image|default('images/default.png') }}" alt="Image de {{ product.name }}" class="product__image">
             <p class="product__description">{{ product.content }}</p>
             <div>
-              <label for="{{ product.id }}-size">Taille :</label>
-              <select id="{{ product.id }}-size" class="size">
-                {%- for variant in product.variants ~%}
-                <option value="{{ variant.value }}">{{ variant.html }}</option>
+              <label for="{{ product.id }}-format">Format :</label>
+              <select id="{{ product.id }}-format" class="format">
+                {%- for format in product.variants.formats ~%}
+                <option value="{{ format.value }}">{{ format.html }}</option>
                 {%- endfor ~%}
               </select><br>
               <label for="{{ product.id }}-qty">Quantité :</label>
@@ -23,8 +23,8 @@
                 data-item-quantity="1"
                 data-item-max-quantity="99"
                 data-item-stackable="auto"
-                data-item-custom1-name="Taille"
-                data-item-custom1-options="{{ product.variants|map(v => "#{v.value}[#{v.price}]")|join('|') }}"
+                data-item-custom1-name="Format"
+                data-item-custom1-options="{{ product.variants.formats|map(v => "#{v.value}[#{v.price}]")|join('|') }}"
               >
                 Commmander
               </button>

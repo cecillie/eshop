@@ -19,7 +19,7 @@
                 data-item-url="{{ url(product,{canonical:true}) }}"
                 data-item-name="{{ product.name }}"
                 {%- if product.description is defined and product.description %}data-item-description="{{ product.description }}"{% endif ~%}
-                data-item-image="{{ product.image }}"
+                data-item-image="{{ asset(product.image,{fingerprint:false})|url({canonical:true}) }}"
                 data-item-quantity="1"
                 data-item-max-quantity="99"
                 data-item-stackable="auto"

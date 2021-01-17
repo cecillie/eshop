@@ -16,5 +16,5 @@ language: fr
 snipcart:
   version: 3.0.27
   api_key: MDU3OWNmMmMtNDJhMi00MTViLTg3NWYtNjNkM2EzMmFmNjhhNjM3MDg2NzcwOTEzNDc4Nzc1
-  customer: true
+  customer: false
 #googleanalytics: 1234

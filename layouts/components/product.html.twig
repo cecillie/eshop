@@ -1,20 +1,21 @@
-{% set productId = product.id|replace({'products/':''}) %}
+{% set productId = product.id|replace({'#{product.section/}':''}) %}
         <div class="product">
           <div class="product__information">
             <h2 class="product__title">{{ product.name }}</h2>
             <img src="{{ asset(product.image)|default('images/default.png') }}" alt="Image de {{ product.name }}" class="product__image">
             <div class="product__description">{{ product.content }}</div>
             <div>
-              <label for="{{ productId }}-format">Format :</label>
-              <select id="{{ productId }}-format" class="format">
-                {%- for format in product.variants.formats ~%}
-                <option value="{{ format.value }}">{{ format.html }}</option>
+              {%- for variant in product.variants ~%}
+              <label for="{{ productId }}-{{ variant.name|lower }}">{{ variant.name }} :</label>
+              <select id="{{ productId }}-{{ variant.name|lower }}" class="{{ variant.name|lower }}">
+                {%- for option in variant.options ~%}
+                <option value="{{ option.value }}">{{ option.html }}</option>
                 {%- endfor ~%}
               </select><br>
+              {%- endfor ~%}
               <label for="{{ productId }}-qty">Quantité :</label>
               <input type="number" id="{{ productId }}-qty" class="qty" min="1" value="1" />
-              <button
-                class="buy-button snipcart-add-item"
+              <button class="buy-button snipcart-add-item"
                 data-item-id="{{ productId|replace({'products/':''}) }}"
                 data-item-price="{{ product.price }}"
                 data-item-url="{{ url(product,{canonical:true}) }}"
@@ -24,8 +25,10 @@
                 data-item-quantity="1"
                 data-item-max-quantity="99"
                 data-item-stackable="auto"
-                data-item-custom1-name="Format"
-                data-item-custom1-options="{{ product.variants.formats|map(v => "#{v.value}[#{v.price}]")|join('|') }}"
+                {%- for variant in product.variants ~%}
+                data-item-custom{{ loop.index }}-name="{{ variant.name }}"
+                data-item-custom{{ loop.index }}-options="{{ variant.options|map(v => "#{v.value}[#{v.price}]")|join('|') }}"
+                {%- endfor ~%}
               >
                 Commmander
               </button>

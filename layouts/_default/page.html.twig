@@ -5,7 +5,7 @@
     {%~ include 'partials/head.html.twig' with {'page': page} only ~%}
   </head>
   <body>
-    {%~ include 'partials/header.html.twig' only ~%}
+    {%~ include 'partials/header.html.twig' with {'page': page} only ~%}
     <main class="main">
       {%~ block content ~%}
       {{- page.content -}}

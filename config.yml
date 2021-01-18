@@ -13,6 +13,17 @@ languages:
     name: Français
     locale: fr_FR
 language: fr
+menus:
+  main:
+    - id: index
+      enabled: false
+    - id: products
+      enabled: false
+  footer:
+    - id: author
+      name: "The author"
+      url: https://arnaudligny.fr
+      weight: 99
 snipcart:
   version: 3.0.27
   api_key: MDU3OWNmMmMtNDJhMi00MTViLTg3NWYtNjNkM2EzMmFmNjhhNjM3MDg2NzcwOTEzNDc4Nzc1

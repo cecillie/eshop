@@ -1,18 +1,18 @@
 @charset "utf-8";
 
 // Variables
-$color--default: #3a3a3a;
+$color--default: #000000;
 $color--light: lighten($color--default, 65%);
-$color--primary: #429bfc;
-$color--secondary: #429bfc;
-$color--background: #f8faff;
+$color--primary: #FAAC8A;
+$color--secondary: #FAAC8A;
+$color--background: #FFFFFF;
 $layout--max-width: 1000px;
 $size--unit: 0.5rem;
 
 // Default styling
 * {
   box-sizing: border-box;
-  font-family: "Muli", sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   font-size: $size--unit * 2;
   color: $color--default;
 }
@@ -21,6 +21,7 @@ html, body {
   padding: 0;
   margin: 0;
   background-color: $color--background;
+  background-image: url('/images/background.png');
 }
 
 // Mixins
@@ -88,22 +89,30 @@ html, body {
   width: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: $size--unit * 6;
   padding-top: $size--unit * 4;
   padding-bottom: $size--unit * 4;
-  border-bottom: 1px solid $color--light;
+  background-color: $color--background;
 
   &__container {
     display: flex;
     justify-content: space-between;
     @include fit-to-layout-and-center;
+    a {
+      text-decoration: none;
+    }
+    align-items: center;
   }
 
   &__branding {
-    all: unset;
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  &__menu {
+    font-weight: normal;
+    font-size: $size--unit * 0.5;
+    text-transform: uppercase;
   }
 
   &__logo {
@@ -113,12 +122,12 @@ html, body {
   }
 
   &__title {
-    font-weight: bold;
-    font-size: $size--unit * 3;
-    cursor: pointer;
-    @include sm {
-      font-size: $size--unit * 2;
-    }
+    font-weight: 400;
+    font-size: $size--unit * 2;
+    text-transform: uppercase;
+    /*@include sm {
+      font-size: $size--unit * 1.5;
+    }*/
   }
 
   &__checkout {
@@ -154,6 +163,24 @@ html, body {
 
 .main {
   @include fit-to-layout-and-center;
+  padding-top: $size--unit * 6;
+}
+
+.hero {
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3rem;
+}
+
+.hero p {
+  font-family: 'Scope One', serif;
+}
+
+.hero h1 {
+  text-transform: uppercase;
 }
 
 .product {
@@ -201,7 +228,7 @@ html, body {
 
   &__information {
     flex: 1;
-    margin-left: $size--unit * 4;
+    margin-left: $size--unit * 10;
     @include sm {
       margin-left: 0;
     }
@@ -235,9 +262,11 @@ html, body {
 
   &__title {
     margin-top: 0;
-    font-size: $size--unit * 5;
+    font-family: 'Homemade Apple', cursive;
+    font-size: $size--unit * 4;
+    font-weight: normal;
     @include sm {
-      font-size: $size--unit * 4;
+      font-size: $size--unit * 3;
     }
   }
 
@@ -247,18 +276,23 @@ html, body {
   }
 }
 
+.product label {
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
 .product input, .product select {
-  background-color: transparent;
+  background-color: $color--background;
   border-radius: 3px;
-  padding: 3px 5px;
-  border: solid 1px $color--primary;
+  padding: $size--unit * 1;
+  border: solid 1px transparent;
   text-align: center;
   margin-top: 3px;
   margin-bottom: 3px;
 }
 
 .qty {
-  width: 45px;
+  width: 50px;
 }
 
 .buy-button {
@@ -273,7 +307,7 @@ html, body {
   text-transform: uppercase;
   font-size: $size--unit * 1.75;
   letter-spacing: 2px;
-  padding: $size--unit * 2;
+  padding: $size--unit * 1.5;
   padding-left: $size--unit * 3;
   padding-right: $size--unit * 3;
   margin-top: $size--unit * 2;
@@ -327,6 +361,7 @@ html, body {
 .footer {
   border-top: 1px solid $color--light;
   margin-top: $size--unit * 12;
+
   &__content {
     display: flex;
     @include fit-to-layout-and-center();

@@ -6,14 +6,14 @@
             <div class="product__description">{{ product.content }}</div>
             <div>
               {%- for variant in product.variants ~%}
-              <label for="{{ productId }}-{{ variant.name|lower }}">{{ variant.name }} :</label>
+              <label for="{{ productId }}-{{ variant.name|lower }}">{{ variant.name }}</label>
               <select id="{{ productId }}-{{ variant.name|lower }}" class="{{ variant.name|lower }}">
                 {%- for option in variant.options ~%}
                 <option value="{{ option.value }}">{{ option.html }}</option>
                 {%- endfor ~%}
               </select><br>
               {%- endfor ~%}
-              <label for="{{ productId }}-qty">Quantité :</label>
+              <label for="{{ productId }}-qty">Quantité</label>
               <input type="number" id="{{ productId }}-qty" class="qty" min="1" value="1" />
               <button class="buy-button snipcart-add-item"
                 data-item-id="{{ productId|replace({'products/':''}) }}"
@@ -30,7 +30,7 @@
                 data-item-custom{{ loop.index }}-options="{{ variant.options|map(v => "#{v.value}[#{v.price}]")|join('|') }}"
                 {%- endfor ~%}
               >
-                Commmander
+                Ajouter au panier
               </button>
             </div>
           </div>

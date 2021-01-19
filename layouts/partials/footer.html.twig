@@ -1,9 +1,16 @@
     <footer class="footer">
       <div class="footer__content">
-        <div class="footer__copyright">Powered by <a href="{{ cecil.url }}">Cecil</a> & <a href="https://snipcart.com/">Snipcart</a></div>
-        <div class="footer__socials">
-          <a href="https://twitter.com/onibd">Twitter</a> | <a href="https://github.com/cecillie/eshop">Github</a>
+        <div class="footer__menu">
+          {%- for item in site.menus.footer|sort_by_weight ~%}
+          <span class="item {{ item.weight }} item--nav{% if url(item.url) == url(page) %} item--current{% endif %}">
+            <a href="{{ url(item.url) }}">{{ item.name }}</a>
+          </span>
+          {%- endfor ~%}
         </div>
+        <div class="footer__copyright">Studio Cecillie 2021 - Tous droits réservés - Powered by <a href="{{ cecil.url }}">Cecil</a> & <a href="https://snipcart.com/">Snipcart</a></div>
+        <!--<div class="footer__socials">
+          <a href="https://twitter.com/onibd">Twitter</a> | <a href="https://github.com/cecillie/eshop">Github</a>
+        </div>-->
       </div>
     </footer>
     {# Snipcart #}

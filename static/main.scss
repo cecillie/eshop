@@ -199,7 +199,7 @@ html, body {
   &:nth-last-of-type(even) & {
     &__information {
       margin-left: 0;
-      margin-right: $size--unit * 4;
+      margin-right: $size--unit * 6;
       @include sm {
         margin-right: 0;
       }
@@ -359,14 +359,14 @@ html, body {
 }
 
 .footer {
-  border-top: 1px solid $color--light;
   margin-top: $size--unit * 12;
+  background-color: $color--background;
 
   &__content {
-    display: flex;
+    //display: flex;
     @include fit-to-layout-and-center();
-    padding-top: $size--unit * 4;
-    padding-bottom: $size--unit * 4;
+    padding-top: $size--unit * 5;
+    padding-bottom: $size--unit * 5;
   }
 
   &__socials {

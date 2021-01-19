@@ -113,24 +113,19 @@ html, body {
     font-weight: normal;
     font-size: $size--unit * 0.5;
     text-transform: uppercase;
-    @include sm {
+    @include xsm {
       display: none;
     }
   }
 
   &__logo {
-    max-height: $size--unit*4;
-    margin-right: $size--unit*1;
-    fill: $color--primary;
+    max-height: $size--unit * 8;
   }
 
   &__title {
     font-weight: 400;
     font-size: $size--unit * 2;
     text-transform: uppercase;
-    /*@include sm {
-      font-size: $size--unit * 1.5;
-    }*/
   }
 
   &__checkout {
@@ -143,7 +138,7 @@ html, body {
     @include sm {
       font-size: $size--unit * 1.5;
     }
-    svg {
+    svg, img {
       margin-right: $size--unit * 1;
     }
   }
@@ -159,7 +154,7 @@ html, body {
 }
 
 .snipcart-total-price {
-  @include sm {
+  @include xsm {
     display: none;
   }
 }
@@ -190,11 +185,7 @@ html, body {
   display: flex;
   align-items: center;
   flex-direction: row;
-  /**
-   * prevent children elements from "bleeding through" in 3D space
-   * by creating a 3D transform container in the parent
-   */
-  transform: translate3d(0px, 0px, 0px);
+
   &:nth-of-type(even) {
     flex-direction: row-reverse;
   }
@@ -209,11 +200,7 @@ html, body {
     }
 
     &__image {
-      //transform: perspective(650px) rotateZ(5deg) rotateX(-2.5deg) rotateY(-15deg) scale(0.8) translateX(30px);
-      box-shadow: 30px 30px 50px transparentize(darken($color--primary, 50%), 0.9);
-      @include sm {
-        //transform: perspective(650px) rotateZ(5deg) rotateX(-2.5deg) rotateY(-15deg) scale(0.8) translateX(-30px);
-      }
+      box-shadow: 1px 5px 6px transparentize(darken($color--primary, 50%), 0.9);
     }
   }
 
@@ -244,11 +231,8 @@ html, body {
     max-width: 300px;
     max-height: 400px;
     background-size: cover;
-    //transform: perspective(650px) rotateZ(-5deg) rotateX(2.5deg) rotateY(15deg) scale(0.8) translateX(-30px);
-    box-shadow: -30px 30px 50px transparentize(darken($color--primary, 50%), 0.9);
+    box-shadow: 1px 5px 6px transparentize(darken($color--primary, 50%), 0.9);
     @include sm {
-      //transform: perspective(650px) rotateZ(5deg) rotateX(-2.5deg) rotateY(-15deg) scale(0.8) translateX(-30px);
-      box-shadow: 30px 30px 50px transparentize(darken($color--primary, 50%), 0.9);
       &:last-child {
         display: none;
       }
@@ -260,7 +244,6 @@ html, body {
       }
     }
     margin-right: auto;
-    border-radius: $size--unit;
   }
 
   &__title {

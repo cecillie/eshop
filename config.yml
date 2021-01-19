@@ -20,10 +20,18 @@ menus:
     - id: products
       enabled: false
   footer:
-    - id: author
-      name: "The author"
-      url: https://arnaudligny.fr
-      weight: 99
+    - id: newsletter
+      name: "Newsletter"
+      url: #
+      weight: 3
+    - id: twitter
+      name: "Twitter"
+      url: #
+      weight: 4
+    - id: instagram
+      name: "Instagram"
+      url: #
+      weight: 5
 snipcart:
   version: 3.0.27
   api_key: MDU3OWNmMmMtNDJhMi00MTViLTg3NWYtNjNkM2EzMmFmNjhhNjM3MDg2NzcwOTEzNDc4Nzc1

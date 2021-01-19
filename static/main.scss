@@ -113,6 +113,9 @@ html, body {
     font-weight: normal;
     font-size: $size--unit * 0.5;
     text-transform: uppercase;
+    @include sm {
+      display: none;
+    }
   }
 
   &__logo {

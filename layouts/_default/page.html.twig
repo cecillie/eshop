@@ -11,6 +11,6 @@
       {{- page.content -}}
       {%~ endblock ~%}
     </main>
-    {%~ include 'partials/footer.html.twig' with {'language': language} only ~%}
+    {%~ include 'partials/footer.html.twig' with {'language': language, 'page': page} only ~%}
   </body>
 </html>

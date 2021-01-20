@@ -13,7 +13,7 @@ $size--unit: 0.5rem;
 * {
   box-sizing: border-box;
   font-family: 'Roboto Condensed', sans-serif;
-  font-size: $size--unit * 2;
+  font-size: $size--unit * 1.9;
   color: $color--default;
 }
 
@@ -280,8 +280,9 @@ html, body {
 .product label {
   font-weight: 600;
   text-transform: uppercase;
-  padding-bottom: .3rem;
+  padding: .3rem 0 .3rem 0;
   display: inline-block;
+  font-size: $size--unit * 1.7;
 }
 
 .product input, .product select {

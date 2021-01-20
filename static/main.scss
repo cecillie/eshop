@@ -111,7 +111,6 @@ html, body {
 
   &__menu {
     font-weight: normal;
-    font-size: $size--unit * 0.5;
     text-transform: uppercase;
     @include xsm {
       //display: none;
@@ -326,9 +325,8 @@ html, body {
   color: $color--default;
   background-color: $color--background;
   border: 0;
-  font-weight: bold;
+  font-weight: normal;
   text-transform: uppercase;
-  font-size: $size--unit * 1.5;
   margin-right: $size--unit * 2;
   display: inline-block;
 }

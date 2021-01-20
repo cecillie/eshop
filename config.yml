@@ -6,9 +6,9 @@ author:
   name: Cécile Ricordeau
   url: https://cecillie.fr
 languages:
-  - code: en
-    name: English
-    locale: en_US
+  #- code: en
+  #  name: English
+  #  locale: en_US
   - code: fr
     name: Français
     locale: fr_FR
@@ -22,15 +22,15 @@ menus:
   footer:
     - id: newsletter
       name: "Newsletter"
-      url: #
+      url: https://mailchi.mp/a7fb0a1ad278/nl-shop-cecillie/
       weight: 3
     - id: twitter
       name: "Twitter"
-      url: #
+      url: https://twitter.com/onibd
       weight: 4
     - id: instagram
       name: "Instagram"
-      url: #
+      url: https://www.instagram.com/cecile.ricordeau/
       weight: 5
 snipcart:
   version: 3.0.27

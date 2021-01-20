@@ -260,6 +260,16 @@ html, body {
     font-size: $size--unit * 2.5;
     line-height: $size--unit * 3.5;
   }
+
+  &__details {
+    display: grid;
+    grid-template-areas: "qty format"
+                         "button button";
+    grid-template-columns: 200px 75px;
+    grid-gap: 20px;
+    width: 300px;
+    margin-top: $size--unit * 4;
+  }
 }
 
 .product label {
@@ -275,6 +285,7 @@ html, body {
   text-align: center;
   margin-top: 3px;
   margin-bottom: 3px;
+  width: 100%;
 }
 
 .qty {
@@ -283,7 +294,6 @@ html, body {
 
 .buy-button {
   cursor: pointer;
-  all: unset;
   color: white;
   background-color: $color--primary;
   border: 1px solid darken($color--primary, 3%);
@@ -296,9 +306,9 @@ html, body {
   padding: $size--unit * 1.5;
   padding-left: $size--unit * 3;
   padding-right: $size--unit * 3;
-  margin-top: $size--unit * 2;
   display: block;
   @include button-hover($color--primary);
+  grid-area: button;
 }
 
 .login-button {

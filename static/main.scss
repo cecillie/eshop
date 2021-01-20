@@ -365,10 +365,29 @@ html, body {
   background-color: $color--background;
 
   &__content {
-    //display: flex;
     @include fit-to-layout-and-center();
     padding-top: $size--unit * 5;
     padding-bottom: $size--unit * 5;
+    align-content: space-between;
+    text-align: center;
+    width: 100%;
+    max-width: 550px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__menu {
+    font-weight: 600;
+    text-transform: uppercase;
+    a {
+      text-decoration: none;
+    }
+    display: flex;
+    justify-content: space-between
+  }
+
+  &__copyright {
+    margin-top: $size--unit * 4;
   }
 
   &__socials {

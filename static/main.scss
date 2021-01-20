@@ -114,7 +114,7 @@ html, body {
     font-size: $size--unit * 0.5;
     text-transform: uppercase;
     @include xsm {
-      display: none;
+      //display: none;
     }
   }
 

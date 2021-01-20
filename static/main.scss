@@ -322,6 +322,7 @@ html, body {
 }
 
 .login-button {
+  cursor: pointer;
   color: $color--default;
   background-color: $color--background;
   border: 0;

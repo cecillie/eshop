@@ -300,64 +300,37 @@ html, body {
 
 .buy-button {
   cursor: pointer;
-  color: white;
+  color: #fff;
   background-color: $color--primary;
-  border: 1px solid darken($color--primary, 3%);
-  text-shadow: 2px 2px 5px darken($color--primary, 3%);
+  border: 1px solid $color--primary;
   border-radius: 5px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
-  font-size: $size--unit * 1.75;
+  text-align: center;
+  font-size: $size--unit * 2;
   letter-spacing: 2px;
-  padding: $size--unit * 1.5;
-  padding-left: $size--unit * 3;
-  padding-right: $size--unit * 3;
+  padding: $size--unit * 2;
   display: block;
-  @include button-hover($color--primary);
+  white-space: nowrap;
   grid-area: button;
 }
 
+.buy-button:hover {
+  transition: all .1s;
+  transform: translateY(-1px);
+  box-shadow: 0 0px 15px $color--primary;
+  background-color: $color--primary
+}
+
 .login-button {
-  all: unset;
-  color: white;
-  background-color: $color--primary;
-  border: 1px solid darken($color--primary, 3%);
-  text-shadow: 2px 2px 5px darken($color--primary, 3%);
-  border-radius: 3px;
+  color: $color--default;
+  background-color: $color--background;
+  border: 0;
   font-weight: bold;
   text-transform: uppercase;
   font-size: $size--unit * 1.5;
-  letter-spacing: 2px;
-  padding: $size--unit * 1;
-  padding-left: $size--unit * 2;
-  padding-right: $size--unit * 2;
-  position: relative;
-  z-index: 2;
-  margin: 0 16px;
-}
-
-.login-button:hover {
-  transition: 0.2s all;
-  background-color: $color--primary;
-}
-
-.login-button:hover:before {
-  transform: scale(1.1, 1.5);
-}
-
-.login-button:before {
-  content: " ";
-  position: absolute;
-  background-color: $color--primary;
-  top: 0;
-  left: 0;
-  border-radius: 4px;
-  width: 100%;
-  height: 100%;
-  opacity: 0.4;
-  z-index: -1;
-  transform: scale(1);
-  transition: all 0.3s cubic-bezier(0.16, 0.8, 0.66, 1.54);
+  margin-right: $size--unit * 2;
+  display: inline-block;
 }
 
 .footer {

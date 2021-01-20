@@ -3,7 +3,7 @@ title: Le projet
 menu:
   main:
     weight: 1
-published: false
+published: true
 ---
 # Le projet
 

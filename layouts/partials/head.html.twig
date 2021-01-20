@@ -3,9 +3,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="{{ page.description|default(site.description) }}" />
     {%~ include 'partials/metatags.html.twig' ~%}
-    <script src="{{ asset('main.js')|url }}"></script>
-    <link rel="stylesheet" href="{{ asset('main.scss')|url }}" />
-    {# Fonts #}
+    {# fonts #}
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap">
@@ -14,3 +12,6 @@
     <link rel="preconnect" href="https://app.snipcart.com" />
     <link rel="preconnect" href="https://cdn.snipcart.com" />
     <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v{{ site.snipcart.version }}/default/snipcart.css" />
+    {# main #}
+    <script src="{{ asset('main.js')|url }}"></script>
+    <link rel="stylesheet" href="{{ asset('main.scss')|url }}"/>

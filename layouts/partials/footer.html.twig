@@ -7,13 +7,15 @@
           </span>
           {%- endfor ~%}
         </div>
-        <div class="footer__copyright">Studio Cecillie 2021 - Tous droits réservés - Powered by <a href="{{ cecil.url }}">Cecil</a> & <a href="https://snipcart.com/">Snipcart</a></div>
-        {#<div class="footer__socials">
+        <div class="footer__copyright">Studio Cecillie {{ 'now'|date('Y') }} - Tous droits réservés - Boutique propulsé par <a href="{{ cecil.url }}">Cecil</a> & <a href="https://snipcart.com/">Snipcart</a>.</div>
+        {#-
+        <div class="footer__socials">
           <a href="https://twitter.com/onibd">Twitter</a> | <a href="https://github.com/cecillie/eshop">Github</a>
-        </div>#}
+        </div>
+        ~#}
       </div>
     </footer>
-    {# Snipcart #}
+    {#- Snipcart ~#}
     <div hidden id="snipcart" data-api-key="{{ site.snipcart.api_key }}" data-config-modal-style="side" data-templates-url="/snipcart-templates.tpl"></div>
     <script src="https://cdn.snipcart.com/themes/v{{ site.snipcart.version }}/default/snipcart.js" defer></script>
     <script>

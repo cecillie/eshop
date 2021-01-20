@@ -2,7 +2,7 @@
 
 {% block content %}
       <div class="hero">
-        {{- page.content -}}
+        {{~ page.content ~}}
       </div>
       <div class="products">
         {%- for product in site.pages.all|filterBy('section', 'products')|sortByWeight ~%}

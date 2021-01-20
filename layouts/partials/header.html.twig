@@ -2,7 +2,7 @@
       <div class="header__container">
         <div class="header__menu">
           {%- for item in site.menus.main|sort_by_weight ~%}
-          <span class="item {{ item.weight }} item--nav{% if url(item.url) == url(page) %} item--current{% endif %}">
+          <span class="item__{{ item.weight }} item__nav{% if url(item.url) == url(page) %} item__current{% endif %}">
             <a href="{{ url(item.url) }}">{{ item.name }}</a>
           </span>
           {%- endfor ~%}

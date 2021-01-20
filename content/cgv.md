@@ -4,3 +4,4 @@ menu:
   footer:
     weight: 1
 ---
+# Mentions légales

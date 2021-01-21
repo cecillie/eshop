@@ -20,9 +20,9 @@
     <script src="https://cdn.snipcart.com/themes/v{{ site.snipcart.version }}/default/snipcart.js" defer></script>
     <script>
       document.addEventListener('snipcart.ready', function() {
-        fetch('/{{ language.locale|replace({'_':'-'}) }}.json')
+        fetch('/{{ language }}.json')
           .then(response => response.json())
-          .then(translation => Snipcart.api.session.setLanguage('{{ language.locale|replace({'_':'-'}) }}', translation))
+          .then(translation => Snipcart.api.session.setLanguage('{{ language }}', translation))
       });
     </script>
     {%~ include 'partials/googleanalytics.js.twig' ~%}

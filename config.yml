@@ -6,13 +6,10 @@ author:
   name: Cécile Ricordeau
   url: https://cecillie.fr
 languages:
-  #- code: en
-  #  name: English
-  #  locale: en_US
-  - code: fr
+  - code: fr-FR
     name: Français
     locale: fr_FR
-language: fr
+language: fr-FR
 menus:
   main:
     - id: index

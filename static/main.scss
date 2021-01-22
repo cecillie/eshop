@@ -90,7 +90,7 @@ html, body {
   display: flex;
   align-items: center;
   padding-top: $size--unit * 3;
-  padding-bottom: $size--unit * 3;
+  padding-bottom: $size--unit * 1.5;
   background-color: $color--background;
 
   &__container {
@@ -101,20 +101,26 @@ html, body {
       text-decoration: none;
     }
     align-items: center;
+    @include xsm {
+      flex-flow: column;
+    }
+  }
+
+  &__menu {
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-bottom: $size--unit * 1.5;
+  }
+
+  .item__nav:not(:nth-child(1)) {
+    padding-left: $size--unit * 4;
   }
 
   &__branding {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  &__menu {
-    font-weight: normal;
-    text-transform: uppercase;
-    @include xsm {
-      //display: none;
-    }
+    padding-bottom: $size--unit * 1.5;
   }
 
   &__logo {
@@ -127,6 +133,12 @@ html, body {
     text-transform: uppercase;
   }
 
+  &__actions {
+    display: flex;
+    align-items: center;
+    padding-bottom: $size--unit * 1.5;
+  }
+
   &__checkout {
     all: unset;
     cursor: pointer;
@@ -134,9 +146,7 @@ html, body {
     align-items: center;
     margin-left: auto;
     font-weight: bold;
-    @include sm {
-      font-size: $size--unit * 1.5;
-    }
+    font-size: $size--unit * 1.5;
     svg, img {
       margin-right: $size--unit * 1;
     }
@@ -145,16 +155,11 @@ html, body {
   &__checkout-fill {
     fill: $color--primary;
   }
-
-  &__actions {
-    display: flex;
-    align-items: center;
-  }
 }
 
 .snipcart-total-price {
   @include xsm {
-    display: none;
+    //display: none;
   }
 }
 

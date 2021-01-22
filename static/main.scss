@@ -24,6 +24,11 @@ html, body {
   background-image: url('/images/background.png');
 }
 
+h1 {
+  font-weight: 600;
+  font-size: $size--unit * 4;
+}
+
 // Mixins
 
 @mixin xsm {

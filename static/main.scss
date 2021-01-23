@@ -29,20 +29,20 @@ h1 {
 
 // Mixins
 
-@mixin xsm {
-  @media (max-width: 724px) {
-    @content;
-  }
-}
-
 @mixin sm {
-  @media (max-width: #{$layout--max-width}) {
+  @media (max-width: 640px) {
     @content;
   }
 }
 
-@mixin ms {
-  @media (min-width: #{$layout--max-width}) {
+@mixin md {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 769px) {
     @content;
   }
 }
@@ -80,7 +80,11 @@ h1 {
   max-width: $layout--max-width;
   margin-left: auto;
   margin-right: auto;
-  @include sm {
+  @include md {
+    padding-left: $size--unit * 3;
+    padding-right: $size--unit * 3;
+  }
+  @include lg {
     padding-left: $size--unit * 3;
     padding-right: $size--unit * 3;
   }
@@ -108,7 +112,7 @@ h1 {
       text-decoration: none;
     }
     align-items: center;
-    @include xsm {
+    @include sm {
       flex-flow: column;
     }
   }
@@ -197,7 +201,7 @@ h1 {
     &__information {
       margin-left: 0;
       margin-right: $size--unit * 6;
-      @include sm {
+      @include md {
         margin-right: 0;
       }
     }
@@ -211,18 +215,10 @@ h1 {
     margin-bottom: $size--unit * 12;
   }
 
-  @include sm {
-    flex-direction: column;
-    &:nth-of-type(even) {
-      flex-direction: column;
-    }
-    justify-content: center;
-  }
-
   &__information {
     flex: 1;
     margin-left: $size--unit * 10;
-    @include sm {
+    @include md {
       margin-left: 0;
     }
   }
@@ -235,18 +231,22 @@ h1 {
     max-height: 400px;
     background-size: cover;
     box-shadow: 1px 5px 6px transparentize(darken($color--primary, 50%), 0.9);
+    margin-right: auto;
     @include sm {
       &:last-child {
         display: none;
       }
     }
-
-    @include ms {
+    @include md {
+      &:last-child {
+        display: none;
+      }
+    }
+    @include lg {
       &:not(:last-child) {
         display: none;
       }
     }
-    margin-right: auto;
   }
 
   &__title {
@@ -254,7 +254,7 @@ h1 {
     font-family: 'Homemade Apple', cursive;
     font-size: $size--unit * 4;
     font-weight: normal;
-    @include sm {
+    @include md {
       font-size: $size--unit * 3;
     }
   }

@@ -1,8 +1,9 @@
 {% set productId = product.id|replace({'#{product.section/}':''}) %}
+{% set image = asset(product.image) %}
         <div class="product">
           <div class="product__information">
             <h2 class="product__title">{{ product.name }}</h2>
-            <img src="{{ asset(product.image)|default('images/default.png') }}" alt="Image de {{ product.name }}" class="product__image" with="300" height="400" loading="lazy">
+            <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" class="product__image" width="{{ image.width }}" height="{{ image.height }}" loading="lazy">
             <div class="product__description">{{ product.content }}</div>
             <div class="product__details">
               <div>
@@ -38,5 +39,5 @@
               </button>
             </div>
           </div>
-          <img src="{{ asset(product.image)|default('images/default.png') }}" alt="Image de {{ product.name }}" class="product__image" with="300" height="400" loading="lazy">
+          <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" class="product__image" width="{{ image.width }}" height="{{ image.height }}" loading="lazy">
         </div>

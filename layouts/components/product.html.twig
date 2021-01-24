@@ -1,4 +1,5 @@
-{% set productId = product.id|replace({'#{product.section/}':''}) %}
+{% set replaceId = product.section ~ '/' %}
+{% set productId = product.id|replace({(replaceId):''}) %}
 {% set image = asset(product.image) %}
         <div class="product">
           <div class="product__information">
@@ -21,7 +22,7 @@
                 <input type="number" id="{{ productId }}-qty" class="qty" min="1" value="1" />
               </div>
               <button class="buy-button snipcart-add-item"
-                data-item-id="{{ productId|replace({'products/':''}) }}"
+                data-item-id="{{ productId }}"
                 data-item-price="{{ product.price }}"
                 data-item-url="{{ url(product,{canonical:true}) }}"
                 data-item-name="{{ product.name }}"

@@ -13,5 +13,11 @@
     <link rel="preconnect" href="https://cdn.snipcart.com" />
     <link rel="stylesheet" href="https://cdn.snipcart.com/themes/v{{ site.snipcart.version }}/default/snipcart.css" defer />
     {#- main ~#}
-    <script src="{{ asset('/js/main.js')|url }}"></script>
-    <link rel="stylesheet" href="{{ asset('css/main.scss')|url }}" />
+    {#-<link rel="stylesheet" href="{{ asset('css/main.scss')|url }}" />~#}
+    <style>
+      {{ asset('css/main.scss')|inline }}
+    </style>
+    {#-<script src="{{ asset('/js/main.js')|url }}"></script>~#}
+    <script>
+      {{ asset('/js/main.js')|inline }}
+    </script>

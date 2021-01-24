@@ -6,6 +6,7 @@ $color--primary: #FAAC8A;
 $color--background: #FFFFFF;
 $layout--max-width: 1000px;
 $size--unit: 0.5rem;
+$image--background: url('/images/background.png');
 
 // Default styling
 * {
@@ -19,7 +20,7 @@ html, body {
   padding: 0;
   margin: 0;
   background-color: $color--background;
-  background-image: url('/images/background.png');
+  background-image: $image--background;
 }
 
 h1 {
@@ -358,27 +359,122 @@ h1 {
 
   &__copyright {
     margin-top: $size--unit * 3;
+    a {
+      text-decoration: none;
+    }
   }
 }
 
 // Snipcart
 
-.snipcart-layout__header {
-  min-height: 80px;
-}
+.snipcart {
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: $size--unit * 1.9;
+  color: $color--default;
 
-.snipcart-cart-button--highlight {
-  background-image: linear-gradient(90deg, $color--primary, $color--primary);
-}
+  &-layout {
+    background-color: transparent;
 
-.snipcart__icon path {
-  fill: $color--primary;
-}
+    &__header {
+      min-height: 80px;
+    }
+  }
 
-.snipcart__actions--link {
-  color: $color--primary;
-}
+  &-modal {
+    &__container {
+      //background-repeat: no-repeat;
+      //background-size: cover;
+      background-image: $image--background;
+    }
+  }
 
-.snipcart__box--badge-highlight {
-  background: linear-gradient(90deg, $color--primary, $color--primary);
+  &__actions--link {
+    color: $color--primary;
+    text-transform: uppercase;
+  }
+
+  &__box {
+    &--badge {
+      border: 1px solid $color--background;
+      background-color: $color--background;
+    }
+
+    &--badge-highlight {
+      background: $color--background;
+      color: $color--primary;
+    }
+
+    &--gray {
+      background-color: $color--background;
+    }
+  }
+
+  &__icon {
+    &--blue-dark path {
+      fill: $color--primary;
+    }
+
+    &--blue-light path {
+      fill: $color--primary;
+    }
+  }
+
+  &-cart {
+    &-header {
+      background-color: transparent;
+    }
+
+    &__secondary-header {
+      background-color: $color--background;
+    }
+
+    &-summary-fees__tax-notice path {
+      fill: $color--primary;
+    }
+
+    &-button {
+      border-radius: 6px;
+      text-transform: uppercase;
+
+      &--highlight {
+        background-image: linear-gradient(90deg, $color--primary, $color--primary);
+      }
+    }
+  }
+
+  &-discount-box {
+    &__form {
+      border: none;
+    }
+
+    &__submit {
+      color: $color--primary;
+    }
+  }
+
+  &-shipping-rates-list-item--highlight {
+    border: 1px solid $color--primary;
+  }
+
+  &-signin {
+    &__register-link {
+      color: $color--primary;
+    }
+
+    &__forgot-password {
+      color: $color--primary;
+    }
+  }
+
+  &-register {
+    &__register-link {
+      color: $color--primary;
+    }
+  }
+
+  &-order {
+    &__invoice-number--highlight {
+      color: $color--primary;
+    }
+  }
 }

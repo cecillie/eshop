@@ -442,6 +442,10 @@ h1 {
       @media (max-width: 1024px) {
         margin: 0 auto 26px auto;
       }
+
+      &__title {
+        text-transform: uppercase;
+      }
     }
 
     &__secondary-header {

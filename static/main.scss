@@ -380,6 +380,17 @@ h1 {
     &__header {
       min-height: 80px;
     }
+
+    &__col--large {
+      margin: 0;
+    }
+
+    &__col:nth-of-type(2) {
+      @media (min-width: 1024px) {
+        margin: 0;
+        margin-left: 16px;
+      }
+    }
   }
 
   &-modal {
@@ -420,12 +431,22 @@ h1 {
   }
 
   &-cart {
-    &-header {
+    &__content {
       background-color: transparent;
+    }
+    &-header {
+      background-color: $color--background;
+      @media (max-width: 1024px) {
+        margin: 0 auto 26px auto;
+      }
     }
 
     &__secondary-header {
       background-color: $color--background;
+    }
+
+    &-summary {
+      background-color: transparent;
     }
 
     &-summary-fees__tax-notice path {

@@ -5,9 +5,10 @@
     {%~ include 'partials/metatags.html.twig' ~%}
     {#- fonts ~#}
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" />
+    {%- for font in site.fonts ~%}
+    <link href="{{ font.url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ font.url }}"></noscript>
+    {%- endfor ~%}
     {#- Snipcart ~#}
     <link rel="preconnect" href="https://app.snipcart.com" />
     <link rel="preconnect" href="https://cdn.snipcart.com" />

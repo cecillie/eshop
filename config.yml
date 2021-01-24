@@ -29,6 +29,10 @@ menus:
       name: "Instagram"
       url: https://www.instagram.com/cecile.ricordeau/
       weight: 5
+fonts:
+  - url: https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap
+  - url: https://fonts.googleapis.com/css2?family=Scope+One&display=swap
+  - url: https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap
 theme:
   - netlify
 snipcart:

@@ -10,9 +10,7 @@
     <noscript><link rel="stylesheet" href="{{ font.url }}"></noscript>
     {%- endfor ~%}
     {#- Snipcart ~#}
-    <link rel="preconnect" href="https://cdn.snipcart.com" />
-    <link rel="preconnect" href="https://app.snipcart.com" />
-    <link href="https://cdn.snipcart.com/themes/v{{ site.snipcart.version }}/default/snipcart.css" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link href="{{ asset('snipcart/v' ~ site.snipcart.version ~ '.css')|url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
     {#- main ~#}
     {#-<link rel="stylesheet" href="{{ asset('css/main.scss')|url }}" />~#}
     <style>

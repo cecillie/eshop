@@ -374,15 +374,15 @@ h1 {
   font-size: $size--unit * 1.9;
   color: $color--default;
 
+  &-modal__container {
+    background-image: $image--background;
+  }
+
   &-layout {
     background-color: transparent;
 
     &__header {
       min-height: 80px;
-    }
-
-    &__col--large {
-      margin: 0;
     }
 
     &__col:nth-of-type(2) {
@@ -391,17 +391,24 @@ h1 {
         margin-left: 16px;
       }
     }
-  }
 
-  &-modal {
-    &__container {
-      background-image: $image--background;
+    &__col--large {
+      margin: 0;
     }
   }
 
-  &__actions--link {
-    color: $color--primary;
-    text-transform: uppercase;
+  &__icon {
+    &--blue-dark path {
+      fill: $color--primary;
+    }
+
+    &--blue-light path {
+      fill: $color--primary;
+    }
+
+    &--white path {
+      fill: $color--primary;
+    }
   }
 
   &__box {
@@ -420,18 +427,9 @@ h1 {
     }
   }
 
-  &__icon {
-    &--blue-dark path {
-      fill: $color--primary;
-    }
-
-    &--blue-light path {
-      fill: $color--primary;
-    }
-
-    &--white path {
-      fill: $color--primary;
-    }
+  &__actions--link {
+    color: $color--primary;
+    text-transform: uppercase;
   }
 
   &-cart {

@@ -467,6 +467,10 @@ h1 {
     }
   }
 
+  &-item-line__media--small {
+    height: 64px;
+  }
+
   &-discount-box {
     &__form {
       border: none;

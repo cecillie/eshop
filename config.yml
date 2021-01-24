@@ -29,6 +29,8 @@ menus:
       name: "Instagram"
       url: https://www.instagram.com/cecile.ricordeau/
       weight: 5
+theme:
+  - netlify
 snipcart:
   version: 3.0.27
   api_key: MDU3OWNmMmMtNDJhMi00MTViLTg3NWYtNjNkM2EzMmFmNjhhNjM3MDg2NzcwOTEzNDc4Nzc1

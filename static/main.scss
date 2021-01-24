@@ -501,6 +501,7 @@ h1 {
 
   &-order {
     &__details {
+      margin: 0;
       @media (min-width: 1024px) {
         max-width: 100%;
       }

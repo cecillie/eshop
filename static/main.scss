@@ -428,12 +428,17 @@ h1 {
     &--blue-light path {
       fill: $color--primary;
     }
+
+    &--white path {
+      fill: $color--primary;
+    }
   }
 
   &-cart {
     &__content {
       background-color: transparent;
     }
+
     &-header {
       background-color: $color--background;
       @media (max-width: 1024px) {
@@ -495,6 +500,12 @@ h1 {
   }
 
   &-order {
+    &__details {
+      @media (min-width: 1024px) {
+        max-width: 100%;
+      }
+    }
+
     &__invoice-number--highlight {
       color: $color--primary;
     }

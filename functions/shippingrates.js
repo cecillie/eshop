@@ -8,29 +8,28 @@ exports.handler = async ({ body, headers }) => {
       description: 'Retrait (Paris 20ème)',
       userDefinedId: 'shipping_30'
     }];
-
     // Montreuil
-    if (obj['content']['shippingAddressPostalCode'] == '93100') {
-      rate_tube = [{
-        cost: 2,
-        description: 'Livraison à vélo (Montreuil)',
-        userDefinedId: 'shipping_20',
-      }];
-    }
-
+    rate_montreuil = [{
+      cost: 2,
+      description: 'Livraison à vélo (Montreuil)',
+      userDefinedId: 'shipping_20',
+    }];
     // A3
     rate_tube = [{
       cost: 10,
       description: 'Colissimo (tube)',
       userDefinedId: 'colissimo_tube',
     }];
-
     // A5
     rate_enveloppe = [{
       cost: 8,
       description: 'Colissimo (enveloppe)',
       userDefinedId: 'colissimo_enveloppe',
     }];
+
+    if (obj.content.shippingAddressPostalCode == '93100') {
+      rates.push(rate_montreuil);
+    }
 
     return {
       statusCode: 200,

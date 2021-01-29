@@ -2,18 +2,20 @@ exports.handler = async ({ body, headers }) => {
   try {
     const obj = JSON.parse(body);
 
-    return {
-      statusCode: 200,
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        errors: [{
-          key: 'invalid_postal_code',
-          message: 'The postal code is invalid.'
-        }]
-      })
-    };
+    if (error) {
+      return {
+        statusCode: 200,
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          errors: [{
+            key: 'error_code',
+            message: 'Ceci est une erreur.'
+          }]
+        })
+      };
+    }
 
     return {
       statusCode: 200,
@@ -23,16 +25,15 @@ exports.handler = async ({ body, headers }) => {
       body: JSON.stringify({
         rates: [{
           cost: 10,
-          description: '10$ shipping',
+          description: 'Mode de livraison N°1',
           userDefinedId: 'shipping_10',
         }, {
           cost: 20,
-          description: '20$ shipping',
-          guaranteedDaysToDelivery: 5,
+          description: 'Mode de livraison N°2',
           userDefinedId: 'shipping_20',
         }, {
           cost: 30,
-          description: '30$ shipping',
+          description: 'Mode de livraison N°3',
           userDefinedId: 'shipping_30'
         }]
       })

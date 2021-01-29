@@ -2,21 +2,6 @@ exports.handler = async ({ body, headers }) => {
   try {
     const obj = JSON.parse(body);
 
-    if (error == 1) {
-      return {
-        statusCode: 200,
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          errors: [{
-            key: 'error_code',
-            message: 'Ceci est une erreur.'
-          }]
-        })
-      };
-    }
-
     return {
       statusCode: 200,
       headers: {
@@ -40,8 +25,16 @@ exports.handler = async ({ body, headers }) => {
     };
   } catch (err) {
     return {
-      statusCode: 400,
-      body: `Webhook Error: ${err.message}`,
+      statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        errors: [{
+          key: 'error_code',
+          message: 'Erreur.'
+        }]
+      })
     };
   }
 };

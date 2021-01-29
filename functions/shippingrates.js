@@ -2,7 +2,7 @@ exports.handler = async ({ body, headers }) => {
   try {
     const obj = JSON.parse(body);
 
-    if (error) {
+    if (error == 1) {
       return {
         statusCode: 200,
         headers: {
@@ -25,15 +25,15 @@ exports.handler = async ({ body, headers }) => {
       body: JSON.stringify({
         rates: [{
           cost: 10,
-          description: 'Mode de livraison N°1',
+          description: 'Mode de livraison 1',
           userDefinedId: 'shipping_10',
         }, {
           cost: 20,
-          description: 'Mode de livraison N°2',
+          description: 'Mode de livraison 2',
           userDefinedId: 'shipping_20',
         }, {
           cost: 30,
-          description: 'Mode de livraison N°3',
+          description: 'Mode de livraison 3',
           userDefinedId: 'shipping_30'
         }]
       })

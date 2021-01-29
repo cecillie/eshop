@@ -40,11 +40,15 @@ exports.handler = async ({ body }) => {
     // Colis selon le format
     let a3 = 0; let a5 = 0;
     for (var i = 0; i < obj.content.items.length; i++) {
-      if (obj.content.items[i].customFields[0].value == 'A3') {
-        a3 = a3 + 1;
-      }
-      if (obj.content.items[i].customFields[0].value == 'A5') {
-        a5 = a5 + 1;
+      for (var f = 0; f < obj.content.items[i].customFields.length; f++) {
+        if (obj.content.items[i].customFields[f].name == 'Format') {
+          if (obj.content.items[i].customFields[f].value == 'A3') {
+            a3 = a3 + 1;
+          }
+          if (obj.content.items[i].customFields[f].value == 'A5') {
+            a5 = a5 + 1;
+          }
+        }
       }
     }
     if (a3 >= 1 && a5 >= 1) {

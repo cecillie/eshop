@@ -209,10 +209,6 @@ h1 {
         margin-right: 0;
       }
     }
-
-    &__image {
-      box-shadow: 1px 5px 6px transparentize(darken($color--primary, 50%), 0.9);
-    }
   }
 
   &:not(:last-child) {

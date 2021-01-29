@@ -518,3 +518,9 @@ h1 {
     }
   }
 }
+
+// fix cart overflow
+.snipcart-cart-summary-side .snipcart-cart__content .snipcart-item-list {
+  /* overflow: overlay; */
+  overflow: auto;
+}

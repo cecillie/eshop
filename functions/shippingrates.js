@@ -26,25 +26,25 @@ exports.handler = async ({ body }) => {
     }];
     // Livraison à vélo
     const rate_montreuil = {
-      cost: 2,
+      cost: 0,
       description: 'Livraison à vélo (Montreuil)',
       userDefinedId: 'livraison_velo'
     };
     // Colissimo
     const rate_colissimo = {
-      cost: 10,
+      cost: 5,
       description: 'Colissimo',
       userDefinedId: 'livraison_colissimo'
     };
     // Lettre suivie
     const rate_lettre = {
-      cost: 8,
+      cost: 3,
       description: 'Lettre suivie',
       userDefinedId: 'livraison_lettre'
     };
     // Colissimo + Lettre suivie
     const rate_2 = {
-      cost: 18,
+      cost: 8,
       description: 'Colissimo + Lettre suivie (envoi séparé)',
       userDefinedId: 'livraison_colissimo_lettre'
     };

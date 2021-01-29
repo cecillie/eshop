@@ -12,7 +12,7 @@ exports.handler = async ({ body }) => {
         body: JSON.stringify({
           errors: [{
             key: 'error_country',
-            message: 'Livraison en France uniquement.'
+            message: 'La livraison n\'est possible qu\'en france pour le moment.'
           }]
         })
       };

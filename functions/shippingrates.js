@@ -12,7 +12,7 @@ exports.handler = async ({ body }) => {
         body: JSON.stringify({
           errors: [{
             key: 'error_country',
-            message: 'La livraison n\'est possible qu\'en france pour le moment.'
+            message: 'La livraison n\'est possible qu\'en France pour le moment.'
           }]
         })
       };
@@ -53,7 +53,7 @@ exports.handler = async ({ body }) => {
     if (obj.content.shippingAddressPostalCode == '93100') {
       rates.push(rate_montreuil);
     }
-    // Colis selon le format
+    // Quel(s) format(s)
     let a3 = 0; let a5 = 0;
     for (var i = 0; i < obj.content.items.length; i++) {
       for (var f = 0; f < obj.content.items[i].customFields.length; f++) {
@@ -67,6 +67,7 @@ exports.handler = async ({ body }) => {
         }
       }
     }
+    // Emballage selon le format
     if (a3 >= 1 && a5 >= 1) {
       rates.push(rate_2);
     } else if (a3 >= 1 && a5 == 0) {
@@ -92,8 +93,8 @@ exports.handler = async ({ body }) => {
       },
       body: JSON.stringify({
         errors: [{
-          key: 'error_code',
-          message: 'Impossible de déterminer les modes de livraison.'
+          key: 'error',
+          message: 'Impossible d\'afficher les modes de livraison.'
         }]
       })
     };

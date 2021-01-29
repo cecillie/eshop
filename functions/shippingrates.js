@@ -18,19 +18,19 @@ exports.handler = async ({ body, headers }) => {
     rate_colissimo = {
       cost: 10,
       description: 'Colissimo',
-      userDefinedId: 'colissimo'
+      userDefinedId: 'livraison_colissimo'
     };
     // Lettre suivie
     rate_lettre = {
       cost: 8,
       description: 'Lettre suivie',
-      userDefinedId: 'lettre'
+      userDefinedId: 'livraison_lettre'
     };
     // les 2
     rate_2 = {
       cost: 18,
-      description: 'Colissimo + Lettre suivie',
-      userDefinedId: 'colissimo_lettre'
+      description: 'Colissimo + Lettre suivie (envoi séparé)',
+      userDefinedId: 'livraison_colissimo_lettre'
     };
 
     // Montreuil

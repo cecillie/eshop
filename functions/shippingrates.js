@@ -5,6 +5,16 @@ exports.handler = async ({ body, headers }) => {
     return {
       statusCode: 200,
       body: JSON.stringify({
+        errors: [{
+          key: "invalid_postal_code",
+          message: "The postal code is invalid."
+        }]
+      })
+    };
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({
         rates: [{
           cost: 10,
           description: "10$ shipping",
@@ -19,7 +29,7 @@ exports.handler = async ({ body, headers }) => {
           description: "30$ shipping",
           userDefinedId: "shipping_30"
         }]
-      }),
+      })
     };
   } catch (err) {
     return {

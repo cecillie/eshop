@@ -1,45 +1,44 @@
-exports.handler = async ({ body, headers }) => {
+exports.handler = async ({ body }) => {
   try {
     const obj = JSON.parse(body);
 
     // Retrait dans le 20ème
-    rates = [{
+    let rates = [{
       cost: 0,
       description: 'Retrait (Paris 20ème)',
       userDefinedId: 'retrait'
     }];
     // Livraison à vélo
-    rate_montreuil = {
+    const rate_montreuil = {
       cost: 2,
       description: 'Livraison à vélo (Montreuil)',
       userDefinedId: 'livraison_velo'
     };
     // Colissimo
-    rate_colissimo = {
+    const rate_colissimo = {
       cost: 10,
       description: 'Colissimo',
       userDefinedId: 'livraison_colissimo'
     };
     // Lettre suivie
-    rate_lettre = {
+    const rate_lettre = {
       cost: 8,
       description: 'Lettre suivie',
       userDefinedId: 'livraison_lettre'
     };
-    // les 2
-    rate_2 = {
+    // Colissimo + Lettre suivie
+    const rate_2 = {
       cost: 18,
       description: 'Colissimo + Lettre suivie (envoi séparé)',
       userDefinedId: 'livraison_colissimo_lettre'
     };
 
-    // Montreuil
+    // Livraison à Montreuil
     if (obj.content.shippingAddressPostalCode == '93100') {
       rates.push(rate_montreuil);
     }
-    // Formats
-    let a3 = 0;
-    let a5 = 0;
+    // Colis selon le format
+    let a3 = 0; let a5 = 0;
     for (var i = 0; i < obj.content.items.length; i++) {
       if (obj.content.items[i].customFields[0].value == 'A3') {
         a3 = a3 + 1;
@@ -74,7 +73,7 @@ exports.handler = async ({ body, headers }) => {
       body: JSON.stringify({
         errors: [{
           key: 'error_code',
-          message: 'Erreur.'
+          message: 'Impossible de déterminer les modes de livraison.'
         }]
       })
     };

@@ -2,6 +2,9 @@ exports.handler = async ({ body, headers }) => {
   try {
     const obj = JSON.parse(body);
 
+    let found = obj.find(e => e.value === 'A3');
+    console.log(found);
+
     // default rates
     rates = [{
       cost: 0,

@@ -14,28 +14,46 @@ exports.handler = async ({ body, headers }) => {
       description: 'Livraison à vélo (Montreuil)',
       userDefinedId: 'livraison_velo'
     };
-    // Tube
-    rate_tube = {
+    // Colissimo
+    rate_colissimo = {
       cost: 10,
-      description: 'Colissimo (tube)',
-      userDefinedId: 'colissimo_tube'
+      description: 'Colissimo',
+      userDefinedId: 'colissimo'
     };
-    // Enveloppe
-    rate_enveloppe = {
+    // Lettre suivie
+    rate_lettre = {
       cost: 8,
-      description: 'Colissimo (enveloppe)',
-      userDefinedId: 'colissimo_enveloppe'
+      description: 'Lettre suivie',
+      userDefinedId: 'lettre'
+    };
+    // les 2
+    rate_2 = {
+      cost: 8,
+      description: 'Colissimo + Lettre suivie',
+      userDefinedId: 'colissimo_lettre'
     };
 
     // Montreuil
     if (obj.content.shippingAddressPostalCode == '93100') {
       rates.push(rate_montreuil);
     }
-    // Format A3
+    // Formats
+    let a3 = 0;
+    let a5 = 0;
     for (var i = 0; i < obj.content.items.length; i++) {
       if (obj.content.items[i].customFields[0].value == 'A3') {
-        rates.push(rate_tube);
+        a3 = a3 + 1;
       }
+      if (obj.content.items[i].customFields[0].value == 'A5') {
+        a5 = a5 + 1;
+      }
+    }
+    if (a3 >= 1 && a5 >= 1) {
+      rates.push(rate_2);
+    } else if (a3 >= 1 && a5 == 0) {
+      rates.push(rate_rate_colissimo);
+    } else if (a5 >= 1 && a3 == 0) {
+      rates.push(rate_rate_colissimo);
     }
 
     return {

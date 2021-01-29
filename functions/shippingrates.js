@@ -3,7 +3,13 @@ exports.handler = async ({ body, headers }) => {
     const obj = JSON.parse(body);
 
     let found = obj.find(e => e.value === 'A3');
-    console.log(found);
+    return {
+      statusCode: 200,
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(found)
+    };
 
     // default rates
     rates = [{

@@ -6,26 +6,26 @@ exports.handler = async ({ body, headers }) => {
     rates = [{
       cost: 0,
       description: 'Retrait (Paris 20ème)',
-      userDefinedId: 'shipping_30'
+      userDefinedId: 'retrait'
     }];
     // Montreuil
-    rate_montreuil = [{
+    rate_montreuil = {
       cost: 2,
       description: 'Livraison à vélo (Montreuil)',
-      userDefinedId: 'shipping_20',
-    }];
+      userDefinedId: 'livraison_velo'
+    };
     // A3
-    rate_tube = [{
+    rate_tube = {
       cost: 10,
       description: 'Colissimo (tube)',
-      userDefinedId: 'colissimo_tube',
-    }];
+      userDefinedId: 'colissimo_tube'
+    };
     // A5
-    rate_enveloppe = [{
+    rate_enveloppe = {
       cost: 8,
       description: 'Colissimo (enveloppe)',
-      userDefinedId: 'colissimo_enveloppe',
-    }];
+      userDefinedId: 'colissimo_enveloppe'
+    };
 
     if (obj.content.shippingAddressPostalCode == '93100') {
       rates.push(rate_montreuil);

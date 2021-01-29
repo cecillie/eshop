@@ -2,6 +2,22 @@ exports.handler = async ({ body }) => {
   try {
     const obj = JSON.parse(body);
 
+    // Livraison FR uniquement
+    if (obj.content.shippingAddressCountry != 'FR') {
+      return {
+        statusCode: 200,
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+          errors: [{
+            key: 'error_country',
+            message: 'Livraison en France uniquement.'
+          }]
+        })
+      };
+    }
+
     // Retrait dans le 20ème
     let rates = [{
       cost: 0,

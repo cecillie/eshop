@@ -28,7 +28,7 @@ exports.handler = async ({ body, headers }) => {
     };
     // les 2
     rate_2 = {
-      cost: 8,
+      cost: 18,
       description: 'Colissimo + Lettre suivie',
       userDefinedId: 'colissimo_lettre'
     };
@@ -51,9 +51,9 @@ exports.handler = async ({ body, headers }) => {
     if (a3 >= 1 && a5 >= 1) {
       rates.push(rate_2);
     } else if (a3 >= 1 && a5 == 0) {
-      rates.push(rate_rate_colissimo);
+      rates.push(rate_colissimo);
     } else if (a5 >= 1 && a3 == 0) {
-      rates.push(rate_rate_colissimo);
+      rates.push(rate_lettre);
     }
 
     return {

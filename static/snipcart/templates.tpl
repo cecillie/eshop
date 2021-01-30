@@ -38,8 +38,7 @@
             </div>
             <div class="snipcart-form__row">
               <div class="snipcart-form__field snipcart-form__cell--tidy">
-                <snipcart-label class="snipcart__font--tiny" for="postalCode">{{ $localize('address_form.postalCode') }}
-                </snipcart-label>
+                <snipcart-label class="snipcart__font--tiny" for="postalCode">{{ $localize('address_form.postalCode') }}</snipcart-label>
                 <snipcart-input name="postalCode"></snipcart-input>
                 <snipcart-error-message name="postalCode"></snipcart-error-message>
               </div>
@@ -50,8 +49,7 @@
               </div>
             </div>
             <div class="snipcart-form__field">
-              <snipcart-label class="snipcart__font--tiny" for="country">{{ $localize('address_form.country') }}
-              </snipcart-label>
+              <snipcart-label class="snipcart__font--tiny" for="country">{{ $localize('address_form.country') }}</snipcart-label>
               <snipcart-typeahead type="dropdown" name="country" autocomplete="country"></snipcart-typeahead>
               <snipcart-error-message name="country"></snipcart-error-message>
             </div>

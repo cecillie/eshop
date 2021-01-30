@@ -55,6 +55,26 @@
           </fieldset>
         </div>
       </address-fields>
+      <!-- shipping rate item -->
+      <!--
+      <shipping-rates-list-item>
+        <div class="root">
+          <li class="snipcart-shipping-rates-list-item snipcart__font--secondary snipcart__font--bold">
+            <span>
+              <snipcart-radio name="selectedRate" class="snipcart-shipping-rates-list-item__label--highlight" :value="slug" :id="`selectedRate-${slug}`">
+                {{ description }}
+              </snipcart-radio>
+            </span>
+            <span v-if="cost > 0" class="snipcart-shipping-rates-list-item--right snipcart-shipping-rates-list-item__price snipcart__font--black">
+              {{ cost | money(currency) }}
+            </span>
+            <span v-else class="snipcart-shipping-rates-list-item--right snipcart-shipping-rates-list-item__price snipcart__font--black">
+              Gratuit
+            </span>
+          </li>
+        </div>
+      </shipping-rates-list-item>
+      -->
     </div>
   </body>
 </html>

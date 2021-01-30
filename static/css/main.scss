@@ -393,6 +393,10 @@ h1 {
     }
   }
 
+  &-loading-overlay__pending svg path.active {
+    fill: $color--primary;
+  }
+
   &__icon {
     &--blue-dark path {
       fill: $color--primary;
@@ -482,6 +486,20 @@ h1 {
   }
 
   &-shipping-rates-list-item--highlight {
+    border: 1px solid $color--primary;
+  }
+
+  &-shipping-rates-list-item:focus-within {
+    border: 1px solid $color--primary;
+  }
+
+  &-form-radio:checked+label:before {
+    background: none;
+    background-color: $color--primary;
+    border: none;
+  }
+
+  &-payment-form--focused {
     border: 1px solid $color--primary;
   }
 

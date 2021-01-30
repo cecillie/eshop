@@ -30,8 +30,7 @@
           <fieldset class="snipcart-form__set">
             <div class="snipcart-form__field">
               <div class="snipcart-form__field snipcart-form__cell--large">
-                <snipcart-label class="snipcart__font--tiny" for="address1">{{ $localize('address_form.address1') }}
-                </snipcart-label>
+                <snipcart-label class="snipcart__font--tiny" for="address1">{{ $localize('address_form.address1') }}</snipcart-label>
                 <snipcart-input name="address1"></snipcart-input>
                 <snipcart-error-message name="address1"></snipcart-error-message>
               </div>

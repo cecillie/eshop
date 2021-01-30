@@ -398,12 +398,14 @@ h1 {
   }
 
   &__icon {
-    &--blue-dark path {
-      fill: $color--primary;
-    }
+    &--blue {
+      &-dark path {
+        fill: $color--primary;
+      }
 
-    &--blue-light path {
-      fill: $color--primary;
+      &-light path {
+        fill: $color--primary;
+      }
     }
 
     &--white path {
@@ -454,10 +456,10 @@ h1 {
 
     &-summary {
       background-color: transparent;
-    }
 
-    &-summary-fees__tax-notice path {
-      fill: $color--primary;
+      &-fees__tax-notice path {
+        fill: $color--primary;
+      }
     }
 
     &-button {
@@ -485,18 +487,31 @@ h1 {
     }
   }
 
-  &-shipping-rates-list-item--highlight {
-    border: 1px solid $color--primary;
-  }
-
-  &-shipping-rates-list-item:focus-within {
-    border: 1px solid $color--primary;
-  }
-
-  &-form-radio:checked+label:before {
-    background: none;
-    background-color: $color--primary;
+  &-shipping-rates-list-item {
     border: none;
+
+    &--highlight {
+      //border: 1px solid $color--primary;
+      border: none;
+    }
+
+    &:focus-within {
+      //border: 1px solid $color--primary;
+      border: none;
+    }
+  }
+
+  &-form {
+      /*&__select:focus {
+        outline: none;
+        border: 1px solid $color--primary;
+      }*/
+
+      &-radio:checked+label:before {
+      background: none;
+      background-color: $color--primary;
+      border: none;
+    }
   }
 
   &-payment-form--focused {

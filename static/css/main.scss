@@ -2,9 +2,13 @@
 
 // Variables
 
-$color--default: #000000;
+$color--default: #313131;
 $color--primary: #FAAC8A;
+$color--secondary: #F3F3F3;
 $color--background: #FFFFFF;
+$color--link: $color--primary;
+$color--button-text: $color--background;
+$color--button-background: $color--primary;
 $layout--max-width: 1000px;
 $size--unit: 0.5rem;
 $image--background: url('/images/background.png');
@@ -48,34 +52,6 @@ h1 {
 @mixin lg {
   @media (min-width: 769px) {
     @content;
-  }
-}
-
-@mixin button-hover($color) {
-  position: relative;
-  z-index: 2;
-
-  &:hover {
-    transition: 0.2s all;
-    background-color: darken($color, 10%);
-    &:before {
-      transform: scale(1.1, 1.5);
-    }
-  }
-
-  &:before {
-    content: " ";
-    position: absolute;
-    background-color: $color;
-    top: 0;
-    left: 0;
-    border-radius: 4px;
-    width: 100%;
-    height: 100%;
-    opacity: 0.4;
-    z-index: -1;
-    transform: scale(1);
-    transition: all 0.3s cubic-bezier(0.16, 0.8, 0.66, 1.54);
   }
 }
 
@@ -298,9 +274,9 @@ h1 {
 
 .buy-button {
   cursor: pointer;
-  color: #fff;
-  background-color: $color--primary;
-  border: 1px solid $color--primary;
+  color: $color--button-text;
+  background-color: $color--button-background;
+  border: 1px solid $color--button-background;
   border-radius: 5px;
   font-weight: 700;
   text-transform: uppercase;
@@ -363,193 +339,239 @@ h1 {
   }
 }
 
-// Snipcart
+// Fix Snipcart style
+
+/*
+$color--default: #313131;
+$color--primary: #FAAC8A;
+$color--secondary: #F3F3F3;
+$color--background: #FFFFFF;
+$color--link: $color--default;
+$color--button-text: $color--default;
+$color--button-background: $color--primary;
+$size--unit: 0.5rem;
+$image--background: url('/images/background.png');
+*/
 
 .snipcart {
   font-family: 'Roboto Condensed', sans-serif;
   font-size: $size--unit * 1.9;
   color: $color--default;
 
+  // background color / image
   &-modal__container {
-    background-image: $image--background;
+    background-color: $color--secondary;
+    @if $image--background {
+      background-image: $image--background;
+    }
   }
 
   &-layout {
     background-color: transparent;
-
-    &__header {
-      min-height: 80px;
-    }
-
+    // columns margin
     &__col:nth-of-type(2) {
       @media (min-width: 1024px) {
         margin: 0;
         margin-left: 16px;
       }
     }
-
     &__col--large {
       margin: 0;
     }
   }
 
+  // loader color
   &-loading-overlay__pending svg path.active {
     fill: $color--primary;
   }
 
+  &-cart {
+    &-header {
+      // replace default background color
+      background-color: $color--background;
+      // fix margin-bottom (for first badge)
+      @media (max-width: 1024px) {
+        margin: 0 auto 26px auto;
+      }
+    }
+
+    // disable default background color
+    &__content {
+      background-color: transparent;
+    }
+
+    // fix side cart header color
+    &__secondary-header {
+      background-color: $color--background;
+    }
+
+    &-button {
+      color: $color--button-text;
+      // replace gradient colors
+      &--highlight {
+        background-image: none;
+        background-color: $color--button-background;
+      }
+    }
+
+    // cart summary in order
+    &-summary {
+      // disable default background color
+      background-color: transparent;
+      // fees icon ("?") color
+      &-fees__tax-notice path {
+        fill: $color--primary;
+      }
+    }
+  }
+
+  // fix product image height on mobile
+  &-item-line__media--small {
+    height: 64px;
+  }
+
+  // discount form
+  &-discount-box {
+    &__form {
+      border: none;
+    }
+    &__submit {
+      color: $color--default;
+    }
+  }
+
+  // cart button arrow color
+  &-cart-button--highlight &__icon path {
+    fill: $color--button-text;
+  }
+
+  // checkout icons color
   &__icon {
     &--blue {
       &-dark path {
         fill: $color--primary;
       }
-
       &-light path {
         fill: $color--primary;
       }
     }
-
     &--white path {
       fill: $color--primary;
     }
   }
 
+  // fix checkout step padding on desktop
+  &-checkout-step {
+    @media (min-width: 1024px) {
+      padding-bottom: 6px;
+    }
+  }
+
+  // checkout step boxes
   &__box {
+    // box background color
+    &--gray {
+      background-color: $color--background;
+    }
+    // step number
     &--badge {
       border: 1px solid $color--background;
       background-color: $color--background;
     }
-
     &--badge-highlight {
       background: $color--background;
       color: $color--primary;
     }
-
-    &--gray {
-      background-color: $color--background;
-    }
   }
 
+  // checkout action link (ie: "update")
   &__actions--link {
-    color: $color--primary;
-    text-transform: uppercase;
+    color: $color--link;
   }
 
-  &-cart {
-    &__content {
-      background-color: transparent;
-    }
-
-    &-header {
-      background-color: $color--background;
-      @media (max-width: 1024px) {
-        margin: 0 auto 26px auto;
-      }
-
-      &__title {
-        text-transform: uppercase;
-      }
-    }
-
-    &__secondary-header {
-      background-color: $color--background;
-    }
-
-    &-summary {
-      background-color: transparent;
-
-      &-fees__tax-notice path {
-        fill: $color--primary;
-      }
-    }
-
-    &-button {
-      border-radius: 6px;
-      text-transform: uppercase;
-
-      &--highlight {
-        background-image: none;
-        background-color: $color--primary;
-      }
-    }
-  }
-
-  &-item-line__media--small {
-    height: 64px;
-  }
-
-  &-discount-box {
-    &__form {
-      border: none;
-    }
-
-    &__submit {
-      color: $color--primary;
-    }
-  }
-
+  // fix shipping rates list style
   &-shipping-rates-list-item {
     border: none;
-
     &--highlight {
-      //border: 1px solid $color--primary;
       border: none;
     }
-
     &:focus-within {
-      //border: 1px solid $color--primary;
       border: none;
     }
   }
 
+  // radio form
   &-form {
-      /*&__select:focus {
-        outline: none;
-        border: 1px solid $color--primary;
-      }*/
-
-      &-radio:checked+label:before {
+    &-radio+label:before {
+      background: $color--background;
+      border: 1px solid $color--default;
+    }
+    &-radio:checked+label:before {
       background: none;
       background-color: $color--primary;
-      border: none;
+      border: 1px solid $color--primary;
     }
   }
 
-  &-payment-form--focused {
-    border: 1px solid $color--primary;
-  }
-
+  // sign-in form
   &-signin {
     &__register-link {
-      color: $color--primary;
+      color: $color--link;
     }
-
     &__forgot-password {
-      color: $color--primary;
+      color: $color--link;
     }
   }
 
+  // register form
   &-register {
     &__register-link {
-      color: $color--primary;
+      color: $color--link;
     }
   }
 
   &-order {
+    // fix product image width
+    &__product-image {
+      width: auto;
+    }
+    // fix order details width
     &__details {
       margin: 0;
       @media (min-width: 1024px) {
         max-width: 100%;
       }
     }
-
+    // invoice number color
     &__invoice-number--highlight {
-      color: $color--primary;
+      color: $color--default;
     }
+  }
+
+  // fix cart overflow (Firefox)
+  &-cart-summary-side &-cart__content &-item-list {
+    overflow: auto;
   }
 }
 
-// fix cart overflow
-.snipcart-cart-summary-side .snipcart-cart__content .snipcart-item-list {
-  /* overflow: overlay; */
-  overflow: auto;
+// Snipcart custom style
+
+.snipcart {
+  &-cart {
+    &-header {
+      &__title {
+        text-transform: uppercase;
+      }
+    }
+    &-button {
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+  }
+  &__actions--link {
+    text-transform: uppercase;
+  }
+  &-orders__title {
+    text-transform: uppercase;
+  }
 }

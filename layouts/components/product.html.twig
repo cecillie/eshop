@@ -4,7 +4,14 @@
         <div class="product">
           <div class="product__information">
             <h2 class="product__title">{{ product.name }}</h2>
-            <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" class="product__image" width="{{ image.width }}" height="{{ image.height }}" loading="lazy">
+            <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true, "pageDots": false }'>
+              <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
+              {%- if product.images is defined ~%}
+                {%- for img in product.images ~%}
+              <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
+                {%- endfor ~%}
+              {%- endif ~%}
+            </div>
             <div class="product__description">{{ product.content }}</div>
             <div class="product__details">
               <div>
@@ -40,5 +47,12 @@
               </button>
             </div>
           </div>
-          <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" class="product__image" width="{{ image.width }}" height="{{ image.height }}" loading="lazy">
+          <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true, "pageDots": false }'>
+            <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
+            {%- if product.images is defined ~%}
+              {%- for img in product.images ~%}
+            <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
+              {%- endfor ~%}
+            {%- endif ~%}
+          </div>
         </div>

@@ -168,6 +168,46 @@ h1 {
   font-size: $size--unit * 2.5;
 }
 
+.carousel {
+  flex: 1;
+  height: 100%;
+  width: 100%;
+  max-width: 300px;
+  max-height: 425px;
+  background-size: cover;
+  box-shadow: 1px 5px 6px transparentize(darken($color--primary, 50%), 0.9);
+  margin-right: auto;
+  @include sm {
+    &:last-child {
+      display: none;
+    }
+  }
+  @include md {
+    &:last-child {
+      display: none;
+    }
+  }
+  @include lg {
+    &:not(:last-child) {
+      display: none;
+    }
+  }
+}
+
+.carousel img {
+  /*display: block;*/
+  /*width: 300px;*/
+  width: 100%;
+}
+
+.flickity-button {
+  background: transparent;
+}
+
+.flickity-button:disabled {
+  display: none;
+}
+
 .product {
   display: flex;
   align-items: center;

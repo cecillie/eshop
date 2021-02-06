@@ -205,11 +205,13 @@ h1 {
 
 .carousel.is-fullscreen {
   height: 100%;
+  width: 100%;
   max-width: none;
   max-height: none;
 }
 
-.carousel-cell {
+.carousel.is-fullscreen img {
+  width: auto;
   height: 100%;
 }
 

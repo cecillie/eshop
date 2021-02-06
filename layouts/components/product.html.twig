@@ -6,9 +6,9 @@
             <h2 class="product__title">{{ product.name }}</h2>
             <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true, "pageDots": false, "fullscreen": true }'>
               <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
-              {%- if product.images is defined ~%}
-                {%- for img in product.images ~%}
-              <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
+              {%- if product.gallery is defined ~%}
+                {%- for img in product.gallery ~%}
+                  <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
                 {%- endfor ~%}
               {%- endif ~%}
             </div>
@@ -49,8 +49,8 @@
           </div>
           <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true, "pageDots": false, "fullscreen": true }'>
             <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
-            {%- if product.images is defined ~%}
-              {%- for img in product.images ~%}
+            {%- if product.gallery is defined ~%}
+              {%- for img in product.gallery ~%}
             <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
               {%- endfor ~%}
             {%- endif ~%}

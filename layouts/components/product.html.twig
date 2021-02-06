@@ -1,34 +1,58 @@
+{% set replaceId = product.section ~ '/' %}
+{% set productId = product.id|replace({(replaceId):''}) %}
+{% set image = asset(product.image) %}
         <div class="product">
           <div class="product__information">
             <h2 class="product__title">{{ product.name }}</h2>
-            <img src="{{ product.image|default('images/default.png') }}" alt="Image de {{ product.name }}" class="product__image">
-            <p class="product__description">{{ product.content }}</p>
-            <div>
-              <label for="{{ product.id }}-size">Taille :</label>
-              <select id="{{ product.id }}-size" class="size">
-                {%- for variant in product.variants ~%}
-                <option value="{{ variant.value }}">{{ variant.html }}</option>
+            <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true, "pageDots": false, "fullscreen": true }'>
+              <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
+              {%- if product.gallery is defined ~%}
+                {%- for img in product.gallery ~%}
+                  <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
                 {%- endfor ~%}
-              </select><br>
-              <label for="{{ product.id }}-qty">Quantité :</label>
-              <input type="number" id="{{ product.id }}-qty" class="qty" min="1" value="1" />
-              <button
-                class="buy-button snipcart-add-item"
+              {%- endif ~%}
+            </div>
+            <div class="product__description">{{ product.content }}</div>
+            <div class="product__details">
+              <div>
+                {%- for variant in product.variants ~%}
+                <label for="{{ productId }}-{{ variant.name|lower }}">{{ variant.name }}</label>
+                <select id="{{ productId }}-{{ variant.name|lower }}" class="{{ variant.name|lower }}">
+                  {%- for option in variant.options ~%}
+                  <option value="{{ option.value }}">{{ option.html }}</option>
+                  {%- endfor ~%}
+                </select>
+                {%- endfor ~%}
+              </div>
+              <div>
+                <label for="{{ productId }}-qty">Quantité</label>
+                <input type="number" id="{{ productId }}-qty" class="qty" min="1" value="1" />
+              </div>
+              <button class="buy-button snipcart-add-item"
+                data-item-id="{{ productId }}"
+                data-item-price="{{ product.price }}"
+                data-item-url="{{ url(product,{canonical:true}) }}"
+                data-item-name="{{ product.name }}"
+                {%- if product.description is defined and product.description %}data-item-description="{{ product.description }}"{% endif ~%}
+                data-item-image="{{ asset(product.image,{fingerprint:false})|url({canonical:true}) }}"
                 data-item-quantity="1"
                 data-item-max-quantity="99"
                 data-item-stackable="auto"
-                data-item-id="{{ product.id }}"
-                data-item-name="{{ product.name }}"
-                data-item-price="{{ product.price }}"
-                data-item-image="{{ product.image }}"
-                data-item-url="{{ url(product) }}"
-                data-item-description="{{ product.content|striptags }}"
-                data-item-custom1-name="Taille"
-                data-item-custom1-options="{{ product.variants|map(v => "#{v.value}[#{v.price}]")|join('|') }}"
+                {%- for variant in product.variants ~%}
+                data-item-custom{{ loop.index }}-name="{{ variant.name }}"
+                data-item-custom{{ loop.index }}-options="{{ variant.options|map(v => "#{v.value}[#{v.price}]")|join('|') }}"
+                {%- endfor ~%}
               >
-                Commmander
+                Ajouter au panier
               </button>
             </div>
           </div>
-          <img src="{{ product.image|default('images/default.png') }}" alt="Image de {{ product.name }}" class="product__image">
+          <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true, "pageDots": false, "fullscreen": true }'>
+            <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
+            {%- if product.gallery is defined ~%}
+              {%- for img in product.gallery ~%}
+            <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
+              {%- endfor ~%}
+            {%- endif ~%}
+          </div>
         </div>

@@ -1,8 +1,11 @@
-{% extends '_default/page.html.twig' %}
+{% extends 'page.html.twig' %}
 
 {% block content %}
+      <div class="hero">
+        {{~ page.content ~}}
+      </div>
       <div class="products">
-        {%- for product in site.pages.all|filterBy('section', 'products')|sortByWeight ~%}
+        {%- for product in site.pages.all|filter_by('section', 'products')|sort_by_weight ~%}
           {%~ include 'components/product.html.twig' with {'product': product} only ~%}
         {%- endfor ~%}
       </div>

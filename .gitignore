@@ -1,3 +1,6 @@
 _site
 .cecil
 .cache
+vendor
+themes
+!static/themes

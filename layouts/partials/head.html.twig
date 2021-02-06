@@ -1,0 +1,26 @@
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="{{ page.description|default(site.description) }}" />
+    {%~ include 'partials/metatags.html.twig' ~%}
+    {#- fonts ~#}
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    {%- for font in site.fonts ~%}
+    <link href="{{ font.url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="{{ font.url }}"></noscript>
+    {%- endfor ~%}
+    {#- Snipcart ~#}
+    <link href="{{ asset('snipcart/v' ~ site.snipcart.version ~ '.css')|url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    {#- main ~#}
+    {#-<link rel="stylesheet" href="{{ asset('css/main.scss')|url }}" />~#}
+    <style>
+      {{ asset('css/main.scss')|inline }}
+    </style>
+    {#-<script src="{{ asset('/js/main.js')|url }}"></script>~#}
+    <script>
+      {{ asset('/js/main.js')|inline }}
+    </script>
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>

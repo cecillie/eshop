@@ -1,0 +1,23 @@
+    <header class="header">
+      <div class="header__container">
+        <div class="header__menu">
+          {%- for item in site.menus.main|sort_by_weight ~%}
+          <span class="item__{{ item.weight }} item__nav{% if url(item.url) == url(page) %} item__current{% endif %}">
+            <a href="{{ url(item.url) }}">{{ item.name }}</a>
+          </span>
+          {%- endfor ~%}
+        </div>
+        <a class="header__branding" href="{{ url() }}">
+          <img src="{{ asset('images/logo.svg')|url }}" width="200" alt="Logo de {{ site.title }}" class="header__logo">
+        </a>
+        <div class="header__actions">
+          {%- if site.snipcart.customer|default(false) ~%}
+          <button class="snipcart-customer-signin login-button">Votre compte</button>
+          {%- endif ~%}
+          <button class="header__checkout snipcart-checkout">
+            <img src="{{ asset('images/shopping-bag.svg')|url }}" width="28" height="28" alt="Shopping cart" class="header__checkout-fill">
+            <span class="snipcart-items-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>

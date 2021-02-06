@@ -1,19 +1,42 @@
-title: "cecillie shop"
+title: "Paysages à vélo"
 baseline: "La boutique de cecillie."
 baseurl: https://shop.cecillie.fr/
-description: "La boutique de cecillie."
+description: "Paysages à vélo, la boutique de cecillie."
 author:
-  name: Cécile Ricordeau
-  url: https://cecillie.fr
+  name: studio cecillie
+  url: https://studio.cecillie.fr
 languages:
-  - code: en
-    name: English
-    locale: en_US
-  - code: fr
+  - code: fr-FR
     name: Français
     locale: fr_FR
-language: fr
+language: fr-FR
+menus:
+  main:
+    - id: index
+      enabled: false
+    - id: products
+      enabled: false
+  footer:
+    - id: newsletter
+      name: "Newsletter"
+      url: https://mailchi.mp/a7fb0a1ad278/nl-shop-cecillie/
+      weight: 3
+    - id: twitter
+      name: "Twitter"
+      url: https://twitter.com/onibd
+      weight: 4
+    - id: instagram
+      name: "Instagram"
+      url: https://www.instagram.com/cecile.ricordeau/
+      weight: 5
+fonts:
+  - url: https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap
+  - url: https://fonts.googleapis.com/css2?family=Scope+One&display=swap
+  - url: https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap
+theme:
+  - netlify
 snipcart:
   version: 3.0.27
-  api_key: MDU3OWNmMmMtNDJhMi00MTViLTg3NWYtNjNkM2EzMmFmNjhhNjM3MDg2NzcwOTEzNDc4Nzc1
+  api_key: ZTVlZWYzMTgtYjBkYS00MmE2LTgwNmYtMTcxZjliNWUxYjhmNjM3NDc0MzIyNTY4MjM5MzY2
+  customer: true
 #googleanalytics: 1234

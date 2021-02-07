@@ -2,7 +2,7 @@ const livraison_velo = require('./data/rates/livraison_velo.json');
 const livraison_colissimo = require('./data/rates/livraison_colissimo.json');
 const livraison_lettre = require('./data/rates/livraison_lettre.json');
 const livraison_colissimo_lettre = require('./data/rates/livraison_colissimo_lettre.json');
-const retrait_paris_20 = require('./data/rates/retrait_paris_20.json');
+const retrait_atelier = require('./data/rates/retrait_atelier.json');
 
 function createResponse(response) {
   return {
@@ -30,7 +30,7 @@ exports.handler = async ({ body }) => {
     }
 
     // Retrait dans Paris 20ème
-    rates.push(retrait_paris_20);
+    rates.push(retrait_atelier);
     // Livraison à Montreuil
     if (obj.content.shippingAddressPostalCode == '93100') {
       rates.push(livraison_velo);

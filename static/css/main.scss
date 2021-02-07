@@ -418,20 +418,26 @@ $image--background: url('/images/background.png');
   &-layout {
     background-color: transparent;
     // columns margin
-    &__col:nth-of-type(2) {
-      @media (min-width: 1024px) {
-        margin: 0;
-        margin-left: 16px;
+    &__col {
+      &:nth-of-type(2) {
+        @media (min-width: 1024px) {
+          margin: 0;
+          margin-left: 16px;
+        }
       }
-    }
-    &__col--large {
-      margin: 0;
+      &--large {
+        margin: 0;
+      }
     }
   }
 
   // loader color
   &-loading-overlay__pending svg path.active {
     fill: $color--primary;
+  }
+
+  &-empty-cart {
+    color: $color--default;
   }
 
   &-cart {
@@ -460,6 +466,19 @@ $image--background: url('/images/background.png');
       &--highlight {
         background-image: none;
         background-color: $color--button-background;
+        // cart button arrow color
+        & .snipcart__icon path {
+          fill: $color--button-text;
+        }
+      }
+
+      // secondary button
+      &--secondary {
+        color: $color--default;
+        background-color: $color--secondary;
+        & .snipcart__icon path {
+          fill: $color--default;
+        }
       }
     }
 
@@ -487,11 +506,6 @@ $image--background: url('/images/background.png');
     &__submit {
       color: $color--default;
     }
-  }
-
-  // cart button arrow color
-  &-cart-button--highlight &__icon path {
-    fill: $color--button-text;
   }
 
   // checkout icons color
@@ -526,10 +540,10 @@ $image--background: url('/images/background.png');
     &--badge {
       border: 1px solid $color--background;
       background-color: $color--background;
-    }
-    &--badge-highlight {
-      background: $color--background;
-      color: $color--primary;
+      &-highlight {
+        background: $color--background;
+        color: $color--primary;
+      }
     }
   }
 
@@ -551,14 +565,16 @@ $image--background: url('/images/background.png');
 
   // radio form
   &-form {
-    &-radio+label:before {
-      background: $color--background;
-      border: 1px solid $color--default;
-    }
-    &-radio:checked+label:before {
-      background: none;
-      background-color: $color--primary;
-      border: 1px solid $color--primary;
+    &-radio {
+      &+label:before {
+        background: $color--background;
+        border: 1px solid $color--default;
+      }
+      &:checked+label:before {
+        background: none;
+        background-color: $color--primary;
+        border: 1px solid $color--primary;
+      }
     }
   }
 

@@ -1,8 +1,10 @@
-          <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false, "fullscreen": true }'>
-            <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}">
+          <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false, "fullscreen": true, "lazyLoad": true }'>
+            {#-<img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}">~#}
+            <img src="/images/default.png" data-flickity-lazyload="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy" />
             {%- if product.gallery is defined ~%}
               {%- for img in product.gallery ~%}
-            <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}">
+            {#-<img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}">~#}
+            <img src="/images/default.png" data-flickity-lazyload="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}" />
               {%- endfor ~%}
             {%- endif ~%}
           </div>

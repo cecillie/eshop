@@ -11,6 +11,11 @@
     {%- endfor ~%}
     {#- Snipcart ~#}
     <link href="{{ asset('snipcart/v' ~ site.snipcart.version ~ '.css')|url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    {#- flickity ~#}
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
     {#- main ~#}
     {#-<link rel="stylesheet" href="{{ asset('css/main.scss')|url }}" />~#}
     <style>
@@ -20,7 +25,3 @@
     <script>
       {{ asset('/js/main.js')|inline }}
     </script>
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css">
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>

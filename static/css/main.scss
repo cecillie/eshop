@@ -158,14 +158,16 @@ h1 {
   padding-bottom: 3rem;
 }
 
-.hero h1 {
-  font-size: $size--unit * 2.5;
-  text-transform: uppercase;
-}
+.hero {
+  & h1 {
+    font-size: $size--unit * 2.5;
+    text-transform: uppercase;
+  }
 
-.hero p {
-  font-family: 'Scope One', serif;
-  font-size: $size--unit * 2.5;
+  & p, p > a {
+    font-family: 'Scope One', serif;
+    font-size: $size--unit * 2.5;
+  }
 }
 
 .carousel {

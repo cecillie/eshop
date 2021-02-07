@@ -5,10 +5,10 @@
           <div class="product__information">
             <h2 class="product__title">{{ product.name }}</h2>
             <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true, "pageDots": false, "fullscreen": true }'>
-              <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
+              <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}">
               {%- if product.gallery is defined ~%}
                 {%- for img in product.gallery ~%}
-                  <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
+                  <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}">
                 {%- endfor ~%}
               {%- endif ~%}
             </div>
@@ -26,7 +26,7 @@
               </div>
               <div>
                 <label for="{{ productId }}-qty">Quantité</label>
-                <input type="number" id="{{ productId }}-qty" class="qty" min="1" value="1" />
+                <input type="number" id="{{ productId }}-qty" class="qty" min="1" max="10" value="1" />
               </div>
               <button class="buy-button snipcart-add-item"
                 data-item-id="{{ productId }}"
@@ -48,10 +48,10 @@
             </div>
           </div>
           <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true, "pageDots": false, "fullscreen": true }'>
-            <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
+            <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}">
             {%- if product.gallery is defined ~%}
               {%- for img in product.gallery ~%}
-            <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy">
+            <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}">
               {%- endfor ~%}
             {%- endif ~%}
           </div>

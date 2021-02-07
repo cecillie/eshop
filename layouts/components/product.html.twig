@@ -4,7 +4,7 @@
         <div class="product">
           <div class="product__information">
             <h2 class="product__title">{{ product.name }}</h2>
-            <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true, "pageDots": false, "fullscreen": true }'>
+            <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false, "fullscreen": true }'>
               <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}">
               {%- if product.gallery is defined ~%}
                 {%- for img in product.gallery ~%}
@@ -47,7 +47,7 @@
               </button>
             </div>
           </div>
-          <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "autoPlay": true, "pageDots": false, "fullscreen": true }'>
+          <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false, "fullscreen": true }'>
             <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}">
             {%- if product.gallery is defined ~%}
               {%- for img in product.gallery ~%}

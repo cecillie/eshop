@@ -20,6 +20,7 @@ exports.handler = async ({ body }) => {
     let rates = [];
 
     // Livraison FR uniquement
+    // https://abbreviations.yourdictionary.com/articles/list-of-europe-country-codes.html
     if (obj.content.shippingAddressCountry != 'FR') {
       return createResponse({
         errors: [{

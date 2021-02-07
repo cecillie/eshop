@@ -4,14 +4,7 @@
         <div class="product">
           <div class="product__information">
             <h2 class="product__title">{{ product.name }}</h2>
-            <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false, "fullscreen": true }'>
-              <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}">
-              {%- if product.gallery is defined ~%}
-                {%- for img in product.gallery ~%}
-                  <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}">
-                {%- endfor ~%}
-              {%- endif ~%}
-            </div>
+            {% include 'components/carrousel.html.twig' with {'product':product,'image':image} %}
             <div class="product__description">{{ product.content }}</div>
             <div class="product__details">
               <div>
@@ -47,12 +40,5 @@
               </button>
             </div>
           </div>
-          <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false, "fullscreen": true }'>
-            <img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}">
-            {%- if product.gallery is defined ~%}
-              {%- for img in product.gallery ~%}
-            <img src="{{ img|default('images/default.png') }}" alt="Image de {{ product.name }}">
-              {%- endfor ~%}
-            {%- endif ~%}
-          </div>
+          {% include 'components/carrousel.html.twig' with {'product':product,'image':image} %}
         </div>

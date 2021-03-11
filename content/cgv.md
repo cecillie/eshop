@@ -1,5 +1,5 @@
 ---
-title: Mentions légales et CGV
+title: Mentions légales & CGV
 menu:
   footer:
     weight: 1
@@ -18,12 +18,12 @@ Adresse e-mail de contact : [velo@cecillie.fr](mailto:velo@cecillie.fr)
 
 ## ☑ SITE
 
-Reponsable de la publication : Cécile Ricordeau  
-Contact : velo@cecillie.fr  
+Reponsable de la publication : [Cécile Ricordeau](https://www.cecillie.fr/)
+Contact : [velo@cecillie.fr](mailto:velo@cecillie.fr) 
 Hébergement : Gandi  
-Plate-forme : Cecil, Snipcart  
-Paiement sécurisé : Stripe  
-Réalisation : Arnaud Ligny
+Plate-forme : [Cecil](https://cecil.app/), Snipcart
+Paiement sécurisé : Stripe
+Réalisation : [Arnaud Ligny](https://arnaudligny.fr/)
 
 ## ☑ PROPRIÉTÉ INTELLECTUELLE
 
@@ -32,7 +32,7 @@ L'ensemble de ce site relève de la législation française et internationale su
 ## ☑ PROTECTION DES DONNÉES
 
 Le site tel qu’il a été conçu, n’a pas pour vocation de collecter les données personnelles de ses visiteurs. Les seules informations enregistrées sont celles fournies volontairement par les internautes afin de permettre l'achat de produits, ou de s'inscrire à la newsletter. Le studio cecillie est l'unique destinataire de ces données personnelles, aucune ne saurait être cédée à des tiers ou des entreprises commerciales.  
-Conformément aux dispositions de la Loi du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, modifiée par la Loi du 6 août 2004, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Ce droit peut être exercé en s’adressant par e-mail à : velo@cecillie.fr.
+Conformément aux dispositions de la Loi du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, modifiée par la Loi du 6 août 2004, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Ce droit peut être exercé en s’adressant par e-mail à : [velo@cecillie.fr](mailto:velo@cecillie.fr).
 
 ## ☑ COOKIES
 
@@ -62,7 +62,7 @@ Le site recourt à l'usage de cookies dans le but d'améliorer le service qui vo
 
 ## ☑ ARTICLE 4 : LIVRAISON
 
-4.1 – Les commandes sont envoyées par Colissimo suivi ou lettre suivie 48h. Après paiement, il faut compter environ 5 à 7 jours ouvrés pour recevoir votre commande. Si vous avez une urgence, vous pouvez me demander une préparation express par email à velo@cecillie.fr, et je ferai tout mon possible pour expédier rapidement vos illustrations.  
+4.1 – Les commandes sont envoyées par Colissimo suivi ou lettre suivie 48h. Après paiement, il faut compter environ 5 à 7 jours ouvrés pour recevoir votre commande. Si vous avez une urgence, vous pouvez me demander une préparation express par email à [velo@cecillie.fr](mailto:velo@cecillie.fr), et je ferai tout mon possible pour expédier rapidement vos illustrations.  
 4.2 – Le studio cecillie ne peut être tenu pour responsable d'un éventuel retard d'acheminement. Ce retard ne saurait vous donner le droit d’annuler la commande, de la refuser ou de demander des dommages et intérêts.  
 4.3 – Si vous recevez un colis détérioré ou ouvert, le studio cecillie s’engage à vous en livrer un nouveau sans aucun frais supplémentaire. Ceci est possible à la condition expresse que vous ayez préalablement refusé le colis au service postal de votre pays et contacté le studio cecillie pour prévenir de l'incident.  
 4.4 – Si vous n'avez pas reçu de colis et que la preuve est amenée qu'il a été perdu par le service postal, le studio cecillie s’engage à vous en livrer un nouveau sans aucun frais supplémentaire.

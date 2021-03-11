@@ -189,7 +189,9 @@
     "title": "Promotions"
   },
   "cart_summary": {
-    "taxes": "Taxes",
+
+    "taxes": "Dont taxes incluses",
+
     "taxes_included_in_price": "Certains articles comprennent des taxes.",
     "total": "Total",
     "subtotal": "Sous-total",

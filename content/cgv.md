@@ -57,7 +57,7 @@ Le site recourt à l'usage de cookies dans le but d'améliorer le service qui vo
 
 ## ☑ ARTICLE 3 : PAIEMENT
 
-3.1 – Le règlement d'une commande se fait par carte bancaire : Visa, Mastercard ou American Express. Réalisé par l'intermédiaire de Stripe, le paiement est sécurisé et vos données bancaires sont transférées en toute sécurité (protocole SSL). Le studio cecillie n'a jamais accès à ces données.  
+3.1 – Le règlement d'une commande se fait par carte bancaire Visa ou Mastercard. Réalisé par l'intermédiaire de Stripe, le paiement est sécurisé et vos données bancaires sont transférées en toute sécurité via protocole SSL/HTTPS. Le studio cecillie n'a jamais accès à ces données.  
 3.2 – Le studio cecillie se réserve le droit de suspendre une commande en cas de refus d'autorisation de paiement ou de non-paiement.
 
 ## ☑ ARTICLE 4 : LIVRAISON

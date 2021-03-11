@@ -1,4 +1,4 @@
-          <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "pageDots": false, "fullscreen": true, "lazyLoad": true }'>
+          <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "prevNextButtons": false, "fullscreen": true, "lazyLoad": true }'>
             {#-<img src="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}">~#}
             <img src="/images/default.png" data-flickity-lazyload="{{ image|default('images/default.png') }}" alt="Image de {{ product.name }}" loading="lazy" />
             {%- if product.gallery is defined ~%}

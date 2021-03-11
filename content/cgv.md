@@ -14,7 +14,7 @@ Siret : 79379122900024
 TVA intracommunautaire : FR31793791229  
 APE/NAF : 6201Z  
 Adresse URL du site : https://shop.cecillie.fr  
-Adress e-mail de contact : velo@cecillie.fr
+Adresse e-mail de contact : [velo@cecillie.fr](mailto:velo@cecillie.fr)
 
 ## ☑ SITE
 
@@ -37,6 +37,8 @@ Conformément aux dispositions de la Loi du 6 janvier 1978 relative à l’infor
 ## ☑ COOKIES
 
 Le site recourt à l'usage de cookies dans le but d'améliorer le service qui vous est destiné. Si vous souhaitez les désactiver, vous pouvez le faire à tout moment via les réglages de votre navigateur.
+
+
 
 # Conditions générales de vente
 

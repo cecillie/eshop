@@ -171,10 +171,10 @@ h1 {
 }
 
 .carousel {
-  flex: 1;
+  flex: 3;
   height: 100%;
   width: 100%;
-  max-width: 400px;
+  //max-width: 400px;
   margin-right: auto;
   @include sm {
     &:last-child {
@@ -231,7 +231,7 @@ h1 {
     flex-direction: row-reverse;
   }
 
-  &:nth-last-of-type(odd) & {
+  &:nth-last-of-type(even) & {
     &__information {
       margin-left: 0;
       margin-right: $size--unit * 6;
@@ -246,8 +246,8 @@ h1 {
   }
 
   &__information {
-    flex: 1;
-    margin-left: $size--unit * 10;
+    flex: 2;
+    margin-left: $size--unit * 6;
     @include md {
       margin-left: 0;
     }

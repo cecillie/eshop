@@ -8,7 +8,7 @@ menu:
 
 ## ☑ SOCIÉTÉ
 
-Le site shop.cecillie.fr est édité et exploité par le studio cecillie, une micro-entreprise au nom de Cécile Ricordeau, située 94 rue Molière 93100 Montreuil et soumis au régime de la TVA. La micro-entreprise est dispensée d’immatriculation au registre du commerce et des sociétés (RCS) et au répertoire des métiers (RM).  
+Le site [shop.cecillie.fr](https://shop.cecillie.fr) est édité et exploité par le [studio cecillie](https://studio.cecillie.fr/), une micro-entreprise au nom de [Cécile Ricordeau](https://www.cecillie.fr/), située 94 rue Molière 93100 Montreuil et soumis au régime de la TVA. La micro-entreprise est dispensée d’immatriculation au registre du commerce et des sociétés (RCS) et au répertoire des métiers (RM).  
 Siren : 793791229  
 Siret : 79379122900024  
 TVA intracommunautaire : FR31793791229  
@@ -18,12 +18,12 @@ Adresse e-mail de contact : [velo@cecillie.fr](mailto:velo@cecillie.fr)
 
 ## ☑ SITE
 
-Reponsable de la publication : [Cécile Ricordeau](https://www.cecillie.fr/)
-Contact : [velo@cecillie.fr](mailto:velo@cecillie.fr) 
+Reponsable de la publication : [Cécile Ricordeau](https://www.cecillie.fr/)  
+Contact : [velo@cecillie.fr](mailto:velo@cecillie.fr)  
 Hébergement : Gandi  
-Plate-forme : [Cecil](https://cecil.app/), Snipcart
-Paiement sécurisé : Stripe
-Réalisation : [Arnaud Ligny](https://arnaudligny.fr/)
+Plate-forme : [Cecil](https://cecil.app/), Snipcart  
+Paiement sécurisé : Stripe  
+Réalisation : [Arnaud Ligny](https://arnaudligny.fr/)  
 
 ## ☑ PROPRIÉTÉ INTELLECTUELLE
 

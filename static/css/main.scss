@@ -181,6 +181,7 @@ h1 {
       display: none;
     }
     margin-left: auto;
+    margin-bottom: 30px;
   }
   @include md {
     &:last-child {

@@ -165,10 +165,10 @@ h2 {
 }
 
 .hero {
-  & h1 {
-    font-size: $size--unit * 2.5;
-    text-transform: uppercase;
-  }
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: $size--unit * 2.5;
+  text-transform: uppercase;
+}
 
   & p, p > a {
     font-family: 'Scope One', serif;

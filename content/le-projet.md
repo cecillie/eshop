@@ -11,6 +11,8 @@ published: true
 
 *Arthur Conan Doyle*
 
+image: /images/products/01-Pink-gravel-A3_S.png
+
 # Au commencement  
 C’est à l’automne 2020, durant le deuxième confinement, que j’ai commencé à griffonner des personnes à vélo. Tellement frustrée de ne plus pouvoir pédaler librement, j'ai tenté de compenser mon manque de vélo à travers des illustrations, tentant de retranscrire ce sentiment de liberté et de joie que procurent les déplacements à bicyclette. 
 Un peu par curiosité, j’ai posté une première illustration sur twitter, puis une autre … l’enthousiasme de la cyclosphere a été tellement encourageant que, suite à plusieurs demandes, j'ai décidé de proposer quelques tirages A3 et A5. Sans trop y croire, j’ai lancé [ma page Ulule](https://fr.ulule.com/paysages-a-velo/) le 28 novembre. 

@@ -37,10 +37,6 @@ Et surtout merci à vous toutes et tous qui m’avez soutenu, motivé, et qui co
 Merci à vous qui partagez vos moments de bonheur à vélo et qui m’apportez l’inspiration pour dessiner.  
 Merci à vous toutes et tous qui avez contribué à ce projet. Le vélo vivra, le vélo vaincra !  
 
-
-If you want to embed images, this is how you do it:
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
-
 Bicyclettement vôtre,  
-cecillie  
+  
 ![Image of cecillie](/images/cecillie_signature.png)

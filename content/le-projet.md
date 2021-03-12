@@ -7,10 +7,11 @@ published: true
 ---
 # Le projet  
 
-*Quand ton moral est bas, quand le jour te paraît sombre,  
-quand le travail devient monotone,  
-quand l'espoir n'y est pas,  
-grimpe sur un vélo et roule sans penser à autre chose que le chemin que tu empruntes.*
+*Quand ton moral est bas,  
+Quand le jour te paraît sombre,  
+Quand le travail devient monotone,  
+Quand l'espoir n'y est pas,  
+Grimpe sur un vélo et roule sans penser à autre chose que le chemin que tu empruntes.*
 
 *Arthur Conan Doyle*
 

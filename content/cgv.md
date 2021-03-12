@@ -35,7 +35,8 @@ Le site tel qu’il a été conçu, n’a pas pour vocation de collecter les don
 
 ## ☑ COOKIES
 
-Le site recourt à l'usage de cookies uniquement pour l'utilisation du panier e-commerce Snipcart. Si vous souhaitez les désactiver, vous pouvez le faire à tout moment via les réglages de votre navigateur.
+Le site recourt à l'usage de cookies uniquement pour l'utilisation du panier e-commerce Snipcart. Si vous souhaitez les désactiver, vous pouvez le faire à tout moment via les réglages de votre navigateur.  
+
 
 
 

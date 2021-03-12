@@ -36,7 +36,7 @@ Je m'appelle [Cécile Ricordeau](https://www.cecillie.fr/), aka "[cecillie](http
 Côté petite reine, je suis vélotafeuse depuis des années, ma petite famille est 100 % vélo au quotidien. Notre garage compte un *Genesis* (mon vélotaf sans faille), *un Petit Porteur* (mon crush), un *Louison Bobet* (mon chouchou), un *Kalkhoff* et un *Bullitt* (le SUV de [Narno](https://twitter.com/Narno)), le *Btwin* de notre fils et sa draisienne *Puky* dont on n'arrive pas à se séparer.  
 Avec ce projet, je combine trois choses que j'aime : le dessin, le vélo et le travail des couleurs. J'espère que ces séries vont plairont, et que ce n'est que le début d'un beau projet !  
 
-![Image of the author](/images/cecillie_picture.jpg)  
+![Image of the author](/images/cecillie_projet-03.jpg)![Image of the author](/images/cecillie_projet-04.jpg)    
 
 
 ## Remerciements  

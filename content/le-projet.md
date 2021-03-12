@@ -20,7 +20,7 @@ Et là,  ̶P̶A̶F̶ PSCHITT !! L’objectif a atteint les 200% en moins de 24h 
 Autant vous l’avouer, j’ai UN PEU paniqué comme quand je roule sur une départementale sans piste cyclable. J’avais promis des livraisons avant noël, et voilà que je me retrouve avec des dizaines et des dizaines de colis à préparer. J’ai donc enfilé mon plus beau lycra et je suis devenue une habituée du comptoir Carré Pro de la poste pendant tout le mois de décembre. Les 142 commandes sont arrivées à bon port et la campagne Ulule s’est terminée avec un objectif final de 473 %.  
 Après cette campagne Ulule qui a roulé comme avec un Nexus 8, j’ai commencé à travailler sur de nouvelles illustrations afin de donner vie à la boutique en ligne des Paysages à Vélo.  
 
-![Image of packaging](/images/cecillie_packaging.jpg)  
+![Image of packaging](/images/cecillie_projet-01.jpg)![Image of packaging](/images/cecillie_projet-02.jpg)    
 
 
 ## Les paysages à vélo  

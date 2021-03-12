@@ -42,5 +42,5 @@ If you want to embed images, this is how you do it:
 ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 Bicyclettement vôtre,  
-cecillie
+cecillie  
 ![Image of cecillie](/images/cecillie_signature.png)

@@ -172,7 +172,8 @@ h2 {
 
   & p, p > a {
     font-family: 'Scope One', serif;
-    font-size: $size--unit * 2.5;
+    font-size: $size--unit * 2;
+    line-height: 1.5;
   }
 }
 

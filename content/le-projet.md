@@ -7,13 +7,10 @@ published: true
 ---
 # Le projet  
 
-*Quand ton moral est bas, quand le jour te paraît sombre, quand le travail devient monotone, quand l'espoir n'y est pas, grimpe sur un vélo et roule sans penser à autre chose que le chemin que tu empruntes.*
+# *Quand ton moral est bas, quand le jour te paraît sombre, quand le travail devient monotone, quand l'espoir n'y est pas, grimpe sur un vélo et roule sans penser à autre chose que le chemin que tu empruntes.*
 
 *Arthur Conan Doyle*
 
-
-If you want to embed images, this is how you do it:
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 # Au commencement  
 C’est à l’automne 2020, durant le deuxième confinement, que j’ai commencé à griffonner des personnes à vélo. Tellement frustrée de ne plus pouvoir pédaler librement, j'ai tenté de compenser mon manque de vélo à travers des illustrations, tentant de retranscrire ce sentiment de liberté et de joie que procurent les déplacements à bicyclette. 
@@ -38,6 +35,10 @@ Merci à toutes celles et ceux qui sont venus retirer votre commande à mon atel
 Et surtout merci à vous toutes et tous qui m’avez soutenu, motivé, et qui continuez encore.  
 Merci à vous qui partagez vos moments de bonheur à vélo et qui m’apportez l’inspiration pour dessiner.  
 Merci à vous toutes et tous qui avez contribué à ce projet. Le vélo vivra, le vélo vaincra !
+
+
+If you want to embed images, this is how you do it:
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 
 Bicyclettement vôtre,  
 cecillie

@@ -41,4 +41,4 @@ Merci à vous toutes et tous qui avez contribué à ce projet. Le vélo vivra, l
 
 Bicyclettement vôtre,  
 cecillie
-![Image of cecillie](https://octodex.github.com/images/yaktocat.png)
+![Image of cecillie](images/cecillie_signature.png)

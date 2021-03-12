@@ -31,12 +31,11 @@ L'ensemble de ce site relève de la législation française et internationale su
 
 ## ☑ PROTECTION DES DONNÉES
 
-Le site tel qu’il a été conçu, n’a pas pour vocation de collecter les données personnelles de ses visiteurs. Les seules informations enregistrées sont celles fournies volontairement par les internautes afin de permettre l'achat de produits, ou de s'inscrire à la newsletter. Le studio cecillie est l'unique destinataire de ces données personnelles, aucune ne saurait être cédée à des tiers ou des entreprises commerciales.  
-Conformément aux dispositions de la Loi du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, modifiée par la Loi du 6 août 2004, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Ce droit peut être exercé en s’adressant par e-mail à : [velo@cecillie.fr](mailto:velo@cecillie.fr).
+Le site tel qu’il a été conçu, n’a pas pour vocation de collecter les données personnelles de ses visiteurs et ne recourt pas à de la publicité ciblée. Le site ne possède aucun pixel de traçage ou autre technologie connexe. Les seules informations enregistrées sont celles fournies volontairement par les internautes afin de permettre l'achat de produits, ou de s'inscrire à la newsletter. Le studio cecillie est l'unique destinataire de ces données personnelles, aucune ne saurait être cédée à des tiers ou des entreprises commerciales. Conformément aux dispositions de la Loi du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, modifiée par la Loi du 6 août 2004, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Ce droit peut être exercé en s’adressant par e-mail à : [velo@cecillie.fr](mailto:velo@cecillie.fr).
 
 ## ☑ COOKIES
 
-Le site recourt à l'usage de cookies dans le but d'améliorer le service qui vous est destiné. Si vous souhaitez les désactiver, vous pouvez le faire à tout moment via les réglages de votre navigateur.
+Le site recourt à l'usage de cookies uniquement pour l'utilisation du panier e-commerce Snipcart. Si vous souhaitez les désactiver, vous pouvez le faire à tout moment via les réglages de votre navigateur.
 
 
 

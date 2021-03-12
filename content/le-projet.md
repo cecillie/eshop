@@ -11,7 +11,11 @@ published: true
 
 *Arthur Conan Doyle*
 
-image: /images/products/01-Pink-gravel-A3_S.png
+
+If you want to embed images, this is how you do it:
+
+![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![Image of Yaktocat](/images/products/01-Pink-gravel-A3_S.png)
 
 # Au commencement  
 C’est à l’automne 2020, durant le deuxième confinement, que j’ai commencé à griffonner des personnes à vélo. Tellement frustrée de ne plus pouvoir pédaler librement, j'ai tenté de compenser mon manque de vélo à travers des illustrations, tentant de retranscrire ce sentiment de liberté et de joie que procurent les déplacements à bicyclette. 

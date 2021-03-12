@@ -43,6 +43,4 @@ If you want to embed images, this is how you do it:
 
 Bicyclettement vôtre,  
 cecillie
-![Image of cecillie]('images/cecillie_signature.png')
-![Image of cecillie]url('/images/background.png')
-![Image of cecillie]('/images/background.png')
+![Image of cecillie](/images/cecillie_signature.png)

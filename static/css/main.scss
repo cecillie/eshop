@@ -35,6 +35,12 @@ h1 {
   text-transform: uppercase;
 }
 
+h2 {
+  font-weight: 400;
+  font-size: $size--unit * 2.5;
+  text-transform: underline;
+}
+
 // Mixins
 
 @mixin sm {

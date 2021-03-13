@@ -35,10 +35,9 @@ Le site tel qu’il a été conçu, n’a pas pour vocation de collecter les don
 
 ## ☑ COOKIES
 
-Le site recourt à l'usage de cookies uniquement pour l'utilisation du panier e-commerce Snipcart. Si vous souhaitez les désactiver, vous pouvez le faire à tout moment via les réglages de votre navigateur.  
+L’installation des cookies Snipcart sont strictement nécessaires pour finaliser et confirmer le service de vente proposé. Ces traceurs sont dispensés du recueil de consentement.
 
-
-
+Aucun autre stockage d’information n’est utilisé sur le site, ni mesure d’audience, de partage, de publicité ou technique.
 
 # Conditions générales de vente
 

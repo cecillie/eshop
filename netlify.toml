@@ -13,4 +13,3 @@
 
 [[plugins]]
   package = "netlify-plugin-cecil-cache"
-

@@ -4,22 +4,15 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: directory
+  path: content
+  label: Pages & articles
+  create: all
+  match: "**/*"
+  new_doc_ext: md
 - type: document
   path: config.yml
   label: Configuration
-- type: directory
-  path: content/products
-  label: Products
-  create: documents
-  match: "**/*"
-  exclude: index.md
-  new_doc_ext: md
-- type: directory
-  path: content
-  label: Pages
-  create: documents
-  match: "**/*"
-  new_doc_ext: md
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''

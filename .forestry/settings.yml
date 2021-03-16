@@ -7,7 +7,13 @@ sections:
 - type: document
   path: config.yml
   label: Configuration
+- type: directory
+  path: content/products
+  label: Products
+  create: documents
   match: "**/*"
+  exclude: index.md
+  new_doc_ext: md
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''

@@ -1,6 +1,5 @@
 # La boutique en ligne
 
-Après le succès de ma [campagne Ulule](https://fr.ulule.com/paysages-a-velo/), je vous propose mes illustrations en vente dans différents formats.
-De nouvelles illustrations seront ajoutées régulièrement, au gré de mon inspiration et de mes rêveries à vélo.
+Bienvenue sur la boutique des Paysages à Vélo ! Vous y retrouverez les cartes et affiches de la [campagne Ulule](https://fr.ulule.com/paysages-a-velo/), mais aussi de nouvelles illustrations inédites. D'autres y seront ajoutées régulièrement, au gré de mon inspiration et de mes rêveries à vélo. J'espère que ça vous plaira !
 
 cecillie

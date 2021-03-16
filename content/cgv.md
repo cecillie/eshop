@@ -1,5 +1,5 @@
 ---
-title: Mentions légales et CGV
+title: Mentions légales & CGV
 menu:
   footer:
     weight: 1
@@ -8,22 +8,22 @@ menu:
 
 ## ☑ SOCIÉTÉ
 
-Le site shop.cecillie.fr est édité et exploité par le studio cecillie, une micro-entreprise au nom de Cécile Ricordeau, située 94 rue Molière 93100 Montreuil et soumis au régime de la TVA. La micro-entreprise est dispensée d’immatriculation au registre du commerce et des sociétés (RCS) et au répertoire des métiers (RM).  
+Le site [shop.cecillie.fr](https://shop.cecillie.fr) est édité et exploité par le [studio cecillie](https://studio.cecillie.fr), une micro-entreprise au nom de [Cécile Ricordeau](https://www.cecillie.fr), domiciliée au 94 rue Molière 93100 Montreuil et soumis au régime de la TVA. La micro-entreprise est dispensée d’immatriculation au registre du commerce et des sociétés (RCS) et au répertoire des métiers (RM).  
 Siren : 793791229  
 Siret : 79379122900024  
 TVA intracommunautaire : FR31793791229  
 APE/NAF : 6201Z  
 Adresse URL du site : https://shop.cecillie.fr  
-Adress e-mail de contact : velo@cecillie.fr
+Adresse e-mail de contact : [velo@cecillie.fr](mailto:velo@cecillie.fr)
 
 ## ☑ SITE
 
-Reponsable de la publication : Cécile Ricordeau  
-Contact : velo@cecillie.fr  
+Reponsable de la publication : [Cécile Ricordeau](https://www.cecillie.fr)  
+Contact : [velo@cecillie.fr](mailto:velo@cecillie.fr)  
 Hébergement : Gandi  
-Plate-forme : Cecil, Snipcart  
+Plate-forme : [Cecil](https://cecil.app), Snipcart  
 Paiement sécurisé : Stripe  
-Réalisation : Arnaud Ligny
+Réalisation : [Arnaud Ligny](https://arnaudligny.fr)  
 
 ## ☑ PROPRIÉTÉ INTELLECTUELLE
 
@@ -31,12 +31,13 @@ L'ensemble de ce site relève de la législation française et internationale su
 
 ## ☑ PROTECTION DES DONNÉES
 
-Le site tel qu’il a été conçu, n’a pas pour vocation de collecter les données personnelles de ses visiteurs. Les seules informations enregistrées sont celles fournies volontairement par les internautes afin de permettre l'achat de produits, ou de s'inscrire à la newsletter. Le studio cecillie est l'unique destinataire de ces données personnelles, aucune ne saurait être cédée à des tiers ou des entreprises commerciales.  
-Conformément aux dispositions de la Loi du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, modifiée par la Loi du 6 août 2004, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Ce droit peut être exercé en s’adressant par e-mail à : velo@cecillie.fr.
+Le site tel qu’il a été conçu, n’a pas pour vocation de collecter les données personnelles de ses visiteurs et ne recourt pas à de la publicité ciblée. Le site ne possède aucun pixel de traçage ou autre technologie connexe. Les seules informations enregistrées sont celles fournies volontairement par les internautes afin de permettre l'achat de produits, ou de s'inscrire à la newsletter. Le studio cecillie est l'unique destinataire de ces données personnelles, aucune ne saurait être cédée à des tiers ou des entreprises commerciales. Conformément aux dispositions de la Loi du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, modifiée par la Loi du 6 août 2004, vous disposez d'un droit d'accès, de rectification et de suppression des données vous concernant. Ce droit peut être exercé en s’adressant par e-mail à : [velo@cecillie.fr](mailto:velo@cecillie.fr).
 
 ## ☑ COOKIES
 
-Le site recourt à l'usage de cookies dans le but d'améliorer le service qui vous est destiné. Si vous souhaitez les désactiver, vous pouvez le faire à tout moment via les réglages de votre navigateur.
+L’installation des cookies Snipcart sont strictement nécessaires pour finaliser et confirmer le service de vente proposé. Ces traceurs sont dispensés du recueil de consentement.
+
+Aucun autre stockage d’information n’est utilisé sur le site, ni mesure d’audience, de partage, de publicité ou technique.
 
 # Conditions générales de vente
 
@@ -55,26 +56,31 @@ Le site recourt à l'usage de cookies dans le but d'améliorer le service qui vo
 
 ## ☑ ARTICLE 3 : PAIEMENT
 
-3.1 – Le règlement d'une commande se fait par carte bancaire : Visa, Mastercard ou American Express. Réalisé par l'intermédiaire de Stripe, le paiement est sécurisé et vos données bancaires sont transférées en toute sécurité (protocole SSL). Le studio cecillie n'a jamais accès à ces données.  
+3.1 – Le règlement d'une commande se fait par carte bancaire Visa ou Mastercard. Réalisé par l'intermédiaire de Stripe, le paiement est sécurisé et vos données bancaires sont transférées en toute sécurité via protocole SSL/HTTPS. Le studio cecillie n'a jamais accès à ces données.  
 3.2 – Le studio cecillie se réserve le droit de suspendre une commande en cas de refus d'autorisation de paiement ou de non-paiement.
 
 ## ☑ ARTICLE 4 : LIVRAISON
 
-4.1 – Les commandes sont envoyées par Colissimo suivi ou lettre suivie 48h. Après paiement, il faut compter environ 5 à 7 jours ouvrés pour recevoir votre commande. Si vous avez une urgence, vous pouvez me demander une préparation express par email à velo@cecillie.fr, et je ferai tout mon possible pour expédier rapidement vos illustrations.  
-4.2 – Le studio cecillie ne peut être tenu pour responsable d'un éventuel retard d'acheminement. Ce retard ne saurait vous donner le droit d’annuler la commande, de la refuser ou de demander des dommages et intérêts.  
-4.3 – Si vous recevez un colis détérioré ou ouvert, le studio cecillie s’engage à vous en livrer un nouveau sans aucun frais supplémentaire. Ceci est possible à la condition expresse que vous ayez préalablement refusé le colis au service postal de votre pays et contacté le studio cecillie pour prévenir de l'incident.  
-4.4 – Si vous n'avez pas reçu de colis et que la preuve est amenée qu'il a été perdu par le service postal, le studio cecillie s’engage à vous en livrer un nouveau sans aucun frais supplémentaire.
+4.1 – Les commandes sont envoyées par Colissimo suivi ou lettre suivie 48h. Après paiement, il faut compter environ 5 à 7 jours ouvrés pour recevoir votre commande. Si vous avez une urgence, vous pouvez me demander une préparation express par email à [velo@cecillie.fr](mailto:velo@cecillie.fr), et je ferai tout mon possible pour expédier rapidement vos illustrations.  
+4.2 - Les commandes livrées à vélo ne sont disponibles que pour la ville de Montreuil (93). Si vous résidez dans une ville limitrophe (Vincennes, Fontenay, Bagnolet, St Mandé), vous pouvez m'envoyer un email à [velo@cecillie.fr](mailto:velo@cecillie.fr) pour savoir si vous êtes éligible à la livraison gratuite à vélo. Il est aussi possible de se retrouver sur votre chemin de vélotaf !  
+4.3 – Le studio cecillie ne peut être tenu pour responsable d'un éventuel retard d'acheminement. Ce retard ne saurait vous donner le droit d’annuler la commande, de la refuser ou de demander des dommages et intérêts.  
+4.4 – Si vous recevez un colis détérioré ou ouvert, le studio cecillie s’engage à vous en livrer un nouveau sans aucun frais supplémentaire. Ceci est possible à la condition expresse que vous ayez préalablement refusé le colis et contacté le studio cecillie pour prévenir de l'incident.  
+4.5 – Si vous n'avez pas reçu de colis et que la preuve est amenée qu'il a été perdu par le service postal, le studio cecillie s’engage à vous en livrer un nouveau sans aucun frais supplémentaire.
 
-## ☑ ARTICLE 5 : CONFORMITÉ
+## ☑ ARTICLE 5 : RETRAIT
+
+4.1 – Les commandes en retrait sont possibles uniquement en retrait à l'atelier, situé au 10 rue de Nice 75011 Paris, du lundi au vendredi. Vous serez contacté par email pour convenir d'un créneau de passage.
+
+## ☑ ARTICLE 6 : CONFORMITÉ
 
 Les tirages sont vendus tels que représentés sur le site. Le studio cecillie ne peut être tenu responsable des différences minimes de couleurs pouvant exister et qui sont dues aux techniques de reproduction employées.
 
-## ☑ ARTICLE 6 : DÉLAI DE RÉTRACTATION
+## ☑ ARTICLE 7 : DÉLAI DE RÉTRACTATION
 
 6.1 – Vous disposez d'un délai de 14 jours à compter de la réception de votre commande pour retourner un produit qui ne vous conviendrait pas. Seuls le prix du produit et les frais d'envoi sont remboursés. Les frais de retour sont à votre charge.  
 6.2 – Un retour doit être envoyé dans son emballage d'origine. Le studio cecillie se réserve le droit de le refuser s'il n'a pas été fait dans de bonnes conditions et que le produit revient abîmé. Les produits endommagés, salis, froissés ou incomplets ne sont pas repris.  
 6.3 – Le remboursement s'effectue par virement sur votre compte bancaire, dans un délai inférieur ou égal à 30 jours, à partir de la bonne réception du retour.
 
-## ☑ ARTICLE 7 : LITIGES
+## ☑ ARTICLE 8 : LITIGES
 
 Le présent contrat est soumis à la loi française. Tout litige relatif à l’interprétation ou à l’exécution des présentes conditions de vente est de la compétence exclusive des Tribunaux de Paris.

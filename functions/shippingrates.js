@@ -30,13 +30,15 @@ exports.handler = async ({ body }) => {
       });
     }
 
-    // Retrait dans Paris 20ème
+    // Retrait à l'atelier
     rates.push(retrait_atelier);
-    // Livraison à Montreuil
+
+    // Livraison à vélo (Montreuil)
     if (obj.content.shippingAddressPostalCode == '93100') {
       rates.push(livraison_velo);
     }
-    // Quel(s) format(s)
+
+    // Quel(s) format(s) dans le panier
     let a3 = 0; let a5 = 0;
     for (var i = 0; i < obj.content.items.length; i++) {
       for (var f = 0; f < obj.content.items[i].customFields.length; f++) {
@@ -50,7 +52,8 @@ exports.handler = async ({ body }) => {
         }
       }
     }
-    // Emballage(s) selon le(s) format(s)
+
+    // Type d'expédition conditionnée par le(s) format(s)
     if (a3 >= 1 && a5 >= 1) {
       rates.push(livraison_colissimo_lettre);
     } else if (a3 >= 1 && a5 == 0) {
@@ -62,7 +65,7 @@ exports.handler = async ({ body }) => {
     return createResponse({
       rates: rates
     });
-  } catch (err) {
+  } catch (error) {
     return createResponse({
       errors: [{
         key: 'error',

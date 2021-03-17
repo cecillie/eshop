@@ -46,7 +46,7 @@ netlify:
       to: https://shop.cecillie.fr/:splat
       status: 301
       force: true
-    - from: https://shop.cecillie.fr/*
-      to: https://mailchi.mp/a7fb0a1ad278/nl-shop-cecillie/
-      status: 302
-      force: true
+    #- from: https://shop.cecillie.fr/*
+    #  to: https://mailchi.mp/a7fb0a1ad278/nl-shop-cecillie/
+    #  status: 302
+    #  force: true

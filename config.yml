@@ -37,7 +37,7 @@ fonts:
 theme:
   - netlify
 snipcart:
-  version: 3.0.27
+  version: 3.0.31
   apikey: ZTVlZWYzMTgtYjBkYS00MmE2LTgwNmYtMTcxZjliNWUxYjhmNjM3NDc0MzIyNTY4MjM5MzY2
   customer: true
 #googleanalytics: 1234

@@ -5,6 +5,7 @@ description: "Paysages à vélo, la boutique de cecillie."
 author:
   name: studio cecillie
   url: https://studio.cecillie.fr
+image: /images/default.png
 languages:
   - code: fr-FR
     name: Français

@@ -177,6 +177,8 @@ h2 {
   }
 }
 
+// Flickity
+
 .carousel {
   flex: 3;
   height: 100%;
@@ -206,9 +208,9 @@ h2 {
   width: 100%;
 }
 
-.flickity-button {
+/*.flickity-button {
   background: transparent;
-}
+}*/
 
 .flickity-button:hover {
   background: $color--secondary;

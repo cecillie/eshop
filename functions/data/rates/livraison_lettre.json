@@ -2,5 +2,6 @@
   "cost": 3,
   "description": "Lettre suivie",
   "guaranteedDaysToDelivery": 5,
-  "userDefinedId": "livraison_lettre"
+  "userDefinedId": "livraison_lettre",
+  "slug": "livraison_lettre"
 }

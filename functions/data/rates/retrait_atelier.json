@@ -2,5 +2,6 @@
   "cost": 0,
   "description": "Retrait à l’atelier (Paris 11ème)",
   "guaranteedDaysToDelivery": 5,
-  "userDefinedId": "retrait"
+  "userDefinedId": "retrait",
+  "slug": "retrait"
 }

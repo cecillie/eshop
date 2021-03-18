@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Snip templates</title>
+    <title>Snipcart templates</title>
   </head>
   <body>
     <div id="snipcart-templates">
@@ -26,7 +26,6 @@
       <!-- address fields without suggestion -->
       <address-fields>
         <div class="root">
-          <overridable name="address-fields" section="top"></overridable>
           <fieldset class="snipcart-form__set">
             <div class="snipcart-form__field">
               <div class="snipcart-form__field snipcart-form__cell--large">

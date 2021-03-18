@@ -9,7 +9,7 @@ sections:
   label: Contenus
   create: all
   match: "**/*"
-  new_doc_ext: ".md"
+  new_doc_ext: md
 - type: document
   path: config.yml
   label: Configuration

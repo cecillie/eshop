@@ -1,5 +1,6 @@
 {
   "cost": 0,
   "description": "Livraison à vélo (Montreuil)",
+  "guaranteedDaysToDelivery": 5,
   "userDefinedId": "livraison_velo"
 }

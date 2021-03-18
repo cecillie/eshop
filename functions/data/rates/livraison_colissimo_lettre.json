@@ -1,5 +1,6 @@
 {
   "cost": 8,
   "description": "Colissimo + Lettre suivie (envoi séparé)",
+  "guaranteedDaysToDelivery": 5,
   "userDefinedId": "livraison_colissimo_lettre"
 }

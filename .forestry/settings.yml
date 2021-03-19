@@ -11,6 +11,8 @@ sections:
   match: "**/*"
   exclude: index.md
   new_doc_ext: md
+  templates:
+  - product
 - type: document
   path: config.yml
   label: Configuration

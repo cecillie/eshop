@@ -10,18 +10,23 @@ fields:
     required: true
 - type: text
   name: title
-  label: Titre de la page
+  label: Titre
+  description: Titre de la page, différent du nom du produit.
 - type: number
   name: price
   label: Prix
   config:
     required: true
+  description: Prix de la variante de référence.
 - type: file
   name: image
   label: Image
+  description: Image de référence (également utilisée pour le partage sur les réseaux
+    sociaux).
 - type: image_gallery
   name: gallery
   label: Galerie
+  description: Image complémentaire à l'image de référence.
 - type: field_group_list
   name: variants
   label: Variantes
@@ -42,9 +47,10 @@ fields:
         required: true
     - type: text
       name: html
-      label: Affichage HTML
+      label: Affichage
       config:
         required: true
+      description: Valeur affichée dans la liste.
     - type: number
       name: price
       label: Prix (relatif)

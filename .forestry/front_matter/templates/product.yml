@@ -48,7 +48,8 @@ fields:
     - type: number
       name: price
       label: Prix (relatif)
-      description: 'Prix de l''option, relatif au prix de base (ex: +3.00).'
+      description: 'Prix de l''option, relatif au prix de base (ex : "+5", "-10",
+        "0", etc.).'
       config:
         required: true
     config:

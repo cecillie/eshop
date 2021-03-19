@@ -4,37 +4,54 @@ hide_body: false
 display_field: name
 fields:
 - type: text
-  name: title
-  label: title
-- type: text
   name: name
-  label: name
+  label: Nom
+  config:
+    required: true
+- type: text
+  name: title
+  label: Titre de la page
 - type: number
   name: price
-  label: price
+  label: Prix
+  config:
+    required: true
 - type: file
   name: image
-  label: image
+  label: Image
 - type: image_gallery
   name: gallery
-  label: gallery
+  label: Galerie
 - type: field_group_list
   name: variants
-  label: variants
+  label: Variants
   fields:
   - type: text
     name: name
-    label: name
+    label: Nom
+    config:
+      required: true
   - type: field_group_list
     name: options
-    label: options
+    label: Options
     fields:
     - type: text
       name: value
-      label: value
+      label: Valeur
+      config:
+        required: true
     - type: text
       name: html
-      label: html
+      label: Affichage HTML
+      config:
+        required: true
     - type: number
       name: price
-      label: price
+      label: Prix (relatif)
+      description: 'Prix de l''option, relatif au prix de base (ex: +3.00).'
+      config:
+        required: true
+    config:
+      labelField: value
+  config:
+    labelField: name

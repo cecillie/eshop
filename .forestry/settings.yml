@@ -5,11 +5,34 @@ admin_path: ''
 webhook_url: 
 sections:
 - type: directory
-  path: content
-  label: Pages & articles
-  create: all
+  path: content/products
+  label: Articles
+  create: documents
   match: "**/*"
+  exclude: index.md
   new_doc_ext: md
+- type: heading
+  label: Pages
+- type: document
+  path: content/index.md
+  label: Accueil
+  match: "**/*"
+- type: document
+  path: content/le-projet.md
+  label: Le projet
+  match: "**/*"
+- type: document
+  path: content/contact.md
+  label: Contact
+  match: "**/*"
+- type: document
+  path: content/cgv.md
+  label: CGV
+  match: "**/*"
+- type: document
+  path: content/404.md
+  label: Page 404
+  match: "**/*"
 - type: document
   path: config.yml
   label: Configuration

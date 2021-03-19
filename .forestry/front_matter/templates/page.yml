@@ -4,10 +4,12 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Titre
+  config:
+    required: true
 - type: field_group
   name: menu
-  label: menu
+  label: Menu
   fields:
   - type: field_group
     name: main

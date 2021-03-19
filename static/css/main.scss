@@ -509,8 +509,13 @@ $image--background: url('/images/background.png');
       // disable default background color
       background-color: transparent;
       // fees icon ("?") color
-      &-fees__tax-notice path {
-        fill: $color--primary;
+      &-fees {
+        &__tax-notice path {
+          fill: $color--primary;
+        }
+        &__discounts-icon svg path {
+          fill: $color--primary;
+        }
       }
     }
   }

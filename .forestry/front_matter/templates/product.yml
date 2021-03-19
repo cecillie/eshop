@@ -24,7 +24,7 @@ fields:
   label: Galerie
 - type: field_group_list
   name: variants
-  label: Variants
+  label: Variantes
   fields:
   - type: text
     name: name

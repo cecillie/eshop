@@ -1,0 +1,39 @@
+---
+label: Product
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: name
+  label: name
+- type: number
+  name: price
+  label: price
+- type: file
+  name: image
+  label: image
+- type: image_gallery
+  name: gallery
+  label: gallery
+- type: field_group_list
+  name: variants
+  label: variants
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: field_group_list
+    name: options
+    label: options
+    fields:
+    - type: text
+      name: value
+      label: value
+    - type: text
+      name: html
+      label: html
+    - type: number
+      name: price
+      label: price

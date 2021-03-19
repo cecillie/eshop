@@ -26,13 +26,12 @@
       <!-- address fields without suggestion -->
       <address-fields>
         <div class="root">
+          <overridable name="address-fields" section="top"></overridable>
           <fieldset class="snipcart-form__set">
             <div class="snipcart-form__field">
-              <div class="snipcart-form__field snipcart-form__cell--large">
-                <snipcart-label class="snipcart__font--tiny" for="address1">{{ $localize('address_form.address1') }}</snipcart-label>
-                <snipcart-input name="address1"></snipcart-input>
-                <snipcart-error-message name="address1"></snipcart-error-message>
-              </div>
+              <snipcart-label class="snipcart__font--tiny" for="address1">{{ $localize('address_form.address1') }}</snipcart-label>
+              <snipcart-input name="address1"></snipcart-input>
+              <snipcart-error-message name="address1"></snipcart-error-message>
             </div>
             <div class="snipcart-form__row">
               <div class="snipcart-form__field snipcart-form__cell--tidy">
@@ -48,9 +47,16 @@
             </div>
             <div class="snipcart-form__field">
               <snipcart-label class="snipcart__font--tiny" for="country">{{ $localize('address_form.country') }}</snipcart-label>
-              <snipcart-typeahead type="dropdown" name="country" autocomplete="country"></snipcart-typeahead>
+              <snipcart-typeahead type="dropdown" name="country"></snipcart-typeahead>
               <snipcart-error-message name="country"></snipcart-error-message>
             </div>
+            <!--
+            <div class="snipcart-form__field">
+              <snipcart-label class="snipcart__font--tiny" for="province">{{ $localize('address_form.province') }}</snipcart-label>
+              <snipcart-typeahead type="dropdown" name="province"></snipcart-typeahead>
+              <snipcart-error-message name="province"></snipcart-error-message>
+            </div>
+            -->
           </fieldset>
         </div>
       </address-fields>

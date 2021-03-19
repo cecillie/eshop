@@ -62,3 +62,7 @@ fields:
       labelField: value
   config:
     labelField: name
+- name: published
+  type: boolean
+  label: Publié
+  default: false

@@ -1,0 +1,14 @@
+    <!-- Missive Live Chat -->
+    <script>
+      (function (d, w) {
+        w.MissiveChatConfig = {
+          "id": "{{ site.webchat }}"
+        };
+        var s = d.createElement('script');
+        s.async = true;
+        s.src = 'https://webchat.missiveapp.com/' + w.MissiveChatConfig.id + '/missive.js';
+        if (d.head)
+          d.head.appendChild(s);
+        })(document, window);
+    </script>
+    <!-- /Missive Live Chat -->

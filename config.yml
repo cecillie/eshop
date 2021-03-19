@@ -42,6 +42,7 @@ snipcart:
   customer: true
 #googleanalytics: 1234
 cloudflareinsights: 5d643695e5b94058b6395c161f613653
+webchat: cc14b8df-44b8-4956-8ae2-1ea4e2f3d5a6
 netlify:
   redirects:
     - from: https://bikeeshop.netlify.com/*

@@ -297,6 +297,11 @@ h2 {
     @include md {
       font-size: $size--unit * 3;
     }
+    & a {
+      font-family: 'Homemade Apple', cursive;
+      font-size: $size--unit * 4;
+      text-decoration: none;
+    }
   }
 
   &__description {

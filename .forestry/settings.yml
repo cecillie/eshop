@@ -4,6 +4,15 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: directory
+  path: content/products
+  label: Produits
+  create: documents
+  match: "**/*"
+  exclude: index.md
+  new_doc_ext: md
+  templates:
+  - product
 - type: document
   path: config.yml
   label: Configuration

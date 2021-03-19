@@ -12,6 +12,12 @@ fields:
   name: title
   label: Titre
   description: Titre de la page, différent du nom du produit.
+- name: description
+  type: text
+  config:
+    required: false
+    min: 25
+  label: Description
 - type: number
   name: price
   label: Prix

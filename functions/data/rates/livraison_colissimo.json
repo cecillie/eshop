@@ -7,7 +7,7 @@
     "slug": "livraison_colissimo"
   },
   "EU": {
-    "cost": 99,
+    "cost": 55,
     "description": "Colissimo",
     "guaranteedDaysToDelivery": 5,
     "userDefinedId": "livraison_colissimo",

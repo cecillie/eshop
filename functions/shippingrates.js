@@ -62,11 +62,11 @@ exports.handler = async ({ body }) => {
 
     // Type d'expédition conditionnée par le(s) format(s)
     if (a3 >= 1 && a5 >= 1) {
-      rates.push(livraison_colissimo_lettre);
+      rates.push(livraison_colissimo_lettre[country]);
     } else if (a3 >= 1 && a5 == 0) {
       rates.push(livraison_colissimo[country]);
     } else if (a5 >= 1 && a3 == 0) {
-      rates.push(livraison_lettre);
+      rates.push(livraison_lettre[country]);
     }
 
     return createResponse({

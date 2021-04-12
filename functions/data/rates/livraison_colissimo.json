@@ -6,9 +6,16 @@
     "userDefinedId": "livraison_colissimo",
     "slug": "livraison_colissimo"
   },
+  "GB": {
+    "cost": 16,
+    "description": "Colissimo  (GB)",
+    "guaranteedDaysToDelivery": 5,
+    "userDefinedId": "livraison_colissimo",
+    "slug": "livraison_colissimo"
+  },
   "EU": {
-    "cost": 55,
-    "description": "Colissimo",
+    "cost": 13,
+    "description": "Colissimo (EU)",
     "guaranteedDaysToDelivery": 5,
     "userDefinedId": "livraison_colissimo",
     "slug": "livraison_colissimo"

@@ -20,14 +20,19 @@ exports.handler = async ({ body }) => {
     let rates = [];
     let country = '';
 
-    // Shipping country
-    country = obj.content.shippingAddressCountry;
-    if (country != 'FR') {
-      country = 'EU';
+    // Pays de livraison
+    switch (obj.content.shippingAddressCountry) {
+      case 'FR':
+        country = 'FR';
+        break;
+      case 'GB':
+        country = 'GB';
+        break;
+      default:
+        country = 'EU'; // https://abbreviations.yourdictionary.com/articles/list-of-europe-country-codes.html
     }
 
     // Livraison FR uniquement
-    // https://abbreviations.yourdictionary.com/articles/list-of-europe-country-codes.html
     /*if (country != 'FR') {
       return createResponse({
         errors: [{

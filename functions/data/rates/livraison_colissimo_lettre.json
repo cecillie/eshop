@@ -6,9 +6,16 @@
     "userDefinedId": "livraison_colissimo_lettre",
     "slug": "livraison_colissimo_lettre"
   },
+  "GB": {
+    "cost": 21,
+    "description": "Colissimo + Lettre suivie (envoi séparé - GB)",
+    "guaranteedDaysToDelivery": 5,
+    "userDefinedId": "livraison_colissimo_lettre",
+    "slug": "livraison_colissimo_lettre"
+  },
   "EU": {
-    "cost": 88,
-    "description": "Colissimo + Lettre suivie (envoi séparé)",
+    "cost": 18,
+    "description": "Colissimo + Lettre suivie (envoi séparé - EU)",
     "guaranteedDaysToDelivery": 5,
     "userDefinedId": "livraison_colissimo_lettre",
     "slug": "livraison_colissimo_lettre"

@@ -8,6 +8,7 @@
 
 [context.deploy-preview.environment]
   CECIL_ENV = "preview"
+  CECIL_SNIPCART_APIKEY = "ZTVlZWYzMTgtYjBkYS00MmE2LTgwNmYtMTcxZjliNWUxYjhmNjM3NDc0MzIyNTY4MjM5MzY2"
 
 [context.branch-deploy.environment]
   CECIL_ENV = "branch"

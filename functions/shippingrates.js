@@ -21,14 +21,14 @@ exports.handler = async ({ body }) => {
 
     // Livraison FR uniquement
     // https://abbreviations.yourdictionary.com/articles/list-of-europe-country-codes.html
-    if (obj.content.shippingAddressCountry != 'FR') {
+    /*if (obj.content.shippingAddressCountry != 'FR') {
       return createResponse({
         errors: [{
           key: 'error_country',
           message: 'La livraison n\'est possible qu\'en France pour le moment.'
         }]
       });
-    }
+    }*/
 
     // Retrait à l'atelier
     rates.push(retrait_atelier);

@@ -57,7 +57,7 @@ exports.handler = async ({ body }) => {
     if (a3 >= 1 && a5 >= 1) {
       rates.push(livraison_colissimo_lettre);
     } else if (a3 >= 1 && a5 == 0) {
-      rates.push(livraison_colissimo);
+      rates.push(livraison_colissimo.FR);
     } else if (a5 >= 1 && a3 == 0) {
       rates.push(livraison_lettre);
     }

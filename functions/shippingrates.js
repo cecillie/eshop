@@ -18,10 +18,17 @@ exports.handler = async ({ body }) => {
   try {
     const obj = JSON.parse(body);
     let rates = [];
+    let country = '';
+
+    // Shipping country
+    country = obj.content.shippingAddressCountry;
+    if (country != 'FR') {
+      country = 'EU';
+    }
 
     // Livraison FR uniquement
     // https://abbreviations.yourdictionary.com/articles/list-of-europe-country-codes.html
-    /*if (obj.content.shippingAddressCountry != 'FR') {
+    /*if (country != 'FR') {
       return createResponse({
         errors: [{
           key: 'error_country',
@@ -57,7 +64,7 @@ exports.handler = async ({ body }) => {
     if (a3 >= 1 && a5 >= 1) {
       rates.push(livraison_colissimo_lettre);
     } else if (a3 >= 1 && a5 == 0) {
-      rates.push(livraison_colissimo.FR);
+      rates.push(livraison_colissimo.country);
     } else if (a5 >= 1 && a3 == 0) {
       rates.push(livraison_lettre);
     }

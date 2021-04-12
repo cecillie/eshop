@@ -1,7 +1,9 @@
 {
-  "cost": 5,
-  "description": "Colissimo",
-  "guaranteedDaysToDelivery": 5,
-  "userDefinedId": "livraison_colissimo",
-  "slug": "livraison_colissimo"
+  "FR": {
+    "cost": 5,
+    "description": "Colissimo",
+    "guaranteedDaysToDelivery": 5,
+    "userDefinedId": "livraison_colissimo",
+    "slug": "livraison_colissimo"
+  }
 }

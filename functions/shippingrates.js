@@ -17,6 +17,7 @@ function createResponse(response) {
 exports.handler = async ({ body }) => {
   try {
     const obj = JSON.parse(body);
+    const postalCode = obj.content.shippingAddressPostalCode;
     let rates = [];
     let country = '';
 
@@ -43,10 +44,12 @@ exports.handler = async ({ body }) => {
     }*/
 
     // Retrait à l'atelier
-    rates.push(retrait_atelier);
+    if (country == 'FR') {
+      rates.push(retrait_atelier);
+    }
 
     // Livraison à vélo (Montreuil)
-    if (obj.content.shippingAddressPostalCode == '93100') {
+    if (country == 'FR' && postalCode == '93100') {
       rates.push(livraison_velo);
     }
 

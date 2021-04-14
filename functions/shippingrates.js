@@ -17,24 +17,39 @@ function createResponse(response) {
 exports.handler = async ({ body }) => {
   try {
     const obj = JSON.parse(body);
+    const postalCode = obj.content.shippingAddressPostalCode;
     let rates = [];
+    let country = '';
+
+    // Pays de livraison
+    switch (obj.content.shippingAddressCountry) {
+      case 'FR':
+        country = 'FR';
+        break;
+      case 'GB':
+        country = 'GB';
+        break;
+      default:
+        country = 'EU'; // https://abbreviations.yourdictionary.com/articles/list-of-europe-country-codes.html
+    }
 
     // Livraison FR uniquement
-    // https://abbreviations.yourdictionary.com/articles/list-of-europe-country-codes.html
-    if (obj.content.shippingAddressCountry != 'FR') {
+    /*if (country != 'FR') {
       return createResponse({
         errors: [{
           key: 'error_country',
           message: 'La livraison n\'est possible qu\'en France pour le moment.'
         }]
       });
-    }
+    }*/
 
     // Retrait à l'atelier
-    rates.push(retrait_atelier);
+    if (country == 'FR') {
+      rates.push(retrait_atelier);
+    }
 
     // Livraison à vélo (Montreuil)
-    if (obj.content.shippingAddressPostalCode == '93100') {
+    if (country == 'FR' && postalCode == '93100') {
       rates.push(livraison_velo);
     }
 
@@ -55,11 +70,11 @@ exports.handler = async ({ body }) => {
 
     // Type d'expédition conditionnée par le(s) format(s)
     if (a3 >= 1 && a5 >= 1) {
-      rates.push(livraison_colissimo_lettre);
+      rates.push(livraison_colissimo_lettre[country]);
     } else if (a3 >= 1 && a5 == 0) {
-      rates.push(livraison_colissimo);
+      rates.push(livraison_colissimo[country]);
     } else if (a5 >= 1 && a3 == 0) {
-      rates.push(livraison_lettre);
+      rates.push(livraison_lettre[country]);
     }
 
     return createResponse({

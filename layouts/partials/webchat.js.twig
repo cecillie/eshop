@@ -1,5 +1,6 @@
     <!-- Missive Live Chat -->
     <script>
+      {% apply minify_js %}
       (function (d, w) {
         w.MissiveChatConfig = {
           "id": "{{ site.webchat }}"
@@ -9,6 +10,7 @@
         s.src = 'https://webchat.missiveapp.com/' + w.MissiveChatConfig.id + '/missive.js';
         if (d.head)
           d.head.appendChild(s);
-        })(document, window);
+      })(document, window);
+      {% endapply %}
     </script>
     <!-- /Missive Live Chat -->

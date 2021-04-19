@@ -14,11 +14,13 @@
     <div hidden id="snipcart" data-api-key="{{ site.snipcart.apikey }}" data-config-modal-style="side" data-templates-url="/snipcart/templates.tpl"></div>
     <script src="{{ asset('/snipcart/v' ~ site.snipcart.version ~ '.js')|url }}" defer></script>
     <script>
+      {% apply minify_js %}
       document.addEventListener('snipcart.ready', function() {
         fetch('/snipcart/{{ language }}.json')
           .then(response => response.json())
           .then(translation => Snipcart.api.session.setLanguage('{{ language }}', translation))
       });
+      {% endapply %}
     </script>
     {%~ include 'partials/googleanalytics.js.twig' ~%}
     {%~ include 'partials/cloudflareinsights.js.twig' ~%}

@@ -76,12 +76,14 @@
       </billing>
       <shipping-address section="bottom">
         <fieldset class="snipcart-form__set">
+          <hr class="snipcart-form__separator" />
           <!-- Gift message -->
           <div class="snipcart-form__field">
-            <snipcart-label class="snipcart__font--tiny" for="giftMessage">Message cadeau (optionnel)</snipcart-label>
-            <snipcart-input name="giftMessage"></snipcart-input>
-            <p class="snipcart__font--tiny snipcart-form__footer">(Votre message sera écrit à la main sur une carte ajoutée dans
-              le colis)</p>
+            <snipcart-label class="snipcart__font--tiny" for="giftMessage">Message cadeau</snipcart-label>
+            <snipcart-textarea name="giftMessage"></snipcart-textarea>
+            <p class="snipcart__font--tiny snipcart-form__footer">
+              (Votre message sera écrit à la main sur une carte, ajoutée dans le colis)
+            </p>
           </div>
         </fieldset>
       </address-fields>

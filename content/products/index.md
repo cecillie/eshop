@@ -10,6 +10,6 @@ cascade:
     - value: A5
       html: Carte A5 - 8 €
       price: -15.00
-  - name: Message cadeau
-    type: textarea
+  #- name: Message cadeau
+  #  type: textarea
 ---

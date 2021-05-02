@@ -82,7 +82,7 @@
             <snipcart-label class="snipcart__font--tiny" for="giftMessage">Message cadeau</snipcart-label>
             <snipcart-textarea name="giftMessage"></snipcart-textarea>
             <p class="snipcart__font--tiny snipcart-form__footer">
-              (Votre message sera écrit à la main sur une carte, ajoutée dans le colis)
+              (Votre message sera écrit à la main sur une carte, ajoutée au colis)
             </p>
           </div>
         </fieldset>

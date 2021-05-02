@@ -79,8 +79,8 @@
           <hr class="snipcart-form__separator" />
           <!-- Gift message -->
           <div class="snipcart-form__field">
-            <snipcart-label class="snipcart__font--tiny" for="giftMessage">Message cadeau</snipcart-label>
-            <snipcart-textarea name="message-cadeau"></snipcart-textarea>
+            <snipcart-label class="snipcart__font--tiny" for="Message cadeau">Message cadeau</snipcart-label>
+            <snipcart-input name="Message cadeau"></snipcart-input>
             <p class="snipcart__font--tiny snipcart-form__footer">
               (Votre message sera écrit à la main sur une carte, ajoutée au colis)
             </p>

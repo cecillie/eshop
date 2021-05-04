@@ -4,3 +4,4 @@ _site
 vendor
 themes
 !static/themes
+node_modules

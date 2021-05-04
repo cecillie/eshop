@@ -60,6 +60,33 @@
           </fieldset>
         </div>
       </address-fields>
+      <!-- Order custom fields -->
+      <billing section="bottom">
+        <fieldset class="snipcart-form__set">
+          <!-- Newsletter -->
+          <!--
+          <div class="snipcart-form__field">
+            <div class="snipcart-form__field-checkbox">
+              <snipcart-checkbox name="subscribeToNewsletter"></snipcart-checkbox>
+              <snipcart-label for="subscribeToNewsletter" class="snipcart__font--tiny snipcart-form__label--checkbox">S'abonner à la newsletter</snipcart-label>
+            </div>
+          </div>
+          -->
+        </fieldset>
+      </billing>
+      <shipping-address section="bottom">
+        <fieldset class="snipcart-form__set">
+          <hr class="snipcart-form__separator" />
+          <!-- Gift message -->
+          <div class="snipcart-form__field">
+            <snipcart-label class="snipcart__font--tiny" for="Message cadeau">Message cadeau</snipcart-label>
+            <snipcart-input name="Message cadeau"></snipcart-input>
+            <p class="snipcart__font--tiny snipcart-form__footer">
+              (Votre message sera écrit à la main sur une carte, ajoutée au colis)
+            </p>
+          </div>
+        </fieldset>
+      </address-fields>
       <!-- shipping rate item -->
       <!--
       <shipping-rates-list-item>

@@ -10,7 +10,8 @@
     <noscript><link rel="stylesheet" href="{{ font.url }}"></noscript>
     {%- endfor ~%}
     {#- Snipcart ~#}
-    <link href="{{ asset('snipcart/v' ~ site.snipcart.version ~ '.css')|url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    {#- <link href="{{ asset('snipcart/v' ~ site.snipcart.version ~ '.css')|url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" /> ~#}
+    <link href="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.css',{minify:false})|url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     {#- flickity ~#}
     <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>

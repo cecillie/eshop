@@ -29,3 +29,5 @@ fields:
       - type: number
         name: price
         label: price
+pages:
+- content/products/index.md

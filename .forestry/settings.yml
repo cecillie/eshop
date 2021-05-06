@@ -12,9 +12,6 @@ sections:
   new_doc_ext: md
   templates:
   - product
-- type: document
-  path: config.yml
-  label: Configuration
 - type: heading
   label: Pages
 - type: document
@@ -32,6 +29,11 @@ sections:
 - type: document
   path: content/404.md
   label: Page 404
+- type: heading
+  label: Settings
+- type: document
+  path: config.yml
+  label: Configuration
 upload_dir: static/images
 public_path: "/images"
 front_matter_path: ''

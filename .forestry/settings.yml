@@ -11,8 +11,8 @@ sections:
   match: "**/*"
   new_doc_ext: md
   templates:
-  - products-section
   - product
+  - products-section
 - type: heading
   label: Pages
 - type: document

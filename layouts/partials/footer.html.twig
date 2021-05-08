@@ -15,13 +15,13 @@
     {#- <script src="{{ asset('/snipcart/v' ~ site.snipcart.version ~ '.js')|url }}" defer></script> ~#}
     <script src="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.js',{minify:false})|url }}" defer></script>
     <script>
-      {% apply minify_js %}
+      {%- apply minify_js %}
       document.addEventListener('snipcart.ready', function() {
         fetch('/snipcart/{{ language }}.json')
           .then(response => response.json())
           .then(translation => Snipcart.api.session.setLanguage('{{ language }}', translation))
       });
-      {% endapply %}
+      {% endapply -%}
     </script>
     {%~ include 'partials/googleanalytics.js.twig' ~%}
     {%~ include 'partials/cloudflareinsights.js.twig' ~%}

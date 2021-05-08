@@ -1,6 +1,5 @@
-    <!-- Missive Live Chat -->
     <script>
-      {% apply minify_js %}
+      {%- apply minify_js -%}
       (function (d, w) {
         w.MissiveChatConfig = {
           "id": "{{ site.webchat }}"
@@ -11,6 +10,5 @@
         if (d.head)
           d.head.appendChild(s);
       })(document, window);
-      {% endapply %}
+      {%- endapply -%}
     </script>
-    <!-- /Missive Live Chat -->

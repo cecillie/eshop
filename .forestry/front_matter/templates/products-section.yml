@@ -45,6 +45,6 @@ fields:
         labelField: value
     config:
       labelField: name
-  hidden: true
+  hidden: false
 pages:
 - content/products/index.md

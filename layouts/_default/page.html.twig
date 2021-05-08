@@ -3,10 +3,6 @@
 <html lang="{{ language }}">
   <head>
     {%~ include 'partials/head.html.twig' with {'page': page} only ~%}
-    {%- if page.forestry_instant_preview_id is defined ~%}
-    <!-- Forestry.io Instant Preview -->
-    <meta property="forestry:preview:id" content="{{ page.forestry_instant_preview_id }}">
-    {%- endif ~%}
   </head>
   <body>
     {%~ include 'partials/header.html.twig' with {'page': page} only ~%}

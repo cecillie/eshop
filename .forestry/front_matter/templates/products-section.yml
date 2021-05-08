@@ -4,7 +4,7 @@ hide_body: true
 fields:
 - type: field_group
   name: cascade
-  label: Cascade
+  label: Products default variables
   fields:
   - type: number
     name: price

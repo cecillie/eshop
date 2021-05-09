@@ -1,0 +1,124 @@
+---
+label: Config
+hide_body: true
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: baseline
+  label: baseline
+- type: text
+  name: baseurl
+  label: baseurl
+- type: text
+  name: description
+  label: description
+- type: field_group
+  name: author
+  label: author
+  fields:
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: url
+    label: url
+- type: file
+  name: image
+  label: image
+- type: field_group_list
+  name: languages
+  label: languages
+  fields:
+  - type: text
+    name: code
+    label: code
+  - type: text
+    name: name
+    label: name
+  - type: text
+    name: locale
+    label: locale
+- type: text
+  name: language
+  label: language
+- type: field_group
+  name: menus
+  label: menus
+  fields:
+  - type: field_group_list
+    name: main
+    label: main
+    fields:
+    - type: text
+      name: id
+      label: id
+    - type: boolean
+      name: enabled
+      label: enabled
+  - type: field_group_list
+    name: footer
+    label: footer
+    fields:
+    - type: text
+      name: id
+      label: id
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: url
+      label: url
+    - type: number
+      name: weight
+      label: weight
+- type: field_group_list
+  name: fonts
+  label: fonts
+  fields:
+  - type: textarea
+    name: url
+    label: url
+- type: list
+  name: theme
+  label: theme
+- type: field_group
+  name: snipcart
+  label: snipcart
+  fields:
+  - type: text
+    name: version
+    label: version
+  - type: text
+    name: apikey
+    label: apikey
+  - type: boolean
+    name: customer
+    label: customer
+- type: text
+  name: cloudflareinsights
+  label: cloudflareinsights
+- type: text
+  name: webchat
+  label: webchat
+- type: field_group
+  name: netlify
+  label: netlify
+  fields:
+  - type: field_group_list
+    name: redirects
+    label: redirects
+    fields:
+    - type: text
+      name: from
+      label: from
+    - type: text
+      name: to
+      label: to
+    - type: number
+      name: status
+      label: status
+    - type: boolean
+      name: force
+      label: force

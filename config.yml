@@ -40,6 +40,10 @@ snipcart:
   version: 3.0.27
   apikey: ZTVlZWYzMTgtYjBkYS00MmE2LTgwNmYtMTcxZjliNWUxYjhmNjM3NDc0MzIyNTY4MjM5MzY2
   customer: true
+flickity:
+  version: 2
+  fullscreen:
+    version: 1
 #googleanalytics: 1234
 cloudflareinsights: 5d643695e5b94058b6395c161f613653
 webchat: cc14b8df-44b8-4956-8ae2-1ea4e2f3d5a6

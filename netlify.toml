@@ -4,7 +4,6 @@
 [build.environment]
   PHP_VERSION = "7.2"
   CECIL_ENV = "production"
-  CECIL_SNIPCART_APIKEY = "ZGQ1NTA5YzItNDQzOS00ZGZkLTg0MTYtYjJjMGRhMmZkYjExNjM3NDc0MzIyNTY4MjM5MzY2"
 
 [context.deploy-preview.environment]
   CECIL_ENV = "preview"

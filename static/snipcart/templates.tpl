@@ -5,7 +5,7 @@
   </head>
   <body>
     <div id="snipcart-templates">
-      <!-- cart line with custom field -->
+      <!-- Cart line with custom field -->
       <cart-summary-item>
         <div class="root">
           <slot v-bind="item">
@@ -23,10 +23,9 @@
           </slot>
         </div>
       </cart-summary-item>
-      <!-- address fields without suggestion -->
+      <!-- Address fields without suggestion -->
       <address-fields>
         <div class="root">
-          <overridable name="address-fields" section="top"></overridable>
           <fieldset class="snipcart-form__set">
             <div class="snipcart-form__field">
               <snipcart-label class="snipcart__font--tiny" for="address1">{{ $localize('address_form.address1') }}</snipcart-label>
@@ -50,44 +49,40 @@
               <snipcart-typeahead type="dropdown" name="country"></snipcart-typeahead>
               <snipcart-error-message name="country"></snipcart-error-message>
             </div>
-            <!--
-            <div class="snipcart-form__field">
-              <snipcart-label class="snipcart__font--tiny" for="province">{{ $localize('address_form.province') }}</snipcart-label>
-              <snipcart-typeahead type="dropdown" name="province"></snipcart-typeahead>
-              <snipcart-error-message name="province"></snipcart-error-message>
-            </div>
-            -->
           </fieldset>
         </div>
       </address-fields>
-      <!-- Order custom fields -->
+      <!-- Newsletter -->
+      <!--
       <billing section="bottom">
-        <fieldset class="snipcart-form__set">
-          <!-- Newsletter -->
-          <!--
-          <div class="snipcart-form__field">
-            <div class="snipcart-form__field-checkbox">
-              <snipcart-checkbox name="subscribeToNewsletter"></snipcart-checkbox>
-              <snipcart-label for="subscribeToNewsletter" class="snipcart__font--tiny snipcart-form__label--checkbox">S'abonner à la newsletter</snipcart-label>
+        <div class="root">
+          <fieldset class="snipcart-form__set">
+            <div class="snipcart-form__field">
+              <div class="snipcart-form__field-checkbox">
+                <snipcart-checkbox name="subscribeToNewsletter"></snipcart-checkbox>
+                <snipcart-label for="subscribeToNewsletter" class="snipcart__font--tiny snipcart-form__label--checkbox">S'abonner à la newsletter</snipcart-label>
+              </div>
             </div>
-          </div>
-          -->
-        </fieldset>
+          </fieldset>
+        </div>
       </billing>
+      -->
+      <!-- Gift message -->
       <shipping-address section="bottom">
-        <fieldset class="snipcart-form__set">
-          <hr class="snipcart-form__separator" />
-          <!-- Gift message -->
-          <div class="snipcart-form__field">
-            <snipcart-label class="snipcart__font--tiny" for="Message cadeau">Message cadeau</snipcart-label>
-            <snipcart-input name="Message cadeau"></snipcart-input>
-            <p class="snipcart__font--tiny snipcart-form__footer">
-              (Votre message sera écrit à la main sur une carte, ajoutée au colis)
-            </p>
-          </div>
-        </fieldset>
+        <div class="root">
+          <fieldset class="snipcart-form__set">
+            <hr class="snipcart-form__separator" />
+            <div class="snipcart-form__field">
+              <snipcart-label class="snipcart__font--tiny" for="Message cadeau">Message cadeau</snipcart-label>
+              <snipcart-input name="Message cadeau"></snipcart-input>
+              <p class="snipcart__font--tiny snipcart-form__footer">
+                (Votre message sera écrit à la main sur une carte, ajoutée au colis)
+              </p>
+            </div>
+          </fieldset>
+        </div>
       </address-fields>
-      <!-- shipping rate item -->
+      <!-- Shipping rate item -->
       <!--
       <shipping-rates-list-item>
         <div class="root">

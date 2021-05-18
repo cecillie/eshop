@@ -17,9 +17,16 @@
     <script>
       {%- apply minify_js %}
       document.addEventListener('snipcart.ready', function() {
+        // Language
         fetch('/snipcart/{{ language }}.json')
           .then(response => response.json())
-          .then(translation => Snipcart.api.session.setLanguage('{{ language }}', translation))
+          .then(translation => Snipcart.api.session.setLanguage('{{ language }}', translation));
+        // Payment form
+        Snipcart.api.theme.customization.registerPaymentFormCustomization({
+          input: {
+            border: '1px solid #FAAC8A',
+          }
+        });
       });
       {% endapply -%}
     </script>

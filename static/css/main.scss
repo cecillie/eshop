@@ -672,3 +672,20 @@ $image--background: url('/images/background.png');
     text-transform: uppercase;
   }
 }
+
+// Snipcart custom variables
+
+:root {
+  --color-icon: #{$color--primary};
+  --color-link: #{$color--primary};
+  --color-link-hover: #{$color--primary};
+  --borderColor-input-hover: #{$color--primary};
+  --borderColor-input-focus: #{$color--primary};
+  --borderColor-input-checked: #{$color--primary};
+  --bgColor-input-checked: #{$color--primary};
+  --bgColor-buttonPrimary: #{$color--primary};
+  --bgColor-buttonPrimary-hover: #{$color--primary};
+  --bgColor-buttonPrimary-active: #{$color--primary};
+  --color-buttonSecondary: #{$color--default};
+  --color-badge: #{$color--primary};
+}

@@ -686,6 +686,9 @@ $image--background: url('/images/background.png');
   --bgColor-buttonPrimary: #{$color--primary};
   --bgColor-buttonPrimary-hover: #{$color--primary};
   --bgColor-buttonPrimary-active: #{$color--primary};
-  --color-buttonSecondary: #{$color--default};
+  --color-buttonSecondary: #{$color--background};
+  --color-buttonSecondary-hover: #{$color--background};
+  --bgColor-buttonSecondary: #{$color--primary};
+  --bgColor-buttonSecondary-hover: #{$color--primary};
   --color-badge: #{$color--primary};
 }

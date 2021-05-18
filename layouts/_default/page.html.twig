@@ -7,9 +7,9 @@
   <body>
     {%~ include 'partials/header.html.twig' with {'page': page} only ~%}
     <main class="main">
-      {%~ block content ~%}
+      {%- block content ~%}
       {{- page.content -}}
-      {%~ endblock ~%}
+      {%- endblock ~%}
     </main>
     {%~ include 'partials/footer.html.twig' with {'language': language, 'page': page} only ~%}
   </body>

@@ -46,7 +46,7 @@
   "subscription": {
     "title": "Abonnement",
     "state": {
-      "title": "État ",
+      "title": "Statut",
       "active": "Actif",
       "paused": "En pause",
       "finished": "Terminé",

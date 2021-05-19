@@ -51,6 +51,9 @@
                   {%- endif ~%}
                 {%- endfor ~%}
               {%- endif ~%}
+              {%- if product.guid is defined ~%}
+              data-guid="{{ product.guid }}"
+              {%- endif ~%}
             >
               Ajouter au panier
             </button>

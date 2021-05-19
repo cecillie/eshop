@@ -4,6 +4,6 @@ layout: promo
 ---
 # Promotion
 
-_"Payages à vélo"_
+_"Paysages à vélo"_
 
 `https://shop.cecillie.fr`

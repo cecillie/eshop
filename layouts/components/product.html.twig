@@ -35,13 +35,13 @@
               data-item-price="{{ product.price }}"
               data-item-url="{{ url(product,{canonical:true}) }}"
               data-item-name="{{ product.name }}"
-              {%- if product.description is defined and product.description %}data-item-description="{{ product.description }}"{% endif ~%}
+              {% if product.description is defined and product.description %}data-item-description="{{ product.description }}"{% endif ~%}
               data-item-image="{{ asset(product.image,{fingerprint:false})|url({canonical:true}) }}"
               data-item-quantity="1"
               data-item-max-quantity="99"
               data-item-stackable="auto"
-              {%- if product.variants is defined ~%}
-                {%- for variant in product.variants ~%}
+              {% if product.variants is defined -%}
+                {%- for variant in product.variants -%}
               data-item-custom{{ loop.index }}-name="{{ variant.name }}"
                   {%- if variant.options is defined ~%}
               data-item-custom{{ loop.index }}-options="{{ variant.options|map(v => "#{v.value}[#{v.price}]")|join('|') }}"

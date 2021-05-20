@@ -31,31 +31,7 @@
               <label for="{{ productId }}-qty">Quantité</label>
               <input type="number" id="{{ productId }}-qty" class="qty" min="1" max="10" value="1" />
             </div>
-            <button class="buy-button snipcart-add-item"
-              data-item-id="{{ productId }}"
-              data-item-price="{{ product.price }}"
-              data-item-url="{{ url(product,{canonical:true}) }}"
-              data-item-name="{{ product.name }}"
-              {% if product.description is defined and product.description %}data-item-description="{{ product.description }}"{% endif ~%}
-              data-item-image="{{ asset(product.image,{fingerprint:false})|url({canonical:true}) }}"
-              {% if product.maxquantity is defined and product.maxquantity %}data-item-max-quantity="{{ product.maxquantity }}"{% endif ~%}
-              {% if product.stackable is defined and product.stackable %}data-item-stackable="{{ product.stackable }}"{% endif ~%}
-              {% if product.variants is defined -%}
-                {%- for variant in product.variants -%}
-              data-item-custom{{ loop.index }}-name="{{ variant.name }}"
-                  {%- if variant.options is defined ~%}
-              data-item-custom{{ loop.index }}-options="{{ variant.options|map(v => "#{v.value}[#{v.price}]")|join('|') }}"
-                    {%- for option in variant.options|filter(v => v.guid is defined) ~%}
-              data-item-file-guid-{{ option.value|lower }}="{{ option.guid }}"
-                    {%- endfor ~%}
-                  {%- elseif variant.type is defined ~%}
-              data-item-custom{{ loop.index }}-type="{{ variant.type }}"
-                  {%- endif ~%}
-                {%- endfor ~%}
-              {%- endif ~%}
-            >
-              Ajouter au panier
-            </button>
+            {%~ include 'components/buybutton.html.twig' with {'productId':productId,'product':product} only ~%}
           </div>
         </div>
         {%~ include 'components/carousel.html.twig' with {'product':product,'image':image} ~%}

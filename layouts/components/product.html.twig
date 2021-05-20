@@ -31,7 +31,7 @@
               <label for="{{ productId }}-qty">Quantité</label>
               <input type="number" id="{{ productId }}-qty" class="qty" min="1" max="10" value="1" />
             </div>
-            {%~ include 'components/buybutton.html.twig' with {'productId':productId,'product':product} only ~%}
+            {%~ include 'components/add-item.html.twig' with {'productId':productId,'product':product,'label':"Ajouter au panier"} only ~%}
           </div>
         </div>
         {%~ include 'components/carousel.html.twig' with {'product':product,'image':image} ~%}

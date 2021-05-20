@@ -1,5 +1,6 @@
-{% set productId = product.id|replace({(product.section ~ '/'):''}) %}
-{% set image = asset(product.image) %}
+{#- varibles: product -#}
+{%- set productId = product.id|replace({(product.section ~ '/'):''}) -%}
+{%- set image = asset(product.image) ~%}
       <div class="product">
         <div class="product__information">
           <h2 class="product__title">

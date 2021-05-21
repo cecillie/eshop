@@ -5,14 +5,16 @@ variables:
   - label: button label (default: "Add to cart")
 ~#}
             <button class="buy-button snipcart-add-item"
+              data-item-name="{{ product.name }}"
               data-item-id="{{ productId }}"
               data-item-price="{{ product.price }}"
               data-item-url="{{ url(product,{canonical:true}) }}"
-              data-item-name="{{ product.name }}"
               {%- if product.description is defined and product.description ~%}
               data-item-description="{{ product.description }}"
               {%- endif ~%}
+              {%- if product.image is defined and product.image ~%}
               data-item-image="{{ asset(product.image,{fingerprint:false})|url({canonical:true}) }}"
+              {%- endif ~%}
               {%- if product.categories is defined and product.categories ~%}
               data-item-categories="{{ product.categories|join("|") }}".
               {%- endif ~%}
@@ -24,6 +26,9 @@ variables:
               {%- endif ~%}
               {%- if product.stackable is defined and product.stackable ~%}
               data-item-stackable="{{ product.stackable }}"
+              {%- endif ~%}
+              {%- if product.guid is defined and product.guid ~%}
+              data-item-file-guid="{{ product.guid }}"
               {%- endif ~%}
               {#- variants (customX) -#}
               {% if product.variants is defined ~%}

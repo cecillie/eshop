@@ -10,21 +10,20 @@
     <noscript><link rel="stylesheet" href="{{ font.url }}"></noscript>
     {%- endfor ~%}
     {#- Snipcart ~#}
-    {#- <link href="{{ asset('snipcart/v' ~ site.snipcart.version ~ '.css')|url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" /> ~#}
-    <link href="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.css',{minify:false})|url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link href="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.css',{minify:false})|url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
     {#- flickity ~#}
-    {#- <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
     <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
     <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css" />
-    <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script> ~#}
-    <link rel="stylesheet" href="{{ asset('https://unpkg.com/flickity@' ~ site.flickity.version ~ '/dist/flickity.min.css',{minify:false})|url }}"/>
-    <script src="{{ asset('https://unpkg.com/flickity@' ~ site.flickity.version ~ '/dist/flickity.pkgd.min.js',{minify:false})|url }}"></script>
-    <link rel="stylesheet" href="{{ asset('https://unpkg.com/flickity-fullscreen@' ~ site.flickity.fullscreen.version ~ '/fullscreen.css',{minify:false})|url }}"/>
-    <script src="{{ asset('https://unpkg.com/flickity-fullscreen@' ~ site.flickity.fullscreen.version ~ '/fullscreen.js',{minify:false})|url }}"></script>
+    <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
     {#- main ~#}
     {#-<link rel="stylesheet" href="{{ asset('css/main.scss')|url }}" />~#}
-    <style>{{ asset('css/main.scss')|inline }}</style>
+    <style>
+      {{ asset('css/main.scss')|inline }}
+    </style>
     {#-<script src="{{ asset('/js/main.js')|minify|url }}"></script>~#}
-    <script>{{ asset('/js/main.js')|minify|inline }}</script>
-    {%~ include 'partials/webchat.js.twig' -%}
-    {%~ include 'partials/forestry.html.twig' -%}
+    <script>
+      {{ asset('/js/main.js')|minify|inline }}
+    </script>
+    {%~ include 'partials/webchat.js.twig' ~%}
+    {%~ include 'partials/forestry.html.twig' ~%}

@@ -9,6 +9,9 @@ fields:
   - type: number
     name: price
     label: Prix
+    description: Prix de référence.
+    config:
+      required: true
   - type: field_group_list
     name: variants
     label: Variants
@@ -16,6 +19,8 @@ fields:
     - type: text
       name: name
       label: Nom
+      config:
+        required: true
     - type: field_group_list
       name: options
       label: Options
@@ -23,15 +28,28 @@ fields:
       - type: text
         name: value
         label: Valeur
+        config:
+          required: true
       - type: text
         name: html
         label: HTML
+        config:
+          required: true
+        description: Affichage dans la liste déroulante.
       - type: number
         name: price
         label: Prix
+        config:
+          required: true
+        description: Prix relatif au prix de référence (peut être négatif).
+      config:
+        labelField: value
+    config:
+      labelField: name
   - type: number
     name: maxquantity
     label: Quantité max
+    description: Quantité maximum autorisée lors de l'ajout au panier.
   - type: text
     name: stackable
     label: Empilable

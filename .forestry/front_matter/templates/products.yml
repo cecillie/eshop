@@ -35,5 +35,6 @@ fields:
   - type: text
     name: stackable
     label: stackable
+  hidden: true
 pages:
 - content/products/index.md

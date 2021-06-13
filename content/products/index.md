@@ -1,7 +1,5 @@
 ---
 cascade:
-  maxquantity: 10
-  stackable: auto
   price: 23
   variants:
   - name: Format
@@ -12,5 +10,7 @@ cascade:
     - value: A5
       html: Carte A5 - 8 €
       price: -15
+  maxquantity: 10
+  stackable: auto
 
 ---

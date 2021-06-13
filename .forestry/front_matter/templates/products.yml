@@ -1,0 +1,37 @@
+---
+label: Products
+hide_body: true
+fields:
+- type: field_group
+  name: cascade
+  label: cascade
+  fields:
+  - type: number
+    name: price
+    label: price
+  - type: field_group_list
+    name: variants
+    label: variants
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: field_group_list
+      name: options
+      label: options
+      fields:
+      - type: text
+        name: value
+        label: value
+      - type: text
+        name: html
+        label: html
+      - type: number
+        name: price
+        label: price
+  - type: number
+    name: maxquantity
+    label: maxquantity
+  - type: text
+    name: stackable
+    label: stackable

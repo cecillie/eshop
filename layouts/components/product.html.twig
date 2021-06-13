@@ -3,14 +3,12 @@
 {%- set image = asset(product.image) ~%}
       <div class="product">
         <div class="product__information">
-          <h2 class="product__title">
-            {%- if home is defined and home ~%}
-            <a href="{{ url(product) }}">{{ product.name }}</a>
-            {%- else ~%}
-            {{ product.name }}
-            {%- endif ~%}
-          </h2>
-          {%~ include 'components/carousel.html.twig' with {'product':product,'image':image} %}
+          {%- if home is defined and home ~%}
+          <h2 class="product__title"><a href="{{ url(product) }}">{{ product.name }}</a></h2>
+          {%- else ~%}
+          <h1 class="product__title">{{ product.name }}</h1>
+          {%- endif ~%}
+          {%~ include 'components/carousel.html.twig' with {'product':product,'image':image} ~%}
           <div class="product__description">{{ product.content }}</div>
           <div class="product__details">
             {%- if product.variants is defined ~%}

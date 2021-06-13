@@ -4,37 +4,38 @@ hide_body: true
 fields:
 - type: field_group
   name: cascade
-  label: cascade
+  label: Variables globales
   fields:
   - type: number
     name: price
     label: Prix
   - type: field_group_list
     name: variants
-    label: variants
+    label: Variants
     fields:
     - type: text
       name: name
-      label: name
+      label: Nom
     - type: field_group_list
       name: options
-      label: options
+      label: Options
       fields:
       - type: text
         name: value
-        label: value
+        label: Valeur
       - type: text
         name: html
-        label: html
+        label: HTML
       - type: number
         name: price
-        label: price
+        label: Prix
   - type: number
     name: maxquantity
-    label: maxquantity
+    label: Quantité max
   - type: text
     name: stackable
-    label: stackable
-  hidden: true
+    label: Empilable
+    hidden: true
+  hidden: false
 pages:
 - content/products/index.md

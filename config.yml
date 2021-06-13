@@ -30,6 +30,8 @@ menus:
       name: "Instagram"
       url: https://www.instagram.com/cecile.ricordeau/
       weight: 5
+pagination:
+  enabled: false
 static:
   load: true
 fonts:

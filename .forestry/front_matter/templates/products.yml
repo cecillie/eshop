@@ -8,7 +8,7 @@ fields:
   fields:
   - type: number
     name: price
-    label: price
+    label: Prix
   - type: field_group_list
     name: variants
     label: variants

@@ -35,3 +35,5 @@ fields:
   - type: text
     name: stackable
     label: stackable
+pages:
+- content/products/index.md

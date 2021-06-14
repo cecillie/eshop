@@ -44,7 +44,7 @@ theme:
 snipcart:
   version: 3.0.27
   apikey: ZTVlZWYzMTgtYjBkYS00MmE2LTgwNmYtMTcxZjliNWUxYjhmNjM3NDc0MzIyNTY4MjM5MzY2
-  account: false
+  account: true
 flickity:
   version: "2"
   fullscreen:

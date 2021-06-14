@@ -1,63 +1,59 @@
-title: "Paysages à vélo"
-baseline: "La boutique de cecillie."
+---
+title: Paysages à vélo
+baseline: La boutique de cecillie.
 baseurl: https://shop.cecillie.fr/
-description: "Paysages à vélo, la boutique de cecillie."
+description: Paysages à vélo, la boutique de cecillie.
 author:
   name: studio cecillie
   url: https://studio.cecillie.fr
-image: /images/cecillie_share_1200x628.jpg
+image: "/images/cecillie_share_1200x628.jpg"
 languages:
-  - code: fr-FR
-    name: Français
-    locale: fr_FR
+- code: fr-FR
+  name: Français
+  locale: fr_FR
 language: fr-FR
 menus:
   main:
-    - id: index
-      enabled: false
-    - id: products
-      enabled: false
+  - id: index
+    enabled: false
+  - id: products
+    enabled: false
   footer:
-    - id: newsletter
-      name: "Newsletter"
-      url: https://mailchi.mp/a7fb0a1ad278/nl-shop-cecillie/
-      weight: 3
-    - id: twitter
-      name: "Twitter"
-      url: https://twitter.com/onibd
-      weight: 4
-    - id: instagram
-      name: "Instagram"
-      url: https://www.instagram.com/cecile.ricordeau/
-      weight: 5
+  - id: newsletter
+    name: Newsletter
+    url: https://mailchi.mp/a7fb0a1ad278/nl-shop-cecillie/
+    weight: "3"
+  - id: twitter
+    name: Twitter
+    url: https://twitter.com/onibd
+    weight: "4"
+  - id: instagram
+    name: Instagram
+    url: https://www.instagram.com/cecile.ricordeau/
+    weight: "5"
 pagination:
   enabled: false
 static:
   load: true
 fonts:
-  - url: https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap
-  - url: https://fonts.googleapis.com/css2?family=Scope+One&display=swap
-  - url: https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap
+- url: https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap
+- url: https://fonts.googleapis.com/css2?family=Scope+One&display=swap
+- url: https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap
 theme:
-  - netlify
+- netlify
 snipcart:
   version: 3.0.27
   apikey: ZTVlZWYzMTgtYjBkYS00MmE2LTgwNmYtMTcxZjliNWUxYjhmNjM3NDc0MzIyNTY4MjM5MzY2
-  account: true
+  account: false
 flickity:
-  version: 2
+  version: "2"
   fullscreen:
-    version: 1
-#googleanalytics: 1234
+    version: "1"
 cloudflareinsights: 5d643695e5b94058b6395c161f613653
 webchat: cc14b8df-44b8-4956-8ae2-1ea4e2f3d5a6
 netlify:
   redirects:
-    - from: https://bikeeshop.netlify.com/*
-      to: https://shop.cecillie.fr/:splat
-      status: 301
-      force: true
-    #- from: https://shop.cecillie.fr/*
-    #  to: https://mailchi.mp/a7fb0a1ad278/nl-shop-cecillie/
-    #  status: 302
-    #  force: true
+  - from: https://bikeeshop.netlify.com/*
+    to: https://shop.cecillie.fr/:splat
+    status: "301"
+    force: true

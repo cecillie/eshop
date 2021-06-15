@@ -33,4 +33,23 @@
           </div>
         </div>
         {%~ include 'components/carousel.html.twig' with {'product':product,'image':image} ~%}
+{# Structured data #}
+{% set variantIndex, currency = 0, 'EUR' %}
+        <script type="application/ld+json">{% apply minify_js %}
+          {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "{{ product.name }}",
+            "image": "{{ image|url({canonical:true}) }}",
+            "description": "{{ product.description }}",
+            "sku": "{{ productId }}",
+            "url": "{{ url(product,{canonical:true}) }}",
+            "offers": {
+              "@type": "AggregateOffer",
+              "highPrice": {{ (product.price + max(product.variants[variantIndex].options|column('price')))|number_format(2) }},
+              "lowPrice": {{ (product.price + min(product.variants[variantIndex].options|column('price')))|number_format(2) }},
+              "priceCurrency": "{{ currency }}"
+            }
+          }
+        {% endapply %}</script>
       </div>

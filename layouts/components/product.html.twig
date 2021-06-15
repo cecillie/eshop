@@ -50,6 +50,19 @@
             "highPrice": {{ (product.price + max(product.variants[variantIndex].options|column('price')))|number_format(2) }},
             "lowPrice": {{ (product.price + min(product.variants[variantIndex].options|column('price')))|number_format(2) }},
             "priceCurrency": "{{ currency }}"
-          }
+          },
+          "model": [
+          {%- for option in product.variants[variantIndex].options -%}
+          {
+            "@type": "ProductModel",
+            "name": "{{ product.name }}",
+            "offers": {
+              "@type": "Offer",
+              "price": {{ (product.price + option.price)|number_format(2) }},
+              "name": "{{ product.name }} {{ option.value }}",
+              "availability": "InStock"
+            }
+          }{% if not loop.last %},{% endif %}
+          {%- endfor ~%}]
         }
       {% endapply %}</script>

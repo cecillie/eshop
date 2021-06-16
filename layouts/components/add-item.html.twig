@@ -1,0 +1,64 @@
+{#-
+variables:
+  - productId: Snipcart product unique ID
+  - product: product front matter variables
+  - label: button label (default: "Add to cart")
+~#}
+            <button class="buy-button snipcart-add-item"
+              data-item-name="{{ product.name }}"
+              data-item-id="{{ productId }}"
+              data-item-price="{{ product.price }}"
+              data-item-url="{{ url(product,{canonical:true}) }}"
+              {%- if product.description is defined and product.description ~%}
+              data-item-description="{{ product.description }}"
+              {%- endif ~%}
+              {%- if product.image is defined and product.image ~%}
+              data-item-image="{{ asset(product.image,{fingerprint:false})|url({canonical:true}) }}"
+              {%- endif ~%}
+              {%- if product.categories is defined and product.categories ~%}
+              data-item-categories="{{ product.categories|join("|") }}".
+              {%- endif ~%}
+              {%- if product.metadata is defined and product.metadata ~%}
+              data-item-metadata='{{ product.metadata|json_encode() }}'
+              {%- endif ~%}
+              {%- if product.maxquantity is defined and product.maxquantity ~%}
+              data-item-max-quantity="{{ product.maxquantity }}"
+              {%- endif ~%}
+              {%- if product.stackable is defined and product.stackable ~%}
+              data-item-stackable="{{ product.stackable }}"
+              {%- endif ~%}
+              {%- if product.guid is defined and product.guid ~%}
+              data-item-file-guid="{{ product.guid }}"
+              {%- endif ~%}
+              {#- variants (customX) -#}
+              {% if product.variants is defined ~%}
+                {%- for variant in product.variants ~%}
+              data-item-custom{{ loop.index }}-name="{{ variant.name }}"
+                  {#- custom placeholder ~#}
+                  {%- if variant.placeholder is defined and variant.placeholder ~%}
+              data-item-custom{{ loop.index }}-placeholder="{{ variant.placeholder }}"
+                  {%- endif ~%}
+                  {#- custom options -#}
+                  {%- if variant.options is defined ~%}
+              data-item-custom{{ loop.index }}-options="{{ variant.options|map(v => "#{v.value}[#{v.price}]")|join('|') }}"
+                    {#- temp guid by variant option -#}
+                    {%- for option in variant.options|filter(v => v.guid is defined) ~%}
+              data-item-file-guid-{{ option.value|lower }}="{{ option.guid }}"
+                    {%- endfor ~%}
+                  {#- custom type -#}
+                  {%- elseif variant.type is defined ~%}
+              data-item-custom{{ loop.index }}-type="{{ variant.type }}"
+                  {%- endif ~%}
+                  {#- custom value ~#}
+                  {%- if variant.value is defined and variant.value ~%}
+              data-item-custom{{ loop.index }}-value="{{ variant.value }}"
+                  {%- endif ~%}
+                  {#- custom required ~#}
+                  {%- if variant.required is defined and variant.required ~%}
+              data-item-custom{{ loop.index }}-required="true"
+                  {%- endif ~%}
+                {%- endfor ~%}
+              {%- endif ~%}
+            >
+              {{ label|default('Add to cart') }}
+            </button>

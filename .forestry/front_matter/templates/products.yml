@@ -1,14 +1,14 @@
 ---
-label: Products section
+label: Products
 hide_body: true
 fields:
 - type: field_group
   name: cascade
-  label: Products default variables
+  label: Variables globales
   fields:
   - type: number
     name: price
-    label: Price
+    label: Prix
     description: Prix de référence.
     config:
       required: true
@@ -18,7 +18,7 @@ fields:
     fields:
     - type: text
       name: name
-      label: Name
+      label: Nom
       config:
         required: true
     - type: field_group_list
@@ -27,7 +27,7 @@ fields:
       fields:
       - type: text
         name: value
-        label: Value
+        label: Valeur
         config:
           required: true
       - type: text
@@ -35,16 +35,25 @@ fields:
         label: HTML
         config:
           required: true
+        description: Affichage dans la liste déroulante.
       - type: number
         name: price
-        label: Price
+        label: Prix
         config:
           required: true
-        default: 0
+        description: Prix relatif au prix de référence (peut être négatif).
       config:
         labelField: value
     config:
       labelField: name
+  - type: number
+    name: maxquantity
+    label: Quantité max
+    description: Quantité maximum autorisée lors de l'ajout au panier.
+  - type: text
+    name: stackable
+    label: Empilable
+    hidden: true
   hidden: false
 pages:
 - content/products/index.md

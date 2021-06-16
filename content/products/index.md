@@ -10,5 +10,7 @@ cascade:
     - value: A5
       html: Carte A5 - 8 €
       price: -15
+  maxquantity: 10
+  stackable: auto
 
 ---

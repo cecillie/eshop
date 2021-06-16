@@ -22,8 +22,6 @@
       {{ asset('css/main.scss')|inline }}
     </style>
     {#-<script src="{{ asset('/js/main.js')|minify|url }}"></script>~#}
-    <script>
-      {{ asset('/js/main.js')|minify|inline }}
-    </script>
-    {%~ include 'partials/webchat.js.twig' ~%}
-    {%~ include 'partials/forestry.html.twig' ~%}
+    <script>{{ asset('/js/main.js')|minify|inline }}</script>
+    {%~ include 'partials/webchat.js.twig' -%}
+    {%~ include 'partials/forestry.html.twig' -%}

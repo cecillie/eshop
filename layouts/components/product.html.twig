@@ -62,7 +62,7 @@
                 "description": "{{ product.description }}",
                 "image": "{{ image|url({canonical:true}) }}",
                 "url": "{{ url(product,{canonical:true}) }}",
-                "sku": "{{ productId }}-{{ option.value }}",
+                "sku": "{{ productId }}-{{ option.value|lower }}",
                 "priceCurrency": "{{ currency }}",
                 "price": {{ (product.price + option.price)|number_format(2) }},
                 "itemCondition": "NewCondition",

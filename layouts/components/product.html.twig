@@ -41,28 +41,35 @@
           "@context": "https://schema.org",
           "@type": "Product",
           "name": "{{ product.name }}",
-          "image": "{{ image|url({canonical:true}) }}",
           "description": "{{ product.description }}",
-          "sku": "{{ productId }}",
+          "image": "{{ image|url({canonical:true}) }}",
           "url": "{{ url(product,{canonical:true}) }}",
+          "sku": "{{ productId }}",
+          "brand": {
+            "@type": "Brand",
+            "name": "{{ site.author.name }}"
+          },
           "offers": {
             "@type": "AggregateOffer",
-            "highPrice": {{ (product.price + max(product.variants[variantIndex].options|column('price')))|number_format(2) }},
+            "priceCurrency": "{{ currency }}",
             "lowPrice": {{ (product.price + min(product.variants[variantIndex].options|column('price')))|number_format(2) }},
-            "priceCurrency": "{{ currency }}"
-          },
-          "model": [
-          {%- for option in product.variants[variantIndex].options -%}
-          {
-            "@type": "ProductModel",
-            "name": "{{ product.name }}",
-            "offers": {
-              "@type": "Offer",
-              "price": {{ (product.price + option.price)|number_format(2) }},
-              "name": "{{ product.name }} {{ option.value }}",
-              "availability": "InStock"
-            }
-          }{% if not loop.last %},{% endif %}
-          {%- endfor ~%}]
+            "highPrice": {{ (product.price + max(product.variants[variantIndex].options|column('price')))|number_format(2) }},
+            "offerCount": "{{ product.variants[variantIndex].options|length }}",
+            "offers": [
+              {%- for option in product.variants[variantIndex].options -%}
+              {
+                "@type": "Offer",
+                "name": "{{ product.name }} {{ option.value }}",
+                "description": "{{ product.description }}",
+                "image": "{{ image|url({canonical:true}) }}",
+                "url": "{{ url(product,{canonical:true}) }}",
+                "sku": "{{ productId }}-{{ option.value }}",
+                "priceCurrency": "{{ currency }}",
+                "price": {{ (product.price + option.price)|number_format(2) }},
+                "itemCondition": "NewCondition",
+                "availability": "InStock"
+              }{% if not loop.last %},{% endif %}
+              {%- endfor ~%}]
+          }
         }
       {% endapply %}</script>

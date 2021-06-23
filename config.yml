@@ -7,11 +7,11 @@ author:
   name: studio cecillie
   url: https://studio.cecillie.fr
 image: "/images/cecillie_share_1200x628.jpg"
+language: fr-FR
 languages:
 - code: fr-FR
   name: Français
   locale: fr_FR
-language: fr-FR
 menus:
   main:
   - id: index

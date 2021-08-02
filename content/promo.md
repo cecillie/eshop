@@ -1,6 +1,7 @@
 ---
 title: Promotion
 layout: promo
+exclude: true
 ---
 # Promotion
 

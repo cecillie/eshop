@@ -12,7 +12,6 @@
     </footer>
     {#- Snipcart ~#}
     <div hidden id="snipcart" data-api-key="{{ site.snipcart.apikey }}" data-config-modal-style="side" data-templates-url="/snipcart/templates.tpl"></div>
-    {#- <script src="{{ asset('/snipcart/v' ~ site.snipcart.version ~ '.js')|url }}" defer></script> ~#}
     <script src="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.js',{minify:false})|url }}" defer></script>
     <script>
       {%- apply minify_js %}

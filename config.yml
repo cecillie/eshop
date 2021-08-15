@@ -31,6 +31,9 @@ menus:
     name: Instagram
     url: https://www.instagram.com/cecile.ricordeau/
     weight: "5"
+social:
+  twitter:
+    creator: onibd
 pagination:
   enabled: false
 static:

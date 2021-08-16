@@ -45,7 +45,7 @@ fonts:
 theme:
 - netlify
 snipcart:
-  version: 3.2.0
+  version: 3.2.1
   apikey: ZTVlZWYzMTgtYjBkYS00MmE2LTgwNmYtMTcxZjliNWUxYjhmNjM3NDc0MzIyNTY4MjM5MzY2
   account: true
 flickity:

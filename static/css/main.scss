@@ -525,10 +525,23 @@ $image--background: url('/images/background.png');
     }
   }
 
-  // fix product image height on mobile
-  &-item-line__media--small {
-    height: 64px;
+  // cart summary
+  &-summary {
+    &-fees {
+      &__tax-notice path {
+        fill: $color--primary;
+      }
+      &__notice {
+        margin-top: 0;
+        margin-bottom: 24px;
+      }
+    }
   }
+
+  // fix product image height on mobile
+  /*&-item-line__media--small {
+    height: 64px;
+  }*/
 
   // discount form
   &-discount-box {
@@ -693,9 +706,10 @@ $image--background: url('/images/background.png');
   --bgColor-buttonPrimary: #{$color--primary};
   --bgColor-buttonPrimary-hover: #{$color--primary};
   --bgColor-buttonPrimary-active: #{$color--primary};
-  --color-buttonSecondary: #{$color--background};
+  --color-buttonSecondary: $color--default;
   --color-buttonSecondary-hover: #{$color--background};
-  --bgColor-buttonSecondary: #{$color--primary};
+  --bgColor-buttonSecondary: $color--background;
   --bgColor-buttonSecondary-hover: #{$color--primary};
   --color-badge: #{$color--primary};
+  --bgColor-buttonDanger: #{$color--background};
 }

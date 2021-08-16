@@ -136,6 +136,7 @@
     "view_invoice": "Consulter la facture",
     "sign_out": "Se déconnecter",
     "show_more_orders": "Afficher %{smart_count} commande supplémentaire |||| Afficher %{smart_count} commandes supplémentaires",
+    "show_more_subscriptions": "Afficher %{smart_count} abonnement supplémentaire |||| Afficher %{smart_count} abonnements supplémentaires",
     "orders": "Commandes",
     "subscriptions": "Abonnements",
     "subscription": "Abonnement"
@@ -261,6 +262,7 @@
     "promocode_isnt_applicable": "Cette promotion n’est pas applicable",
     "promo_code_is_expired": "Cette promotion est expirée",
     "stringEmpty": "Ce champ est obligatoire",
+    "emailEmpty": "Ce champ est obligatoire",
     "required": "Ce champ est obligatoire",
     "invalid_expiry_year_past": "La carte est expirée",
     "email": "Veuillez spécifier une adresse de courriel valide",
@@ -327,9 +329,6 @@
         "description": "Veuillez vérifier votre adresse de livraison ou nous contacter."
       }
     },
-    "shippingRates": {
-      "loading": "Chargement des frais de port"
-    },
     "payment_failed": {
       "title": "Impossible de traiter votre paiement.",
       "description": "Veuillez réessayer plus tard, ou nous contacter pour obtenir de l’assistance."
@@ -362,8 +361,14 @@
     "invalid_credentials": "Adresse de courriel ou mot de passe non valide.",
     "customer_current_password_invalid": "Mot de passe non valide."
   },
+  "shippingRates": {
+    "loading": "Chargement des frais de port"
+  },
   "customer_orders": {
     "loading": "Chargement…"
+  },
+  "digital_goods": {
+    "download": "Télécharger le fichier"
   },
   "confirmation": {
     "thank_you_for_your_order": "Merci pour votre commande.",

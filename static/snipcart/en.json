@@ -329,9 +329,6 @@
         "description": "Please review your shipping address or contact us."
       }
     },
-    "shippingRates": {
-      "loading": "Loading shipping rates"
-    },
     "payment_failed": {
       "title": "Unable to process payment",
       "description": "Try again later, or contact us for support."
@@ -364,8 +361,14 @@
     "invalid_credentials": "Invalid email or password.",
     "customer_current_password_invalid": "Invalid password."
   },
+  "shippingRates": {
+    "loading": "Loading shipping rates"
+  },
   "customer_orders": {
     "loading": "Loading..."
+  },
+  "digital_goods": {
+    "download": "Download file"
   },
   "confirmation": {
     "thank_you_for_your_order": "Thank you for your order",

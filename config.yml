@@ -2,7 +2,7 @@
 title: Paysages à vélo
 baseline: La boutique de cecillie.
 baseurl: https://shop.cecillie.fr/
-description: Paysages à vélo, la boutique de cecillie.
+description: Superbes impressions numériques sur papier couché premium semi mat 200 g (carte A5 300 g). Les affiches sont toutes signées à la main.
 author:
   name: studio cecillie
   url: https://studio.cecillie.fr
@@ -31,6 +31,9 @@ menus:
     name: Instagram
     url: https://www.instagram.com/cecile.ricordeau/
     weight: "5"
+social:
+  twitter:
+    creator: onibd
 pagination:
   enabled: false
 static:

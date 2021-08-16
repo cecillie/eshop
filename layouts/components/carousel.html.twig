@@ -2,11 +2,11 @@
 {%- set default = asset('images/products/default.png') ~%}
           <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "prevNextButtons": false, "fullscreen": true, "lazyLoad": true }'>
             {#- main image ~#}
-            <img src="{{ default|url }}" width="{{ default.width }}" data-flickity-lazyload="{{ image|default(default)|url }}" alt="Image de {{ product.name }}" loading="lazy" />
+            <img src="{{ default|url }}" width="{{ default.width }}" data-flickity-lazyload="{{ image|default(default)|url }}" alt="{{ product.description }}" loading="lazy" />
             {#- gallery images ~#}
             {%- if product.gallery is defined ~%}
               {%- for img in product.gallery ~%}
-            <img src="{{ default|url }}" width="{{ default.width }}" data-flickity-lazyload="{{ asset(img)|default(default)|url }}" alt="Image de {{ product.name }}" />
+            <img src="{{ default|url }}" width="{{ default.width }}" data-flickity-lazyload="{{ asset(img)|default(default)|url }}" alt="{{ product.description }}" />
               {%- endfor ~%}
             {%- endif ~%}
           </div>

@@ -9,6 +9,8 @@ php cecil.phar --version
 echo "Started Cecil build"
 if [[ $CECIL_ENV != "production" ]]; then
   php cecil.phar build -vv --baseurl=$DEPLOY_PRIME_URL --drafts || { sleep 30; false; }
+  echo "User-agent: *" > _site/robots.txt
+  echo "Disallow: /" >> _site/robots.txt
 else
   php cecil.phar build -v --baseurl=$URL --postprocess
 fi

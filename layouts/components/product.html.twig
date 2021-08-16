@@ -1,17 +1,18 @@
-{% set replaceId = product.section ~ '/' %}
-{% set productId = product.id|replace({(replaceId):''}) %}
-{% set image = asset(product.image) %}
+{#- Varibles: product -#}
+{%- set productId = product.id|replace({(product.section ~ '/'):''}) -%}
+{%- set image = asset(product.image) ~%}
       <div class="product">
         <div class="product__information">
-          <h2 class="product__title">
-            {%- if home is defined and home ~%}
-            <a href="{{ url(product) }}">{{ product.name }}</a>
-            {%- else ~%}
-            {{ product.name }}
-            {%- endif ~%}
-          </h2>
-          {%~ include 'components/carousel.html.twig' with {'product':product,'image':image} %}
-          <div class="product__description">{{ product.content }}</div>
+          {%- if home is defined and home ~%}
+          <h2 class="product__title"><a href="{{ url(product) }}">{{ product.name }}</a></h2>
+          {%- else ~%}
+          <h1 class="product__title">{{ product.name }}</h1>
+          {%- endif ~%}
+          {%~ include 'components/carousel.html.twig' with {'product':product,'image':image} ~%}
+          <div class="product__description">
+            {{ product.content }}
+            <p>{{ product.details|markdown_to_html }}</p>
+          </div>
           <div class="product__details">
             {%- if product.variants is defined ~%}
             <div>
@@ -31,30 +32,46 @@
               <label for="{{ productId }}-qty">Quantité</label>
               <input type="number" id="{{ productId }}-qty" class="qty" min="1" max="10" value="1" />
             </div>
-            <button class="buy-button snipcart-add-item"
-              data-item-id="{{ productId }}"
-              data-item-price="{{ product.price }}"
-              data-item-url="{{ url(product,{canonical:true}) }}"
-              data-item-name="{{ product.name }}"
-              {%- if product.description is defined and product.description %}data-item-description="{{ product.description }}"{% endif ~%}
-              data-item-image="{{ asset(product.image,{fingerprint:false})|url({canonical:true}) }}"
-              data-item-quantity="1"
-              data-item-max-quantity="99"
-              data-item-stackable="auto"
-              {%- if product.variants is defined ~%}
-                {%- for variant in product.variants ~%}
-              data-item-custom{{ loop.index }}-name="{{ variant.name }}"
-                  {%- if variant.options is defined ~%}
-              data-item-custom{{ loop.index }}-options="{{ variant.options|map(v => "#{v.value}[#{v.price}]")|join('|') }}"
-                  {%- elseif variant.type is defined ~%}
-              data-item-custom{{ loop.index }}-type="{{ variant.type }}"
-                  {%- endif ~%}
-                {%- endfor ~%}
-              {%- endif ~%}
-            >
-              Ajouter au panier
-            </button>
+            {%~ include 'components/add-item.html.twig' with {'productId':productId,'product':product,'label':"Ajouter au panier"} only ~%}
           </div>
         </div>
         {%~ include 'components/carousel.html.twig' with {'product':product,'image':image} ~%}
       </div>
+{# Structured data #}
+{% set variantIndex, currency = 0, 'EUR' %}
+      <script type="application/ld+json">{% apply minify_js %}
+        {
+          "@context": "https://schema.org",
+          "@type": "Product",
+          "name": "{{ product.name }}",
+          "description": "{{ product.description }}",
+          "image": "{{ image|url({canonical:true}) }}",
+          "url": "{{ url(product,{canonical:true}) }}",
+          "brand": {
+            "@type": "Brand",
+            "name": "{{ site.author.name }}"
+          },
+          "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "{{ currency }}",
+            "lowPrice": {{ (product.price + min(product.variants[variantIndex].options|column('price')))|number_format(2) }},
+            "highPrice": {{ (product.price + max(product.variants[variantIndex].options|column('price')))|number_format(2) }},
+            "offerCount": "{{ product.variants[variantIndex].options|length }}",
+            "offers": [
+              {%- for option in product.variants[variantIndex].options -%}
+              {
+                "@type": "Offer",
+                "name": "{{ product.name }} {{ option.value }}",
+                "description": "{{ product.description }}",
+                "image": "{{ image|url({canonical:true}) }}",
+                "url": "{{ url(product,{canonical:true}) }}",
+                "sku": "{{ productId }}-{{ option.value|lower }}",
+                "priceCurrency": "{{ currency }}",
+                "price": {{ (product.price + option.price)|number_format(2) }},
+                "itemCondition": "NewCondition",
+                "availability": "InStock"
+              }{% if not loop.last %},{% endif %}
+              {%- endfor ~%}]
+          }
+        }
+      {% endapply %}</script>

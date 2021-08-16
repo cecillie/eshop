@@ -1,7 +1,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <meta name="description" content="{{ page.description|default(site.description) }}" />
     {%~ include 'partials/metatags.html.twig' ~%}
     {#- fonts ~#}
     <link rel="preconnect" href="https://fonts.gstatic.com" />
@@ -10,20 +9,14 @@
     <noscript><link rel="stylesheet" href="{{ font.url }}"></noscript>
     {%- endfor ~%}
     {#- Snipcart ~#}
-    <link href="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.css',{minify:false})|url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-    {#- flickity ~#}
-    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css" />
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/flickity-fullscreen@1/fullscreen.css" />
-    <script src="https://unpkg.com/flickity-fullscreen@1/fullscreen.js"></script>
+    <link href="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.css',{minify:false})|url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    {#- Flickity ~#}
+    <link rel="stylesheet" href="{{ asset('https://unpkg.com/flickity@' ~ site.flickity.version ~ '/dist/flickity.min.css',{minify:false})|url }}"/>
+    <script src="{{ asset('https://unpkg.com/flickity@' ~ site.flickity.version ~ '/dist/flickity.pkgd.min.js',{minify:false})|url }}"></script>
+    <link rel="stylesheet" href="{{ asset('https://unpkg.com/flickity-fullscreen@' ~ site.flickity.fullscreen.version ~ '/fullscreen.css',{minify:false})|url }}"/>
+    <script src="{{ asset('https://unpkg.com/flickity-fullscreen@' ~ site.flickity.fullscreen.version ~ '/fullscreen.js',{minify:false})|url }}"></script>
     {#- main ~#}
-    {#-<link rel="stylesheet" href="{{ asset('css/main.scss')|url }}" />~#}
-    <style>
-      {{ asset('css/main.scss')|inline }}
-    </style>
-    {#-<script src="{{ asset('/js/main.js')|minify|url }}"></script>~#}
-    <script>
-      {{ asset('/js/main.js')|minify|inline }}
-    </script>
-    {%~ include 'partials/webchat.js.twig' ~%}
-    {%~ include 'partials/forestry.html.twig' ~%}
+    <style>{{ asset('css/main.scss')|inline }}</style>
+    <script>{{ asset('/js/main.js')|minify|inline }}</script>
+    {%~ include 'partials/webchat.js.twig' -%}
+    {%~ include 'partials/forestry.html.twig' -%}

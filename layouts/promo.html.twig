@@ -1,0 +1,10 @@
+{% extends 'page.html.twig' %}
+
+      {%- block content ~%}
+      {{- page.content -}}
+      {%- for file in site.static|filter(f => f.path matches '/^promo/')|sort((a, b) => a.date|date('U') < b.date|date('U')) ~%}
+      <a href="{{ url(file.path) }}" title="{{ file.name }}" download>
+        <img src="{{ asset(file.path,{fingerprint:false})|resize(310) }}" alt="{{ file.basename }}" />
+      </a>
+      {%- endfor ~%}
+      {%- endblock ~%}

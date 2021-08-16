@@ -1,8 +1,9 @@
+{% if site.webchat.enabled|default(false) %}
     <script>
       {%- apply minify_js -%}
       (function (d, w) {
         w.MissiveChatConfig = {
-          "id": "{{ site.webchat }}"
+          "id": "{{ site.webchat.id }}"
         };
         var s = d.createElement('script');
         s.async = true;
@@ -12,3 +13,4 @@
       })(document, window);
       {%- endapply -%}
     </script>
+{% endif %}

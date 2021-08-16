@@ -53,7 +53,9 @@ flickity:
   fullscreen:
     version: "1"
 cloudflareinsights: 5d643695e5b94058b6395c161f613653
-webchat: cc14b8df-44b8-4956-8ae2-1ea4e2f3d5a6
+webchat:
+  enabled: false
+  id: cc14b8df-44b8-4956-8ae2-1ea4e2f3d5a6
 netlify:
   redirects:
   - from: https://bikeeshop.netlify.com/*

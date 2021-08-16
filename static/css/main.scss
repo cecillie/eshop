@@ -671,6 +671,13 @@ $image--background: url('/images/background.png');
   &-orders__title {
     text-transform: uppercase;
   }
+  &-button-link {
+    text-transform: uppercase;
+    border-bottom: none;
+  }
+  &-base-button__label {
+    text-transform: uppercase;
+  }
 }
 
 // Snipcart custom variables

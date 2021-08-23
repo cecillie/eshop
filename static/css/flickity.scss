@@ -1,0 +1,54 @@
+// Flickity
+
+.carousel {
+  flex: 3;
+  height: 100%;
+  width: 100%;
+  //max-width: 400px;
+  margin-right: auto;
+  @include sm {
+    &:last-child {
+      display: none;
+    }
+    margin-left: auto;
+    margin-bottom: 30px;
+  }
+  @include md {
+    &:last-child {
+      display: none;
+    }
+  }
+  @include lg {
+    &:not(:last-child) {
+      display: none;
+    }
+  }
+}
+
+.carousel img {
+  width: 100%;
+}
+
+/*.flickity-button {
+  background: transparent;
+}*/
+
+.flickity-button:hover {
+  background: $color--secondary;
+}
+
+.flickity-button:disabled {
+  display: none;
+}
+
+.carousel.is-fullscreen {
+  height: 100%;
+  width: 100%;
+  max-width: none;
+  max-height: none;
+}
+
+.carousel.is-fullscreen img {
+  width: auto;
+  height: 100%;
+}

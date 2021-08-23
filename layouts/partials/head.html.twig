@@ -17,6 +17,6 @@
     <script src="{{ asset('https://unpkg.com/flickity-fullscreen@' ~ site.flickity.fullscreen.version ~ '/fullscreen.js',{minify:false}) }}"></script>
     {#- main ~#}
     <style>{{ asset(['css/eshop.scss','css/flickity.scss','css/snipcart.scss'])|inline }}</style>
-    <script>{{ asset('/js/main.js')|minify|inline }}</script>
+    <script>{{ asset('js/main.js')|minify|inline }}</script>
     {%~ include 'partials/webchat.js.twig' -%}
     {%~ include 'partials/forestry.html.twig' -%}

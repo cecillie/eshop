@@ -9,14 +9,14 @@
     <noscript><link rel="stylesheet" href="{{ font.url }}"></noscript>
     {%- endfor ~%}
     {#- Snipcart ~#}
-    <link href="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.css',{minify:false})|url }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link href="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.css',{minify:false}) }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     {#- Flickity ~#}
-    <link rel="stylesheet" href="{{ asset('https://unpkg.com/flickity@' ~ site.flickity.version ~ '/dist/flickity.min.css',{minify:false})|url }}"/>
-    <script src="{{ asset('https://unpkg.com/flickity@' ~ site.flickity.version ~ '/dist/flickity.pkgd.min.js',{minify:false})|url }}"></script>
-    <link rel="stylesheet" href="{{ asset('https://unpkg.com/flickity-fullscreen@' ~ site.flickity.fullscreen.version ~ '/fullscreen.css',{minify:false})|url }}"/>
-    <script src="{{ asset('https://unpkg.com/flickity-fullscreen@' ~ site.flickity.fullscreen.version ~ '/fullscreen.js',{minify:false})|url }}"></script>
+    <link rel="stylesheet" href="{{ asset('https://unpkg.com/flickity@' ~ site.flickity.version ~ '/dist/flickity.min.css',{minify:false}) }}"/>
+    <script src="{{ asset('https://unpkg.com/flickity@' ~ site.flickity.version ~ '/dist/flickity.pkgd.min.js',{minify:false}) }}"></script>
+    <link rel="stylesheet" href="{{ asset('https://unpkg.com/flickity-fullscreen@' ~ site.flickity.fullscreen.version ~ '/fullscreen.css',{minify:false}) }}"/>
+    <script src="{{ asset('https://unpkg.com/flickity-fullscreen@' ~ site.flickity.fullscreen.version ~ '/fullscreen.js',{minify:false}) }}"></script>
     {#- main ~#}
-    <style>{{ asset('css/main.scss')|inline }}</style>
-    <script>{{ asset('/js/main.js')|minify|inline }}</script>
+    <style>{{ asset(['css/eshop.scss','css/flickity.scss','css/snipcart.scss'])|inline }}</style>
+    <script>{{ asset('js/main.js')|minify|inline }}</script>
     {%~ include 'partials/webchat.js.twig' -%}
     {%~ include 'partials/forestry.html.twig' -%}

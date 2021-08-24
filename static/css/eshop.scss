@@ -1,0 +1,361 @@
+@charset "utf-8";
+
+// Variables
+
+$color--default: #313131;
+$color--primary: #FAAC8A;
+$color--secondary: #F3F3F3;
+$color--background: #FFFFFF;
+$color--link: $color--primary;
+$color--button-text: $color--background;
+$color--button-background: $color--primary;
+$layout--max-width: 1000px;
+$size--unit: 0.5rem;
+$image--background: url('/images/background.png');
+
+// Default styling
+
+* {
+  box-sizing: border-box;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: $size--unit * 1.9;
+  line-height: 1.5;
+  color: $color--default;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background-color: $color--background;
+  background-image: $image--background;
+}
+
+h1 {
+  //font-family: 'Homemade Apple', cursive;
+  font-size: $size--unit * 3;
+  font-weight: normal;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: $size--unit * 2.5;
+}
+
+// Mixins
+
+@mixin sm {
+  @media (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin fit-to-layout-and-center {
+  width: 100%;
+  max-width: $layout--max-width;
+  margin-left: auto;
+  margin-right: auto;
+  @include md {
+    padding-left: $size--unit * 3;
+    padding-right: $size--unit * 3;
+  }
+  @include lg {
+    padding-left: $size--unit * 3;
+    padding-right: $size--unit * 3;
+  }
+}
+
+// Components
+
+.item__nav:not(:last-child) {
+  padding-right: $size--unit * 3;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-top: $size--unit * 3;
+  padding-bottom: $size--unit * 1.5;
+  background-color: $color--background;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    @include fit-to-layout-and-center;
+    a {
+      text-decoration: none;
+    }
+    align-items: center;
+    @include sm {
+      flex-flow: column;
+    }
+  }
+
+  &__menu {
+    font-weight: normal;
+    text-transform: uppercase;
+    padding-bottom: $size--unit * 1.5;
+  }
+
+  &__branding {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: $size--unit * 1.5;
+  }
+
+  &__logo {
+    max-height: $size--unit * 8;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: $size--unit * 2;
+    text-transform: uppercase;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    padding-bottom: $size--unit * 1.5;
+  }
+
+  &__checkout {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    font-weight: bold;
+    font-size: $size--unit * 1.5;
+    svg, img {
+      margin-right: $size--unit * 1;
+    }
+  }
+
+  &__checkout-fill {
+    fill: $color--primary;
+  }
+}
+
+.main {
+  @include fit-to-layout-and-center;
+  padding-top: $size--unit * 6;
+}
+
+.hero {
+  text-align: center;
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 3rem;
+}
+
+.hero {
+  & h1 {
+    font-size: $size--unit * 2.5;
+    text-transform: uppercase;
+  }
+
+  & p, p > a {
+    font-family: 'Scope One', serif;
+    font-size: $size--unit * 2;
+    line-height: 1.5;
+  }
+}
+
+.product {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+
+  &:nth-of-type(even) {
+    flex-direction: row-reverse;
+  }
+
+  &:nth-last-of-type(even) & {
+    &__information {
+      margin-left: 0;
+      margin-right: $size--unit * 6;
+      @include md {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &:not(:last-child) {
+    margin-bottom: $size--unit * 12;
+  }
+
+  &__information {
+    flex: 2;
+    margin-left: $size--unit * 6;
+    @include md {
+      margin-left: 0;
+    }
+  }
+
+  &__image {
+    flex: 1;
+    height: 100%;
+    width: 100%;
+    max-width: 300px;
+    max-height: 425px;
+    background-size: cover;
+    box-shadow: 1px 5px 6px transparentize(darken($color--primary, 50%), 0.9);
+    margin-right: auto;
+    @include sm {
+      &:last-child {
+        display: none;
+      }
+    }
+    @include md {
+      &:last-child {
+        display: none;
+      }
+    }
+    @include lg {
+      &:not(:last-child) {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    margin-top: 0;
+    font-family: 'Homemade Apple', cursive;
+    font-size: $size--unit * 4;
+    font-weight: normal;
+    @include md {
+      font-size: $size--unit * 3;
+    }
+    & a {
+      font-family: 'Homemade Apple', cursive;
+      font-size: $size--unit * 4;
+      text-decoration: none;
+    }
+  }
+
+  &__description {
+    font-size: $size--unit * 2.5;
+    line-height: $size--unit * 3.5;
+  }
+
+  &__details {
+    display: grid;
+    grid-template-areas: "format qty"
+                         "button button";
+    grid-template-columns: 3fr 1fr;
+    grid-gap: $size--unit * 2;
+    margin-top: $size--unit * 4;
+    width: 300px;
+    @include sm {
+      width: 100%;
+    }
+  }
+}
+
+.product label {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: .3rem 0 .3rem 0;
+  display: inline-block;
+  font-size: $size--unit * 1.7;
+}
+
+.product select, .product input {
+  background-color: $color--background;
+  border-radius: 3px;
+  padding: $size--unit * 1;
+  border: solid 1px transparent;
+  width: 100%;
+  height: 37px;
+}
+
+.product input {
+  text-align: center;
+}
+
+.qty {
+  width: 50px;
+}
+
+.buy-button {
+  cursor: pointer;
+  color: $color--button-text;
+  background-color: $color--button-background;
+  border: 1px solid $color--button-background;
+  border-radius: 5px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: $size--unit * 2;
+  letter-spacing: 2px;
+  padding: $size--unit * 2;
+  display: block;
+  white-space: nowrap;
+  grid-area: button;
+}
+
+.buy-button:hover {
+  transition: all .1s;
+  transform: translateY(-1px);
+  box-shadow: 0 0px 15px $color--primary;
+  background-color: $color--primary
+}
+
+.login-button {
+  cursor: pointer;
+  color: $color--default;
+  background-color: $color--background;
+  border: 0;
+  font-weight: normal;
+  text-transform: uppercase;
+  margin-right: $size--unit * 2;
+  display: inline-block;
+}
+
+.footer {
+  margin-top: $size--unit * 12;
+  background-color: $color--background;
+
+  &__content {
+    @include fit-to-layout-and-center();
+    padding-top: $size--unit * 5;
+    padding-bottom: $size--unit * 5;
+    align-content: space-between;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__menu {
+    font-weight: 600;
+    text-transform: uppercase;
+    a {
+      text-decoration: none;
+    }
+  }
+
+  &__copyright {
+    margin-top: $size--unit * 3;
+    a {
+      text-decoration: none;
+    }
+  }
+}

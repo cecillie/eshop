@@ -1,5 +1,4 @@
-// Fix Snipcart style
-
+// Custom variables
 /*
 $color--default: #313131;
 $color--primary: #FAAC8A;
@@ -12,9 +11,33 @@ $size--unit: 0.5rem;
 $image--background: url('/images/background.png');
 */
 
+// Snipcart style
 .snipcart {
-  font-size: $size--unit * 1.9;
   color: $color--default;
+  font-size: $size--unit * 1.9;
+
+  // theme
+  --color-default: #{$color--default};
+  --color-icon: #{$color--primary};
+  --color-badge: #{$color--primary};
+  --color-link: #{$color--primary};
+  --color-link-hover: #{$color--primary};
+  --color-inputIcon-focus: #{$color--primary};
+  --color-buttonSecondary: #{$color--default};
+  --color-buttonSecondary-hover: #{$color--background};
+  --borderColor-input-hover: #{$color--primary};
+  --borderColor-input-focus: #{$color--primary};
+  --borderColor-input-checked: #{$color--primary};
+  --bgColor-default: #{$color--background};
+  --bgColor-alt: #{$color--background};
+  --bgColor-modal: #{$color--background};
+  --bgColor-input-checked: #{$color--primary};
+  --bgColor-buttonPrimary: #{$color--primary};
+  --bgColor-buttonPrimary-hover: #{$color--primary};
+  --bgColor-buttonPrimary-active: #{$color--primary};
+  --bgColor-buttonSecondary: #{$color--background};
+  --bgColor-buttonSecondary-hover: #{$color--primary};
+  --bgColor-buttonDanger: #{$color--background};
 
   // background image
   &-modal__container {
@@ -69,12 +92,14 @@ $image--background: url('/images/background.png');
   // cart summary
   &-summary {
     &-fees {
-      &__tax-notice path {
-        fill: $color--primary;
-      }
+      // shipping notice
       &__notice {
         margin-top: 0;
         margin-bottom: 24px;
+      }
+      // tax (?)
+      &__tax-notice path {
+        fill: $color--primary;
       }
     }
   }
@@ -144,70 +169,13 @@ $image--background: url('/images/background.png');
     }
   }
 
+  // payment logo background
+  &-featured-payment-methods__title {
+    background-color: $color--secondary;
+  }
+
   // fix cart overflow (Firefox)
   &-cart-summary-side &-cart__content &-item-list {
     overflow: auto;
   }
-
-  &-featured-payment-methods__title {
-    background-color: $color--secondary;
-  }
-}
-
-// Snipcart custom style
-
-.snipcart {
-  font-family: 'Roboto Condensed', sans-serif;
-  &-cart {
-    &-header {
-      &__title {
-        text-transform: uppercase;
-      }
-    }
-    &-button {
-      border-radius: 6px;
-      text-transform: uppercase;
-    }
-  }
-  &__actions--link {
-    text-transform: uppercase;
-  }
-  &-orders__title {
-    text-transform: uppercase;
-  }
-  &-button-link {
-    text-transform: uppercase;
-    border-bottom: none;
-  }
-  &-base-button__label {
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 2px;
-    font-family: inherit;
-  }
-}
-
-// Snipcart custom variables
-
-:root {
-  --color-icon: #{$color--primary};
-  --color-badge: #{$color--primary};
-  --color-link: #{$color--primary};
-  --color-link-hover: #{$color--primary};
-  --color-inputIcon-focus: #{$color--default};
-  --color-buttonSecondary: $color--default;
-  --color-buttonSecondary-hover: #{$color--background};
-  --borderColor-input-hover: #{$color--primary};
-  --borderColor-input-focus: #{$color--primary};
-  --borderColor-input-checked: #{$color--primary};
-  --bgColor-default: #{$color--background};
-  --bgColor-alt: #{$color--background};
-  --bgColor-modal: #{$color--background};
-  --bgColor-input-checked: #{$color--primary};
-  --bgColor-buttonPrimary: #{$color--primary};
-  --bgColor-buttonPrimary-hover: #{$color--primary};
-  --bgColor-buttonPrimary-active: #{$color--primary};
-  --bgColor-buttonSecondary: $color--background;
-  --bgColor-buttonSecondary-hover: #{$color--primary};
-  --bgColor-buttonDanger: #{$color--background};
 }

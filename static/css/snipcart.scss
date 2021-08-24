@@ -53,8 +53,14 @@ $image--background: url('/images/background.png');
     color: $color--default;
   }
 
-  // disable default background color
   &-cart {
+    &-header {
+      // fix margin-bottom (for first badge)
+      @media (max-width: 1024px) {
+        margin: 0 auto 26px auto;
+      }
+    }
+    // disable default background color
     &__content {
       background-color: transparent;
     }
@@ -72,11 +78,6 @@ $image--background: url('/images/background.png');
       }
     }
   }
-
-  // fix product image height on mobile
-  /*&-item-line__media--small {
-    height: 64px;
-  }*/
 
   // discount form
   &-discount-box {

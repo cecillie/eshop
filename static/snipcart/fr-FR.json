@@ -1,4 +1,9 @@
 {
+  "default": {
+    "loading": "Chargement…",
+    "error": "Une erreur est survenue.",
+    "success": "Succès !"
+  },
   "actions": {
     "edit": "Modifier",
     "cancel": "Annuler",
@@ -6,6 +11,7 @@
     "back_to_checkout": "Revenir au paiement",
     "checkout": "Paiement",
     "apply": "Appliquer",
+    "dismiss": "Abandonner",
     "type_address": "Saisissez votre adresse",
     "use_this_address": "Utiliser cette adresse",
     "back_to_store": "Revenir à la boutique",
@@ -17,6 +23,7 @@
     "save_changes": "Enregistrer les modifications",
     "back_to_orders": "Revenir aux commandes",
     "change_password": "Modifier le mot de passe",
+    "clear_cart": "Vider le panier",
     "add": "Ajouter"
   },
   "header": {
@@ -37,9 +44,32 @@
     }
   },
   "subscription": {
+    "title": "Abonnement",
+    "state": {
+      "title": "Statut",
+      "active": "Actif",
+      "paused": "En pause",
+      "finished": "Terminé",
+      "stopped": "Arrété",
+      "cancellationrequested": "L’abonnement sera arrété à la fin de l’abonnement."
+    },
+    "placed_on": "Placé sur",
+    "final_billing_date": "Date finale de facturation",
+    "items": "Articles",
     "plan": "Formule",
     "billed_on": "Facturé le",
-    "payment_amount": "Montant à payer"
+    "payment_amount": "Montant à payer",
+    "processing": "Abonnment en cours de traietement. Revenez plus tard pour voir les détails.",
+    "loading": "Chargement des abonnements",
+    "cancel": "Annuler",
+    "pause": "Mettre en pause",
+    "unpause": "Reprendre",
+    "billing_recurrence": {
+      "daily": "Facturé chaque jour |||| Facturé tout les %{smart_count} jours",
+      "weekly": "Facturé chaque semaine |||| Facturé tout les %{smart_count} semaines",
+      "monthly": "Facturé chaque mois |||| Facturé tout les %{smart_count} mois",
+      "yearly": "Facturé chaque année |||| Facturé tout les %{smart_count} ans"
+    }
   },
   "cart": {
     "subtotal": "Sous-total",
@@ -52,7 +82,8 @@
     "view_detailed_cart": "Consulter le panier détaillé"
   },
   "order": {
-    "loading": "Chargement des détails de votre commande…"
+    "loading": "Chargement des détails de votre commande…",
+    "title": "Commande"
   },
   "discount_box": {
     "promo_code": "Code promo ?",
@@ -77,7 +108,15 @@
     "use_different_shipping_address": "C’est pour offrir ? Utiliser une adresse de livraison différente et ajouter un message cadeau"
   },
   "customer": {
-    "information": "Informations client"
+    "information": "Informations client",
+    "payment_info": "Mes informations de paiement",
+    "payment_method_update": {
+      "title": "Mise à jour de la méthode de paiement",
+      "outstanding_payment_failed": {
+        "title": "Échec de paiement",
+        "description": "Votre méthode de paiement à été mis à jour, ou bien, nous n’avons pas pu facturer le solde impayé. Veuillez utiliser une autre méthode"
+      }
+    }
   },
   "customer_details": {
     "title": "Détails client"
@@ -97,7 +136,18 @@
     "view_invoice": "Consulter la facture",
     "sign_out": "Se déconnecter",
     "show_more_orders": "Afficher %{smart_count} commande supplémentaire |||| Afficher %{smart_count} commandes supplémentaires",
-    "orders": "Commandes"
+    "show_more_subscriptions": "Afficher %{smart_count} abonnement supplémentaire |||| Afficher %{smart_count} abonnements supplémentaires",
+    "orders": "Commandes",
+    "subscriptions": "Abonnements",
+    "subscription": "Abonnement"
+  },
+  "customer_notifications": {
+    "subscription": {
+      "outstanding_payment": {
+        "title": "Un paiement est échu pour un abonnement",
+        "description": "Vous avez un abonnement avec un paiement en attente. Veuillez mettre à jour votre méthode de paiement en cliquant sur Modifier à côté de vos détails."
+      }
+    }
   },
   "signin_form": {
     "signin": "Se connecter",
@@ -132,7 +182,11 @@
     "already_have_an_account": "Vous avez déjà un compte ?",
     "email": "Courriel",
     "password": "Mot de passe",
-    "confirm_password": "Confirmation du mot de passe"
+    "confirm_password": "Confirmation du mot de passe",
+    "requires_action": {
+      "title": "Vérifiez vos courriels",
+      "description": "Cette adresse de courriel à déjà été utilisée pour passer une autre commande. Veuillez compléter le processus d’enregistrement en utilisant le lien qui vous a été envoyé par courriel."
+    }
   },
   "alternative": {
     "or": "Ou",
@@ -152,7 +206,11 @@
       "card_number": "Numéro de carte",
       "card_expiration": "MM/AA",
       "card_cvv": "CVV",
-      "card_postal_code": "Code postal"
+      "card_postal_code": "Code postal",
+      "invalid_number": "Le numéro de carte n’est pas valide",
+      "invalid_expiration": "Expiration date is invalid",
+      "invalid_cvv": "CVV is invalid",
+      "invalid_postal_code": "Postal code is invalid"
     },
     "still_pending_notice": "Votre paiement est en cours de traitement.",
     "title": "Paiement",
@@ -189,9 +247,7 @@
     "title": "Promotions"
   },
   "cart_summary": {
-
     "taxes": "Dont taxes incluses",
-
     "taxes_included_in_price": "Certains articles comprennent des taxes.",
     "total": "Total",
     "subtotal": "Sous-total",
@@ -206,11 +262,13 @@
     "promocode_isnt_applicable": "Cette promotion n’est pas applicable",
     "promo_code_is_expired": "Cette promotion est expirée",
     "stringEmpty": "Ce champ est obligatoire",
+    "emailEmpty": "Ce champ est obligatoire",
     "required": "Ce champ est obligatoire",
     "invalid_expiry_year_past": "La carte est expirée",
     "email": "Veuillez spécifier une adresse de courriel valide",
     "quantity_revised": "La quantité a été modifiée en raison d’un stock limité.",
     "quantity_out_of_stock": "Malheureusement, cet article n’est plus disponible, supprimez-le du panier pour continuer.",
+    "disabled_country": "Le pays sélectionné n’est pas disponible.",
     "error_payment_items_are_invalid": {
       "title": "Certains articles de votre panier ne sont pas valides",
       "description": "Veuillez vérifier votre commande, ou réessayer plus tard."
@@ -285,6 +343,16 @@
         "description": "Nous n’avons pas pu confirmer vos informations de paiement. Veuillez réessayer."
       }
     },
+    "cart_items": {
+      "cart_can_only_contain_one_subscription": {
+        "title": "L’abonnement ne peut pas être ajouté au panier",
+        "description": "Un panier ne peut contenir qu’un abonnement à la fois.."
+      },
+      "cart_can_only_contain_items_or_subscriptions": {
+        "title": "Product couldn’t be added to the cart",
+        "description": "The cart can only contain either items or a subscription."
+      }
+    },
     "customer_exists": "Cette adresse de courriel est déjà utilisée.",
     "customer_password_missmatch": "Les deux mots de passe doivent être identiques.",
     "customer_password_token_expired": "Votre code de récupération de mot de passe est expiré.",
@@ -293,8 +361,14 @@
     "invalid_credentials": "Adresse de courriel ou mot de passe non valide.",
     "customer_current_password_invalid": "Mot de passe non valide."
   },
+  "shippingRates": {
+    "loading": "Chargement des frais de port"
+  },
   "customer_orders": {
     "loading": "Chargement…"
+  },
+  "digital_goods": {
+    "download": "Télécharger le fichier"
   },
   "confirmation": {
     "thank_you_for_your_order": "Merci pour votre commande.",

@@ -12,13 +12,20 @@
     </footer>
     {#- Snipcart ~#}
     <div hidden id="snipcart" data-api-key="{{ site.snipcart.apikey }}" data-config-modal-style="side" data-templates-url="/snipcart/templates.tpl"></div>
-    <script src="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.js',{minify:false})|url }}" defer></script>
+    <script src="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.js',{minify:false}) }}" defer></script>
     <script>
       {%- apply minify_js %}
       document.addEventListener('snipcart.ready', function() {
+        // Language
         fetch('/snipcart/{{ language }}.json')
           .then(response => response.json())
-          .then(translation => Snipcart.api.session.setLanguage('{{ language }}', translation))
+          .then(translation => Snipcart.api.session.setLanguage('{{ language }}', translation));
+        // Payment form
+        Snipcart.api.theme.customization.registerPaymentFormCustomization({
+          input: {
+            border: '1px solid #F3F3F3',
+          }
+        });
       });
       {% endapply -%}
     </script>

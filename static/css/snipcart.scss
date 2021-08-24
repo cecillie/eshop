@@ -1,0 +1,212 @@
+// Fix Snipcart style
+
+/*
+$color--default: #313131;
+$color--primary: #FAAC8A;
+$color--secondary: #F3F3F3;
+$color--background: #FFFFFF;
+$color--link: $color--default;
+$color--button-text: $color--default;
+$color--button-background: $color--primary;
+$size--unit: 0.5rem;
+$image--background: url('/images/background.png');
+*/
+
+.snipcart {
+  font-size: $size--unit * 1.9;
+  color: $color--default;
+
+  // background image
+  &-modal__container {
+    @if $image--background {
+      background-image: $image--background;
+    }
+  }
+
+  &-layout {
+    // transparent background
+    background-color: transparent;
+    // columns margin
+    &__col {
+      &:nth-of-type(2) {
+        @media (min-width: 1024px) {
+          margin: 0;
+          margin-left: 16px;
+        }
+      }
+      &--large {
+        margin: 0;
+      }
+    }
+  }
+
+  // loader color
+  &-loading-overlay__pending,
+  &__loading__screen__content {
+    & svg path.active {
+      fill: $color--primary;
+    }
+  }
+
+  // cart empty text
+  &-empty-cart {
+    color: $color--default;
+  }
+
+  // disable default background color
+  &-cart {
+    &__content {
+      background-color: transparent;
+    }
+  }
+
+  // cart summary
+  &-summary {
+    &-fees {
+      &__tax-notice path {
+        fill: $color--primary;
+      }
+      &__notice {
+        margin-top: 0;
+        margin-bottom: 24px;
+      }
+    }
+  }
+
+  // fix product image height on mobile
+  &-item-line__media--small {
+    height: 64px;
+  }
+
+  // discount form
+  &-discount-box {
+    &__form {
+      border: none;
+    }
+    &__submit {
+      color: $color--default;
+    }
+  }
+
+  // fix checkout step padding on desktop
+  &-checkout-step {
+    @media (min-width: 1024px) {
+      padding-bottom: 6px;
+    }
+  }
+
+  // checkout step boxes
+  &__box {
+    // step number
+    &--badge {
+      border: 1px solid $color--background;
+      background-color: $color--background;
+      &-highlight {
+        color: $color--primary;
+      }
+    }
+  }
+
+  // fix shipping rates list style
+  &-shipping-rates-list-item {
+    border: none;
+    &--highlight {
+      border: none;
+    }
+    &:focus-within {
+      border: none;
+    }
+  }
+
+  // radio form
+  &-form {
+    &-radio {
+      &+label:before {
+        background: $color--background;
+        border: 1px solid $color--default;
+      }
+      &:checked+label:before {
+        background: none;
+        background-color: $color--primary;
+        border: 1px solid $color--primary;
+      }
+    }
+  }
+
+  // fix order details width
+  &-order {
+    &__details {
+      margin: 0;
+      @media (min-width: 1024px) {
+        max-width: 100%;
+      }
+    }
+  }
+
+  // fix cart overflow (Firefox)
+  &-cart-summary-side &-cart__content &-item-list {
+    overflow: auto;
+  }
+
+  &-featured-payment-methods__title {
+    background-color: $color--secondary;
+  }
+}
+
+// Snipcart custom style
+
+.snipcart {
+  font-family: 'Roboto Condensed', sans-serif;
+  &-cart {
+    &-header {
+      &__title {
+        text-transform: uppercase;
+      }
+    }
+    &-button {
+      border-radius: 6px;
+      text-transform: uppercase;
+    }
+  }
+  &__actions--link {
+    text-transform: uppercase;
+  }
+  &-orders__title {
+    text-transform: uppercase;
+  }
+  &-button-link {
+    text-transform: uppercase;
+    border-bottom: none;
+  }
+  &-base-button__label {
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: inherit;
+  }
+}
+
+// Snipcart custom variables
+
+:root {
+  --color-icon: #{$color--primary};
+  --color-badge: #{$color--primary};
+  --color-link: #{$color--primary};
+  --color-link-hover: #{$color--primary};
+  --color-inputIcon-focus: #{$color--default};
+  --color-buttonSecondary: $color--default;
+  --color-buttonSecondary-hover: #{$color--background};
+  --borderColor-input-hover: #{$color--primary};
+  --borderColor-input-focus: #{$color--primary};
+  --borderColor-input-checked: #{$color--primary};
+  --bgColor-default: #{$color--background};
+  --bgColor-alt: #{$color--background};
+  --bgColor-modal: #{$color--background};
+  --bgColor-input-checked: #{$color--primary};
+  --bgColor-buttonPrimary: #{$color--primary};
+  --bgColor-buttonPrimary-hover: #{$color--primary};
+  --bgColor-buttonPrimary-active: #{$color--primary};
+  --bgColor-buttonSecondary: $color--background;
+  --bgColor-buttonSecondary-hover: #{$color--primary};
+  --bgColor-buttonDanger: #{$color--background};
+}

@@ -177,24 +177,24 @@ $image--background: url('/images/background.png');
 // Snipcart custom variables
 
 :root {
-  --bgColor-default: #{$color--background};
-  --bgColor-alt: #{$color--background};
-  --bgColor-modal: #{$color--background};
-  --color-inputIcon-focus: #8f99a3;
   --color-icon: #{$color--primary};
+  --color-badge: #{$color--primary};
   --color-link: #{$color--primary};
   --color-link-hover: #{$color--primary};
+  --color-inputIcon-focus: #8f99a3;
+  --color-buttonSecondary: $color--default;
+  --color-buttonSecondary-hover: #{$color--background};
   --borderColor-input-hover: #{$color--primary};
   --borderColor-input-focus: #{$color--primary};
   --borderColor-input-checked: #{$color--primary};
+  --bgColor-default: #{$color--background};
+  --bgColor-alt: #{$color--background};
+  --bgColor-modal: #{$color--background};
   --bgColor-input-checked: #{$color--primary};
   --bgColor-buttonPrimary: #{$color--primary};
   --bgColor-buttonPrimary-hover: #{$color--primary};
   --bgColor-buttonPrimary-active: #{$color--primary};
-  --color-buttonSecondary: $color--default;
-  --color-buttonSecondary-hover: #{$color--background};
   --bgColor-buttonSecondary: $color--background;
   --bgColor-buttonSecondary-hover: #{$color--primary};
-  --color-badge: #{$color--primary};
   --bgColor-buttonDanger: #{$color--background};
 }

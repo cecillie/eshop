@@ -13,13 +13,11 @@ $image--background: url('/images/background.png');
 */
 
 .snipcart {
-  font-family: 'Roboto Condensed', sans-serif;
   font-size: $size--unit * 1.9;
   color: $color--default;
 
-  // background color / image
+  // background image
   &-modal__container {
-    background-color: $color--secondary;
     @if $image--background {
       background-image: $image--background;
     }
@@ -42,70 +40,16 @@ $image--background: url('/images/background.png');
   }
 
   // loader color
-  &-loading-overlay__pending svg path.active {
-    fill: $color--primary;
+  &-loading-overlay__pending,
+  &__loading__screen__content {
+    & svg path.active {
+      fill: $color--primary;
+    }
   }
 
+  // cart empty text
   &-empty-cart {
     color: $color--default;
-  }
-
-  &-cart {
-    &-header {
-      // replace default background color
-      background-color: $color--background;
-      // fix margin-bottom (for first badge)
-      @media (max-width: 1024px) {
-        margin: 0 auto 26px auto;
-      }
-    }
-
-    // disable default background color
-    &__content {
-      background-color: transparent;
-    }
-
-    // fix side cart header color
-    &__secondary-header {
-      background-color: $color--background;
-    }
-
-    &-button {
-      color: $color--button-text;
-      // replace gradient colors
-      &--highlight {
-        background-image: none;
-        background-color: $color--button-background;
-        // cart button arrow color
-        & .snipcart__icon path {
-          fill: $color--button-text;
-        }
-      }
-
-      // secondary button
-      &--secondary {
-        color: $color--default;
-        background-color: $color--secondary;
-        & .snipcart__icon path {
-          fill: $color--default;
-        }
-      }
-    }
-
-    // cart summary in order
-    &-summary {
-      // disable default background color
-      background-color: transparent;
-      // fees icon ("?") color
-      &-fees {
-        &__tax-notice path {
-          fill: $color--primary;
-        }
-        &__discounts-icon svg path {
-          fill: $color--primary;
-        }
-      }
-    }
   }
 
   // cart summary
@@ -136,21 +80,6 @@ $image--background: url('/images/background.png');
     }
   }
 
-  // checkout icons color
-  &__icon {
-    &--blue {
-      &-dark path {
-        fill: $color--primary;
-      }
-      &-light path {
-        fill: $color--primary;
-      }
-    }
-    &--white path {
-      fill: $color--primary;
-    }
-  }
-
   // fix checkout step padding on desktop
   &-checkout-step {
     @media (min-width: 1024px) {
@@ -160,24 +89,14 @@ $image--background: url('/images/background.png');
 
   // checkout step boxes
   &__box {
-    // box background color
-    &--gray {
-      background-color: $color--background;
-    }
     // step number
     &--badge {
       border: 1px solid $color--background;
       background-color: $color--background;
       &-highlight {
-        background: $color--background;
         color: $color--primary;
       }
     }
-  }
-
-  // checkout action link (ie: "update")
-  &__actions--link {
-    color: $color--link;
   }
 
   // fix shipping rates list style
@@ -206,38 +125,13 @@ $image--background: url('/images/background.png');
     }
   }
 
-  // sign-in form
-  &-signin {
-    &__register-link {
-      color: $color--link;
-    }
-    &__forgot-password {
-      color: $color--link;
-    }
-  }
-
-  // register form
-  &-register {
-    &__register-link {
-      color: $color--link;
-    }
-  }
-
   &-order {
-    // fix product image width
-    &__product-image {
-      width: auto;
-    }
     // fix order details width
     &__details {
       margin: 0;
       @media (min-width: 1024px) {
         max-width: 100%;
       }
-    }
-    // invoice number color
-    &__invoice-number--highlight {
-      color: $color--default;
     }
   }
 
@@ -250,6 +144,7 @@ $image--background: url('/images/background.png');
 // Snipcart custom style
 
 .snipcart {
+  font-family: 'Roboto Condensed', sans-serif;
   &-cart {
     &-header {
       &__title {
@@ -282,6 +177,10 @@ $image--background: url('/images/background.png');
 // Snipcart custom variables
 
 :root {
+  --bgColor-default: #{$color--background};
+  --bgColor-alt: #{$color--background};
+  --bgColor-modal: #{$color--background};
+  --color-inputIcon-focus: #8f99a3;
   --color-icon: #{$color--primary};
   --color-link: #{$color--primary};
   --color-link-hover: #{$color--primary};

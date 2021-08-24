@@ -193,7 +193,7 @@ $image--background: url('/images/background.png');
   --color-badge: #{$color--primary};
   --color-link: #{$color--primary};
   --color-link-hover: #{$color--primary};
-  --color-inputIcon-focus: #8f99a3;
+  --color-inputIcon-focus: #{$color--default};
   --color-buttonSecondary: $color--default;
   --color-buttonSecondary-hover: #{$color--background};
   --borderColor-input-hover: #{$color--primary};

@@ -20,6 +20,7 @@ $image--background: url('/images/background.png');
   --color-default: #{$color--default};
   --color-icon: #{$color--primary};
   --color-badge: #{$color--primary};
+  --color-badge-active: #{$color--primary};
   --color-link: #{$color--primary};
   --color-link-hover: #{$color--primary};
   --color-inputIcon-focus: #{$color--primary};
@@ -31,6 +32,7 @@ $image--background: url('/images/background.png');
   --bgColor-default: #{$color--background};
   --bgColor-alt: #{$color--background};
   --bgColor-modal: #{$color--background};
+  --bgColor-badge-active: #{$color--background};
   --bgColor-input-checked: #{$color--primary};
   --bgColor-buttonPrimary: #{$color--primary};
   --bgColor-buttonPrimary-hover: #{$color--primary};
@@ -121,18 +123,6 @@ $image--background: url('/images/background.png');
     }
   }
 
-  // checkout step boxes
-  &__box {
-    // step number
-    &--badge {
-      border: 1px solid $color--background;
-      background-color: $color--background;
-      &-highlight {
-        color: $color--primary;
-      }
-    }
-  }
-
   // fix shipping rates list style
   &-shipping-rates-list-item {
     border: none;
@@ -159,7 +149,12 @@ $image--background: url('/images/background.png');
     }
   }
 
-  // fix order details width
+  // payment logo background
+  &-featured-payment-methods__title {
+    background-color: $color--secondary;
+  }
+
+  // fix order details column width
   &-order {
     &__details {
       margin: 0;
@@ -169,9 +164,9 @@ $image--background: url('/images/background.png');
     }
   }
 
-  // payment logo background
-  &-featured-payment-methods__title {
-    background-color: $color--secondary;
+  // fix order details cart icon color
+  &__icon--blue-dark path {
+    fill: $color--primary;
   }
 
   // fix cart overflow (Firefox)

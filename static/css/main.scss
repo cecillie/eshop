@@ -2,6 +2,7 @@
 
 // Variables
 
+$layout--max-width: 1000px;
 $color--default: #313131;
 $color--primary: #FAAC8A;
 $color--secondary: #F3F3F3;
@@ -9,7 +10,6 @@ $color--background: #FFFFFF;
 $color--link: $color--primary;
 $color--button-text: $color--background;
 $color--button-background: $color--primary;
-$layout--max-width: 1000px;
 $size--unit: 0.5rem;
 $image--background: url('/images/background.png');
 

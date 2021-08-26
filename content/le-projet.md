@@ -30,8 +30,8 @@ Après cette campagne Ulule qui a roulé comme avec un Nexus 8, j’ai commencé
 Côté graphisme, j’aime travailler ces formes pleines et ces aplats de couleur. Techniquement, c’est un vrai défi pour moi qui suis habituée à dessiner avec des lignes, mais cela permet de laisser vivre pleinement les couleurs sans qu’elles soient enfermées par d’épais contours noirs. Je réalise toutes mes illustrations avec des nuances vives et expressionnistes, qui donnent un aspect onirique à ces simples moments de vie.  
 Je commence d’abord par griffonner un premier croquis au Posca, puis j’utilise le logiciel Procreate et un iPad pro pour poursuivre mon illustration. Je fais aussi toujours un travail de recherche photographique pour les paysages, les positions des personnages et pour le choix de la monture !  
 
-<img src="/images/projet/cecillie_projet-05.gif" width="400" style="max-width:100%;height:auto;" />
-<img src="/images/projet/cecillie_projet-06.gif" width="400" style="max-width:100%;height:auto;" />
+<img src="/images/projet/cecillie_projet-05.jpg" width="400" style="max-width:100%;height:auto;" />
+<img src="/images/projet/cecillie_projet-06.jpg" width="400" style="max-width:100%;height:auto;" />
 
 ## L’autrice
 

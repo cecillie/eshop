@@ -1,3 +1,4 @@
+{% set title = site.title %}
     <header class="header">
       <div class="header__container">
         <div class="header__menu">
@@ -7,12 +8,12 @@
           </span>
           {%- endfor ~%}
         </div>
-        <a class="header__branding" href="{{ url() }}">
-          <img src="{{ asset('images/logo.svg') }}" width="200" height="60.8" alt="Logo de {{ site.title }}" class="header__logo">
+        <a class="header__branding" href="{{ url(site.home) }}">
+          <img src="{{ asset('images/logo.svg') }}" width="200" height="60.8" alt="{% trans %}Logo de {{ title }}{% endtrans %}" class="header__logo">
         </a>
         <div class="header__actions">
           {%- if site.snipcart.account|default(false) ~%}
-          <button class="snipcart-customer-signin login-button">Votre compte</button>
+          <button class="snipcart-customer-signin login-button">{% trans "Votre compte" %}</button>
           {%- endif ~%}
           <button class="header__checkout snipcart-checkout">
             <img src="{{ asset('images/shopping-bag.svg') }}" width="28" height="28" alt="Shopping cart" class="header__checkout-fill">

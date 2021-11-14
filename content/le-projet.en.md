@@ -4,6 +4,7 @@ menu:
   main:
     weight: 1
 published: true
+slug: the-project
 ---
 # The project
 

@@ -8,7 +8,7 @@
           {%- endfor ~%}
         </div>
         <div class="footer__copyright">
-          <a href="{{ site.author.url }}">{{ site.author.name }}</a> {{ 'now'|date('Y') }} - {% trans "Tous droits réservés" %} - {% trans "Boutique propulsée par" %} <a href="{{ cecil.url }}">Cecil</a> & <a href="https://snipcart.com">Snipcart</a>{% if page.translations|length >= 1 %} - {% include 'partials/languages.html.twig' %}{% endif %}
+          <a href="{{ site.author.url }}">{{ site.author.name }}</a> {{ 'now'|date('Y') }} - {% trans "Tous droits réservés" %}<br>{% trans "Boutique propulsée par" %} <a href="{{ cecil.url }}">Cecil</a> & <a href="https://snipcart.com">Snipcart</a>{% if page.translations|length >= 1 %} - {% include 'partials/languages.html.twig' %}{% endif %}
         </div>
       </div>
     </footer>

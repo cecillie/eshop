@@ -1,4 +1,5 @@
 ---
+redirect: en/
 cascade:
   price: 23
   variants:

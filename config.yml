@@ -7,11 +7,6 @@ author:
   name: studio cecillie
   url: https://studio.cecillie.fr
 image: "/images/cecillie_share_1200x628.jpg"
-language: fr-FR
-languages:
-- code: fr-FR
-  name: Français
-  locale: fr_FR
 menus:
   main:
   - id: index
@@ -31,6 +26,35 @@ menus:
     name: Instagram
     url: https://www.instagram.com/cecile.ricordeau/
     weight: "5"
+language: fr-FR
+languages:
+- code: fr-FR
+  name: Français
+  locale: fr_FR
+- code: en
+  enabled: false
+  name: English
+  locale: en_EN
+  config:
+    baseline: The shop of cecillie.
+    description: Superb digital prints on premium semi matte coated paper 200g (A5 300g card). The posters are all hand signed.
+    menus:
+      main:
+      - id: products
+        enabled: false
+      footer:
+      - id: newsletter
+        name: Newsletter
+        url: https://mailchi.mp/a7fb0a1ad278/nl-shop-cecillie/
+        weight: "3"
+      - id: twitter
+        name: Twitter
+        url: https://twitter.com/onibd
+        weight: "4"
+      - id: instagram
+        name: Instagram
+        url: https://www.instagram.com/cecile.ricordeau/
+        weight: "5"
 social:
   twitter:
     creator: onibd

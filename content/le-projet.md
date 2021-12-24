@@ -21,8 +21,8 @@ Et là,  ̶P̶A̶F̶ PSCHITT !! L’objectif a atteint les 200% en moins de 24h 
 Autant vous l’avouer, j’ai UN PEU paniqué comme quand je roule sur une départementale sans piste cyclable. J’avais promis des livraisons avant noël, et voilà que je me retrouve avec des dizaines et des dizaines de colis à préparer. J’ai donc enfilé mon plus beau lycra et je suis devenue une habituée du comptoir Carré Pro de la poste pendant tout le mois de décembre. Les 142 commandes sont arrivées à bon port et la campagne Ulule s’est terminée avec un objectif final de 473 %.  
 Après cette campagne Ulule qui a roulé comme avec un Nexus 8, j’ai commencé à travailler sur de nouvelles illustrations afin de donner vie à la boutique en ligne des Paysages à Vélo.  
 
-<img src="/images/projet/cecillie_projet-01.jpg" width="400" style="max-width:100%;height:auto;" />
-<img src="/images/projet/cecillie_projet-02.jpg" width="400" style="max-width:100%;height:auto;" />
+![](/images/projet/cecillie_projet-01.jpg){width=400}
+![](/images/projet/cecillie_projet-02.jpg){width=400}
 
 ## Les paysages à vélo
 
@@ -30,8 +30,8 @@ Après cette campagne Ulule qui a roulé comme avec un Nexus 8, j’ai commencé
 Côté graphisme, j’aime travailler ces formes pleines et ces aplats de couleur. Techniquement, c’est un vrai défi pour moi qui suis habituée à dessiner avec des lignes, mais cela permet de laisser vivre pleinement les couleurs sans qu’elles soient enfermées par d’épais contours noirs. Je réalise toutes mes illustrations avec des nuances vives et expressionnistes, qui donnent un aspect onirique à ces simples moments de vie.  
 Je commence d’abord par griffonner un premier croquis au Posca, puis j’utilise le logiciel Procreate et un iPad pro pour poursuivre mon illustration. Je fais aussi toujours un travail de recherche photographique pour les paysages, les positions des personnages et pour le choix de la monture !  
 
-<img src="/images/projet/cecillie_projet-05.jpg" width="400" style="max-width:100%;height:auto;" />
-<img src="/images/projet/cecillie_projet-06.jpg" width="400" style="max-width:100%;height:auto;" />
+![](/images/projet/cecillie_projet-05.jpg){width=400}
+![](/images/projet/cecillie_projet-06.jpg){width=400}
 
 ## L’autrice
 
@@ -39,8 +39,9 @@ Je m'appelle [Cécile Ricordeau](https://www.cecillie.fr/), aka "[cecillie](http
 Côté petite reine, je suis vélotafeuse depuis des années, et ma petite famille est 100 % vélo au quotidien. Notre garage compte un *Genesis* (mon vélotaf sans faille), un *Petit Porteur* (mon crush), un *Louison Bobet* (mon chouchou), un *Kalkhoff* et un *Bullitt* (le SUV de [Narno](https://twitter.com/Narno)), le *Btwin* de notre fils et sa draisienne *Puky* dont on n'arrive pas à se séparer.  
 Avec ce projet, je combine trois choses que j'aime : le dessin, le vélo et le travail des couleurs. J'espère que ces séries vont plairont, et que ce n'est que le début d'un beau projet !  
 
-<img src="/images/projet/cecillie_projet-03.jpg" width="400" style="max-width:100%;height:auto;" />
-<img src="/images/projet/cecillie_projet-04.jpg" width="400" style="max-width:100%;height:auto;" />
+![](/images/projet/cecillie_projet-03.jpg){width=400}
+![](/images/projet/cecillie_projet-04.jpg){width=400}
+
 
 ## Remerciements
 

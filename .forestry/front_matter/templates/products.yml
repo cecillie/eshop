@@ -56,4 +56,5 @@ fields:
     hidden: true
   hidden: false
 pages:
+- content/products/index.en.md
 - content/products/index.md

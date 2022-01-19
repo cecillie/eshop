@@ -12,7 +12,7 @@ sections:
   new_doc_ext: md
   templates:
   - product
-  - products-section
+  - products
 - type: heading
   label: Pages
 - type: document

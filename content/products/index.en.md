@@ -7,7 +7,7 @@ cascade:
     options:
     - value: A3
       html: A3 poster - 23 €
-      price: 
+      price: 0
     - value: A5
       html: A5 card - 8 €
       price: -15

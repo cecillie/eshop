@@ -1,5 +1,5 @@
 ---
-redirect: /
+redirect: "/"
 cascade:
   price: 23
   variants:
@@ -13,5 +13,7 @@ cascade:
       price: -15
   maxquantity: 10
   stackable: auto
-  details: _Impression numérique sans bordure sur papier couché premium semi mat 200 g (carte A5 300 g). Les affiches sont toutes signées à la main._
+  details: _Impression numérique sans bordure sur papier couché premium semi mat 200
+    g (carte A5 300 g). Les affiches sont toutes signées à la main._
+
 ---

@@ -41,7 +41,7 @@ languages:
       menus:
         main:
           - id: products
-          enabled: false
+            enabled: false
         footer:
           - id: newsletter
             name: Newsletter

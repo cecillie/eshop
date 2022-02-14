@@ -27,6 +27,19 @@ Variables:
               {%- if product.stackable is defined and product.stackable ~%}
               data-item-stackable="{{ product.stackable }}"
               {%- endif ~%}
+              {#- taxes ~#}
+              {%- if product.taxes.taxable is defined and product.taxes.taxable ~%}
+              data-item-taxable="true"
+                {%- if product.taxes.name|default('') ~%}
+              data-item-taxes="{{ product.taxes.name|join('|') }}"
+                {%- endif ~%}
+                {%- if product.taxes.included|default(false) ~%}
+              data-item-has-taxes-included="true"
+                {%- endif ~%}
+              {%- else ~%}
+              data-item-taxable="false"
+              {%- endif ~%}
+              {#- files ~#}
               {%- if product.guid is defined and product.guid ~%}
               data-item-file-guid="{{ product.guid }}"
               {%- endif ~%}

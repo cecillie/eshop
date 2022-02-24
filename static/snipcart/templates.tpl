@@ -60,7 +60,7 @@
             <div class="snipcart-form__field">
               <div class="snipcart-form__field-checkbox">
                 <snipcart-checkbox name="subscribeToNewsletter"></snipcart-checkbox>
-                <snipcart-label for="subscribeToNewsletter" class="snipcart__font--tiny snipcart-form__label--checkbox">S'abonner à la newsletter</snipcart-label>
+                <snipcart-label for="subscribeToNewsletter" class="snipcart__font--tiny snipcart-form__label--checkbox">{{ $localize('billing.subscribe_to_newsletter') }}</snipcart-label>
               </div>
             </div>
           </fieldset>
@@ -73,10 +73,10 @@
           <fieldset class="snipcart-form__set">
             <hr class="snipcart-form__separator" />
             <div class="snipcart-form__field">
-              <snipcart-label class="snipcart__font--tiny" for="Message cadeau">Message cadeau</snipcart-label>
+              <snipcart-label class="snipcart__font--tiny" for="Message cadeau">{{ $localize('shipping.gift_message') }}</snipcart-label>
               <snipcart-input name="Message cadeau"></snipcart-input>
               <p class="snipcart__font--tiny snipcart-form__footer">
-                (Votre message sera écrit à la main sur une carte, ajoutée au colis)
+                {{ $localize('shipping.gift_message_hints') }}
               </p>
             </div>
           </fieldset>
@@ -96,7 +96,7 @@
               {{ cost | money(currency) }}
             </span>
             <span v-else class="snipcart-shipping-rates-list-item--right snipcart-shipping-rates-list-item__price snipcart__font--black">
-              Gratuit
+              {{ $localize('shipping.rate_free') }}
             </span>
           </li>
         </div>

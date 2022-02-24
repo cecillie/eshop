@@ -105,7 +105,8 @@
     "title": "Billing",
     "address": "Billing address",
     "continue_to_shipping": "Continue to shipping",
-    "use_different_shipping_address": "Use different shipping address"
+    "use_different_shipping_address": "Use different shipping address",
+    "subscribe_to_newsletter": "Subscribe to newsletter"
   },
   "customer": {
     "information": "Customer information",
@@ -196,7 +197,10 @@
     "title": "Shipping",
     "shipping_to": "Shipping to:",
     "address": "Shipping address",
-    "method": "Shipping method"
+    "method": "Shipping method",
+    "gift_message": "Gift message",
+    "gift_message_hints": "(Your message will be handwritten on a card, added to the package)",
+    "rate_free": "Free"
   },
   "payment": {
     "form": {

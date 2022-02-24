@@ -1,21 +1,21 @@
 {
   "FR": {
     "cost": 3,
-    "description": "Livraison à domicile via Lettre suivie",
+    "description": "Livraison via Lettre suivie",
     "guaranteedDaysToDelivery": 5,
     "userDefinedId": "livraison_lettre",
     "slug": "livraison_lettre"
   },
   "GB": {
     "cost": 5,
-    "description": "Livraison à domicile via Lettre suivie (Grande Bretagne)",
+    "description": "Livraison via Lettre suivie (Grande Bretagne)",
     "guaranteedDaysToDelivery": 5,
     "userDefinedId": "livraison_lettre_gb",
     "slug": "livraison_lettre_gb"
   },
   "EU": {
     "cost": 5,
-    "description": "Livraison à domicile via Lettre suivie (Europe)",
+    "description": "Livraison via Lettre suivie (Europe)",
     "guaranteedDaysToDelivery": 5,
     "userDefinedId": "livraison_lettre_eu",
     "slug": "livraison_lettre_eu"

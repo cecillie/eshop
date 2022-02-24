@@ -81,7 +81,7 @@
             </div>
           </fieldset>
         </div>
-      </address-fields>
+      </shipping-address>
       <!-- Shipping rate item -->
       <!--
       <shipping-rates-list-item>

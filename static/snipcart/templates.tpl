@@ -83,7 +83,6 @@
         </div>
       </shipping-address>
       <!-- Shipping rate item -->
-      <!--
       <shipping-rates-list-item>
         <div class="root">
           <li class="snipcart-shipping-rates-list-item snipcart__font--secondary snipcart__font--bold">
@@ -101,7 +100,6 @@
           </li>
         </div>
       </shipping-rates-list-item>
-      -->
     </div>
   </body>
 </html>

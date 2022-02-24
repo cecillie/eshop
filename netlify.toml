@@ -1,8 +1,11 @@
 [build]
   publish = "_site"
   command = "chmod +x ./scripts/netlify-build.sh && bash ./scripts/netlify-build.sh"
+
 [build.environment]
   PHP_VERSION = "7.4"
+
+[context.production.environment]
   CECIL_ENV = "production"
 
 [[context.production.plugins]]

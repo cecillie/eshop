@@ -105,7 +105,8 @@
     "title": "Facturation",
     "address": "Adresse de facturation",
     "continue_to_shipping": "Continuer vers la livraison",
-    "use_different_shipping_address": "C’est pour offrir ? Utiliser une adresse de livraison différente et ajouter un message cadeau"
+    "use_different_shipping_address": "C’est pour offrir ? Utiliser une adresse de livraison différente et ajouter un message cadeau",
+    "subscribe_to_newsletter": "S’abonner à la newsletter"
   },
   "customer": {
     "information": "Informations client",
@@ -196,7 +197,10 @@
     "title": "Livraison",
     "shipping_to": "Livrer à :",
     "address": "Adresse de livraison",
-    "method": "Méthode de livraison"
+    "method": "Méthode de livraison",
+    "gift_message": "Message cadeau",
+    "gift_message_hints": "(Votre message sera écrit à la main sur une carte, ajoutée au colis)",
+    "rate_free": "Gratuit"
   },
   "payment": {
     "form": {

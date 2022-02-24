@@ -15,5 +15,5 @@ php cecil.phar serve -vv
 
 Prévisualiser le site généré et publié sur [Netlify](https://www.netlify.com) :
 
-- Branche : https://github.com/cecillie/eshop/tree/preview
-- URL : https://preview--bikeeshop.netlify.app
+- Branche : <https://github.com/cecillie/eshop/tree/preview>
+- URL : <https://preview--bikeeshop.netlify.app>

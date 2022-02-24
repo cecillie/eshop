@@ -1,0 +1,18 @@
+body:
+  images:
+    caption:
+      enabled: false
+    resize:
+      enabled: false
+    responsive:
+      enabled: false
+    webp:
+      enabled: false
+assets:
+  images:
+    optimize:
+      enabled: false
+    responsive:
+      enabled: false
+    webp:
+      enabled: false

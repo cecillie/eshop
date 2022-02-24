@@ -43,16 +43,6 @@ exports.handler = async ({ body }) => {
       });
     }*/
 
-    // Retrait à l'atelier
-    if (country == 'FR') {
-      rates.push(retrait_atelier);
-    }
-
-    // Livraison à vélo (Montreuil)
-    if (country == 'FR' && postalCode == '93100') {
-      rates.push(livraison_velo);
-    }
-
     // Quel(s) format(s) dans le panier
     let a3 = 0; let a5 = 0;
     for (var i = 0; i < obj.content.items.length; i++) {
@@ -75,6 +65,16 @@ exports.handler = async ({ body }) => {
       rates.push(livraison_colissimo[country]);
     } else if (a5 >= 1 && a3 == 0) {
       rates.push(livraison_lettre[country]);
+    }
+
+    // Retrait à l'atelier
+    if (country == 'FR') {
+      rates.push(retrait_atelier);
+    }
+
+    // Livraison à vélo (Montreuil)
+    if (country == 'FR' && postalCode == '93100') {
+      rates.push(livraison_velo);
     }
 
     return createResponse({

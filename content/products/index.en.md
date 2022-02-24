@@ -13,6 +13,8 @@ cascade:
           price: -15
   maxquantity: 10
   stackable: auto
+  taxes:
+    taxable: false
   details: _Digital borderless printing on premium coated semi mat 200 g paper (A5
     300 g card). The posters are all hand signed._
 

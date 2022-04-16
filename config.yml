@@ -78,6 +78,9 @@ netlify:
       to: https://shop.cecillie.fr/:splat
       status: "301"
       force: true
+metatags:
+  jsonld:
+    enabled: true
 body:
   images:
     caption:

@@ -8,15 +8,14 @@
           {%- endfor ~%}
         </div>
         <div class="footer__copyright">
-          <a href="{{ site.author.url }}">{{ site.author.name }}</a> {{ 'now'|date('Y') }} - {% trans "Tous droits réservés" %}<br>{% trans "Boutique propulsée par" %} <a href="{{ cecil.url }}">Cecil</a> & <a href="https://snipcart.com">Snipcart</a>{% if page.translations|length >= 1 %} - {% include 'partials/languages.html.twig' %}{% endif %}
+          <a href="{{ site.author.url }}">{{ site.author.name }}</a> {{ 'now'|date('Y') }} - {% trans "Tous droits réservés" %}<br>{% trans "Boutique propulsée par" %} <a href="{{ cecil.url }}">Cecil</a> & <a href="https://snipcart.com">Snipcart</a>{% if page.translations|length >= 1 %} - {% include 'partials/languages.html.twig' %}{% endif ~%}
         </div>
       </div>
     </footer>
     {#- Snipcart ~#}
     <div hidden id="snipcart" data-api-key="{{ site.snipcart.apikey }}" data-config-modal-style="side" data-templates-url="/snipcart/templates.tpl"></div>
     <script src="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.js',{minify:false}) }}" defer></script>
-    <script>
-      {%- apply minify_js %}
+    <script>{%- apply minify_js ~%}
       document.addEventListener('snipcart.ready', function() {
         // Language
         fetch('/snipcart/{{ language }}.json')
@@ -29,7 +28,6 @@
           }
         });
       });
-      {% endapply -%}
-    </script>
+    {% endapply -%}</script>
     {%~ include 'partials/googleanalytics.js.twig' ~%}
     {%~ include 'partials/cloudflareinsights.js.twig' ~%}

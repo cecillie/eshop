@@ -1,6 +1,6 @@
 {#- Varibles: product -#}
 {%- set productId = product.id|replace({(product.section ~ '/'):''}) -%}
-{%- set image = asset(product.image)|resize(800) ~%}
+{%- set image = asset(product.image)|resize(800) %}
       <div class="product">
         <div class="product__information">
           {%- if home is defined and home ~%}

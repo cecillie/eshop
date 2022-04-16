@@ -1,5 +1,5 @@
 {#- Variables: product, image -#}
-{%- set default = asset('images/products/default.png')|resize(800) ~%}
+{%- set default = asset('images/products/default.png')|resize(800) %}
           <div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false, "prevNextButtons": false, "fullscreen": true, "lazyLoad": true }'>
             {#- main image ~#}
             <img src="{{ default }}" width="{{ default.width }}" height="{{ default.height }}" data-flickity-lazyload="{{ image|default(default) }}" alt="{{ product.description }}" loading="lazy" />

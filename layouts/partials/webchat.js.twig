@@ -1,4 +1,4 @@
-{% if site.webchat.enabled|default(false) %}
+    {% if site.webchat.enabled|default(false) -%}
     <script>
       {%- apply minify_js -%}
       (function (d, w) {
@@ -13,4 +13,4 @@
       })(document, window);
       {%- endapply -%}
     </script>
-{% endif %}
+    {%- endif %}

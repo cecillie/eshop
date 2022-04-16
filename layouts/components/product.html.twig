@@ -1,6 +1,6 @@
 {#- Varibles: product -#}
 {%- set productId = product.id|replace({(product.section ~ '/'):''}) -%}
-{%- set image = asset(product.image)|resize(800) ~%}
+{%- set image = asset(product.image)|resize(800) %}
       <div class="product">
         <div class="product__information">
           {%- if home is defined and home ~%}
@@ -38,8 +38,10 @@
         {%~ include 'components/carousel.html.twig' with {'product':product,'image':image} ~%}
       </div>
 {# Structured data #}
-{% set variantIndex, currency = 0, 'EUR' %}
-      <script type="application/ld+json">{% apply minify_js %}
+{% set currency = 'EUR' %}
+{% set variantIndex = product.variants|column('name')|filter(name => name == 'Format')|keys|first %}
+{% if product.variants[variantIndex].options is defined %}
+      <script type="application/ld+json">{%- apply minify_js ~%}
         {
           "@context": "https://schema.org",
           "@type": "Product",
@@ -58,20 +60,20 @@
             "highPrice": {{ (product.price + max(product.variants[variantIndex].options|column('price')))|number_format(2) }},
             "offerCount": "{{ product.variants[variantIndex].options|length }}",
             "offers": [
-              {%- for option in product.variants[variantIndex].options -%}
-              {
-                "@type": "Offer",
-                "name": "{{ product.name }} {{ option.value }}",
-                "description": "{{ product.description }}",
-                "image": "{{ image|url({canonical:true}) }}",
-                "url": "{{ url(product,{canonical:true}) }}",
-                "sku": "{{ productId }}-{{ option.value|lower }}",
-                "priceCurrency": "{{ currency }}",
-                "price": {{ (product.price + option.price)|number_format(2) }},
-                "itemCondition": "https://schema.org/NewCondition",
-                "availability": "https://schema.org/InStock"
-              }{% if not loop.last %},{% endif %}
-              {%- endfor ~%}]
+              {%- for option in product.variants[variantIndex].options|sort((a, b) => a.price <=> b.price) -%}{
+              "@type": "Offer",
+              "name": "{{ product.name }} {{ option.value }}",
+              "description": "{{ product.description }}",
+              "image": "{{ image|url({canonical:true}) }}",
+              "url": "{{ url(product,{canonical:true}) }}",
+              "sku": "{{ productId }}-{{ option.value|lower }}",
+              "priceCurrency": "{{ currency }}",
+              "price": {{ (product.price + option.price)|number_format(2) }},
+              "itemCondition": "https://schema.org/NewCondition",
+              "availability": "https://schema.org/InStock"
+            }{% if not loop.last %},{% endif %}
+            {%- endfor ~%}]
           }
         }
       {% endapply %}</script>
+{%- endif -%}

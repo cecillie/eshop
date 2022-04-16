@@ -23,7 +23,7 @@
           </slot>
         </div>
       </cart-summary-item>
-      <!-- Address fields without suggestion -->
+      <!-- Address fields customized (+ without suggestion) -->
       <address-fields>
         <div class="root">
           <fieldset class="snipcart-form__set">

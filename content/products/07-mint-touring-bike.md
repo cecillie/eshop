@@ -1,13 +1,13 @@
 ---
 title: "#07 Mint touring bike"
-description: Jeunes amoureux partageant une bicyclette.
-name: "#06 Lemon lovers"
-image: "/images/products/06-Lemon-lovers-A3_S.png"
+description: Pause au fil d'un voyage en solo.
+name: "#07 Mint touring bike"
+image: "/images/07-minttouringbike-a3_s.png"
 gallery:
-- "/images/products/06-Lemon-lovers-A5_S.png"
-- "/images/products/06-Lemon-lovers-ZOOM_S.png"
+- "/images/07-minttouringbike-a5_s.png"
+- "/images/07-minttouringbike-zoom_s.png"
 published: true
 
 ---
-**Forêt des blancs bouleaux, Vosges.**  
-**Jeunes amoureux partageant une bicyclette.**
+**Pont suspendu, Puy-de-Dôme.**  
+**Pause au fil d'un voyage en solo.**

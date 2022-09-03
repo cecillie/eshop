@@ -7,7 +7,6 @@ gallery:
 - "/images/products/01-Pink-gravel-A5_S.png"
 - "/images/products/01-Pink-gravel-ZOOM_S.png"
 published: true
-
 ---
 **Gavarnie, Hautes-Pyrénées.**  
 **Femme ridant en toute liberté au pied des montagnes.**

@@ -5,7 +5,7 @@ admin_path: "/static/cms"
 webhook_url: 
 sections:
 - type: directory
-  path: content/products
+  path: pages/products
   label: Produits
   create: documents
   match: "**/*"
@@ -16,19 +16,19 @@ sections:
 - type: heading
   label: Pages
 - type: document
-  path: content/index.md
+  path: pages/index.md
   label: Accueil
 - type: document
-  path: content/le-projet.md
+  path: pages/le-projet.md
   label: Le projet
 - type: document
-  path: content/contact.md
+  path: pages/contact.md
   label: Contact
 - type: document
-  path: content/cgv.md
+  path: pages/cgv.md
   label: CGV
 - type: document
-  path: content/404.md
+  path: pages/404.md
   label: Page 404
 - type: heading
   label: Settings

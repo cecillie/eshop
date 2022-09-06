@@ -7,7 +7,6 @@ gallery:
 - "/images/07-minttouringbike-a5_s.png"
 - "/images/07-minttouringbike-zoom_s.png"
 published: true
-
 ---
 **Pont suspendu, Puy-de-Dôme.**  
 **Pause au fil d'un voyage en solo.**

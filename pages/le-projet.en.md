@@ -3,7 +3,7 @@ title: The project
 menu:
   main:
     weight: 1
-published: true
+date: 2021-03-17
 slug: the-project
 ---
 # The project

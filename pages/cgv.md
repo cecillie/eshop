@@ -3,6 +3,7 @@ title: Mentions légales & CGV
 menu:
   footer:
     weight: 1
+date: 2021-03-17
 ---
 # Mentions Légales
 

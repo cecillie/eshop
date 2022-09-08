@@ -35,13 +35,15 @@ languages:
 - code: en
   enabled: true
   name: English
-  locale: en_EN
+  locale: en
   config:
     baseline: The shop of cecillie.
     description: Superb digital prints on premium semi matte coated paper 200g (A5
       300g card). The posters are all hand signed.
     menus:
       main:
+      - id: index
+        enabled: false
       - id: products
         enabled: false
       footer:

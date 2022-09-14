@@ -6,9 +6,8 @@ image: "/images/07-minttouringbike-a3_s.png"
 gallery:
 - "/images/07-minttouringbike-a5_s.png"
 - "/images/07-minttouringbike-zoom_s.png"
-date: 2022-09-04
+date: '2022-09-04'
+
 ---
 **Pont suspendu, Puy-de-Dôme.**  
 **Pause au fil d'un voyage en solo.**
-
-EN PRÉCOMMANDE - Expédié le 10/09/2022.

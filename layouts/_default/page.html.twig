@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-{% set language = page.language|default(site.language)|default('fr') %}
-<html lang="{{ language }}">
+<html lang="{{ site.language }}">
   <head>
     {%~ include 'partials/head.html.twig' with {'page': page} only ~%}
   </head>
@@ -11,6 +10,6 @@
       {{- page.content -}}
       {%~ endblock ~%}
     </main>
-    {%~ include 'partials/footer.html.twig' with {'language': language, 'page': page} only ~%}
+    {%~ include 'partials/footer.html.twig' with {'page': page} only ~%}
   </body>
 </html>

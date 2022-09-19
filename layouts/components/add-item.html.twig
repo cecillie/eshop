@@ -1,73 +1,72 @@
 {#-
 Variables:
-  - productId: Snipcart product unique ID
   - product: product front matter variables
   - label: button label (default: "Add to cart")
 #}
             <button class="buy-button snipcart-add-item"
               data-item-name="{{ product.name }}"
-              data-item-id="{{ productId }}"
+              data-item-id="{{ product.id|replace({(product.section ~ '/'): ''}) }}"
               data-item-price="{{ product.price }}"
               data-item-url="{{ url(product, {canonical: true}) }}"
-              {%- if product.description is defined and product.description ~%}
+              {%- if product.description|default() ~%}
               data-item-description="{{ product.description }}"
               {%- endif ~%}
-              {%- if product.image is defined and product.image ~%}
+              {%- if product.image|default() ~%}
               data-item-image="{{ asset(product.image, {fingerprint: false})|url({canonical: true}) }}"
               {%- endif ~%}
-              {%- if product.categories is defined and product.categories ~%}
+              {%- if product.categories|default({}) ~%}
               data-item-categories="{{ product.categories|join('|') }}".
               {%- endif ~%}
-              {%- if product.metadata is defined and product.metadata ~%}
+              {%- if product.metadata|default({}) ~%}
               data-item-metadata='{{ product.metadata|json_encode() }}'
               {%- endif ~%}
-              {%- if product.maxquantity is defined and product.maxquantity ~%}
+              {%- if product.maxquantity|default(product.stock|default()) ~%}
               data-item-max-quantity="{{ product.maxquantity }}"
               {%- endif ~%}
-              {%- if product.stackable is defined and product.stackable ~%}
+              {%- if product.stackable|default('auto') ~%}
               data-item-stackable="{{ product.stackable }}"
               {%- endif ~%}
               {#- taxes ~#}
-              {%- if product.taxes.taxable is defined and product.taxes.taxable ~%}
+              {%- if product.taxes.taxable ?? true ~%}
               data-item-taxable="true"
-                {%- if product.taxes.name|default('') ~%}
+                {%- if product.taxes.name|default({}) ~%}
               data-item-taxes="{{ product.taxes.name|join('|') }}"
                 {%- endif ~%}
-                {%- if product.taxes.included|default(false) ~%}
+                {%- if product.taxes.included ?? true ~%}
               data-item-has-taxes-included="true"
                 {%- endif ~%}
               {%- else ~%}
               data-item-taxable="false"
               {%- endif ~%}
               {#- files ~#}
-              {%- if product.guid is defined and product.guid ~%}
+              {%- if product.guid|default() ~%}
               data-item-file-guid="{{ product.guid }}"
               {%- endif ~%}
               {#- variants (customX) -#}
-              {% if product.variants is defined ~%}
+              {% if product.variants|default({}) ~%}
                 {%- for variant in product.variants ~%}
               data-item-custom{{ loop.index }}-name="{{ variant.name }}"
                   {#- custom placeholder ~#}
-                  {%- if variant.placeholder is defined and variant.placeholder ~%}
+                  {%- if variant.placeholder|default() ~%}
               data-item-custom{{ loop.index }}-placeholder="{{ variant.placeholder }}"
                   {%- endif ~%}
                   {#- custom options -#}
-                  {%- if variant.options is defined ~%}
+                  {%- if variant.options|default({}) ~%}
               data-item-custom{{ loop.index }}-options="{{ variant.options|map(v => "#{v.value}[#{v.price}]")|join('|') }}"
                     {#- temp guid by variant option -#}
                     {%- for option in variant.options|filter(v => v.guid is defined) ~%}
               data-item-file-guid-{{ option.value|lower }}="{{ option.guid }}"
                     {%- endfor ~%}
                   {#- custom type -#}
-                  {%- elseif variant.type is defined ~%}
+                  {%- elseif variant.type|default() ~%}
               data-item-custom{{ loop.index }}-type="{{ variant.type }}"
                   {%- endif ~%}
                   {#- custom value ~#}
-                  {%- if variant.value is defined and variant.value ~%}
+                  {%- if variant.value|default() ~%}
               data-item-custom{{ loop.index }}-value="{{ variant.value }}"
                   {%- endif ~%}
                   {#- custom required ~#}
-                  {%- if variant.required is defined and variant.required ~%}
+                  {%- if variant.required|default(false) ~%}
               data-item-custom{{ loop.index }}-required="true"
                   {%- endif ~%}
                 {%- endfor ~%}

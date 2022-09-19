@@ -4,7 +4,7 @@
             {#- main image ~#}
             <img src="{{ default }}" width="{{ default.width }}" height="{{ default.height }}" data-flickity-lazyload="{{ image|default(default) }}" alt="{{ product.description }}" loading="lazy" />
             {#- gallery images ~#}
-            {%- if product.gallery is defined ~%}
+            {%- if product.gallery|default() ~%}
               {%- for img in product.gallery ~%}
             <img src="{{ default }}" width="{{ default.width }}" height="{{ default.height }}" data-flickity-lazyload="{{ asset(img)|resize(800)|default(default) }}" alt="{{ product.description }}" />
               {%- endfor ~%}

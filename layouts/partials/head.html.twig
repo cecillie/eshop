@@ -10,15 +10,15 @@
     <noscript><link rel="stylesheet" href="{{ font.url }}"></noscript>
     {%- endfor ~%}
     {#- Flickity ~#}
-    <link rel="stylesheet" href="{{ asset('https://unpkg.com/flickity@' ~ site.flickity.version ~ '/dist/flickity.min.css',{minify:false}) }}"/>
-    <script src="{{ asset('https://unpkg.com/flickity@' ~ site.flickity.version ~ '/dist/flickity.pkgd.min.js',{minify:false}) }}"></script>
-    <link rel="stylesheet" href="{{ asset('https://unpkg.com/flickity-fullscreen@' ~ site.flickity.fullscreen.version ~ '/fullscreen.css',{minify:false}) }}"/>
-    <script src="{{ asset('https://unpkg.com/flickity-fullscreen@' ~ site.flickity.fullscreen.version ~ '/fullscreen.js',{minify:false}) }}"></script>
+    <link rel="stylesheet" href="{{ asset('https://unpkg.com/flickity@' ~ site.flickity.version ~ '/dist/flickity.min.css', {minify: false}) }}"/>
+    <script src="{{ asset('https://unpkg.com/flickity@' ~ site.flickity.version ~ '/dist/flickity.pkgd.min.js', {minify: false}) }}"></script>
+    <link rel="stylesheet" href="{{ asset('https://unpkg.com/flickity-fullscreen@' ~ site.flickity.fullscreen.version ~ '/fullscreen.css', {minify: false}) }}"/>
+    <script src="{{ asset('https://unpkg.com/flickity-fullscreen@' ~ site.flickity.fullscreen.version ~ '/fullscreen.js', {minify: false}) }}"></script>
     {#- Snipcart ~#}
     <link rel="preconnect" href="https://app.snipcart.com" />
-    <link href="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.css',{minify:false}) }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
+    <link href="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.css', {minify: false}) }}" rel="preload" as="style" onload="this.onload=null;this.rel='stylesheet'"/>
     {#- main ~#}
-    <style>{{ asset(['css/main.scss','css/flickity.scss','css/snipcart.scss','css/snipcart-custom.scss'])|inline }}</style>
+    <style>{{ asset(['css/main.scss', 'css/flickity.scss', 'css/snipcart.scss', 'css/snipcart-custom.scss'])|inline }}</style>
     <script>{{ asset('js/main.js')|minify|inline }}</script>
     {%~ include 'partials/webchat.js.twig' -%}
     {%~ include 'partials/forestry.html.twig' -%}

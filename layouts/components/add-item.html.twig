@@ -8,15 +8,15 @@ Variables:
               data-item-name="{{ product.name }}"
               data-item-id="{{ productId }}"
               data-item-price="{{ product.price }}"
-              data-item-url="{{ url(product,{canonical:true}) }}"
+              data-item-url="{{ url(product, {canonical: true}) }}"
               {%- if product.description is defined and product.description ~%}
               data-item-description="{{ product.description }}"
               {%- endif ~%}
               {%- if product.image is defined and product.image ~%}
-              data-item-image="{{ asset(product.image,{fingerprint:false})|url({canonical:true}) }}"
+              data-item-image="{{ asset(product.image, {fingerprint: false})|url({canonical: true}) }}"
               {%- endif ~%}
               {%- if product.categories is defined and product.categories ~%}
-              data-item-categories="{{ product.categories|join("|") }}".
+              data-item-categories="{{ product.categories|join('|') }}".
               {%- endif ~%}
               {%- if product.metadata is defined and product.metadata ~%}
               data-item-metadata='{{ product.metadata|json_encode() }}'
@@ -73,5 +73,5 @@ Variables:
                 {%- endfor ~%}
               {%- endif ~%}
             >
-              {{ label|default('Add to cart') }}
+              {{ label|default('Add to cart'|trans) }}
             </button>

@@ -1,5 +1,5 @@
 {#- Varibles: product -#}
-{%- set productId = product.id|replace({(product.section ~ '/'):''}) -%}
+{%- set productId = product.id|replace({(product.section ~ '/'): ''}) -%}
 {%- set image = asset(product.image)|resize(800) %}
       <div class="product">
         <div class="product__information">
@@ -8,7 +8,7 @@
           {%- else ~%}
           <h1 class="product__title">{{ product.name }}</h1>
           {%- endif ~%}
-          {%~ include 'components/carousel.html.twig' with {'product':product,'image':image} ~%}
+          {%~ include 'components/carousel.html.twig' with {'product': product, 'image': image} ~%}
           <div class="product__description">
             {{ product.content }}
             <p>{{ product.details|markdown_to_html }}</p>
@@ -32,10 +32,10 @@
               <label for="{{ productId }}-qty">{% trans %}Quantité{% endtrans %}</label>
               <input type="number" id="{{ productId }}-qty" class="qty" min="1" max="10" value="1" />
             </div>
-            {%~ include 'components/add-item.html.twig' with {'productId':productId,'product':product,'label':"Ajouter au panier"|trans} only ~%}
+            {%~ include 'components/add-item.html.twig' with {'productId': productId, 'product': product, 'label': "Ajouter au panier"|trans} only ~%}
           </div>
         </div>
-        {%~ include 'components/carousel.html.twig' with {'product':product,'image':image} ~%}
+        {%~ include 'components/carousel.html.twig' with {'product': product, 'image': image} ~%}
       </div>
 {# Structured data #}
 {% set currency = 'EUR' %}
@@ -48,7 +48,7 @@
           "name": "{{ product.name }}",
           "description": "{{ product.description }}",
           "image": "{{ image|url({canonical:true}) }}",
-          "url": "{{ url(product,{canonical:true}) }}",
+          "url": "{{ url(product, {canonical: true}) }}",
           "brand": {
             "@type": "Brand",
             "name": "{{ site.author.name }}"
@@ -64,8 +64,8 @@
               "@type": "Offer",
               "name": "{{ product.name }} {{ option.value }}",
               "description": "{{ product.description }}",
-              "image": "{{ image|url({canonical:true}) }}",
-              "url": "{{ url(product,{canonical:true}) }}",
+              "image": "{{ image|url({canonical: true}) }}",
+              "url": "{{ url(product,{canonical: true}) }}",
               "sku": "{{ productId }}-{{ option.value|lower }}",
               "priceCurrency": "{{ currency }}",
               "price": {{ (product.price + option.price)|number_format(2) }},

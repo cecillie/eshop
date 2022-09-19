@@ -2,7 +2,7 @@
 {%- set image = asset(product.image)|resize(800) %}
       <div class="product">
         <div class="product__information">
-          {%- if home is defined and home ~%}
+          {%- if home|default(false) ~%}
           <h2 class="product__title"><a href="{{ url(product) }}">{{ product.name }}</a></h2>
           {%- else ~%}
           <h1 class="product__title">{{ product.name }}</h1>

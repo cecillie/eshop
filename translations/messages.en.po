@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-09-19 23:54+0200\n"
-"PO-Revision-Date: 2022-09-19 23:55+0200\n"
+"POT-Creation-Date: 2022-09-24 02:16+0200\n"
+"PO-Revision-Date: 2022-09-24 02:16+0200\n"
 "Last-Translator: Arnaud Ligny <arnaud@ligny.org>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -14,11 +14,11 @@ msgstr ""
 "X-Poedit-Basepath: ../layouts\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: components/add-item.html.twig:76
+#: components/add-item.html.twig:75
 msgid "Add to cart"
 msgstr "Add to cart"
 
-#: components/product.html.twig:32
+#: components/product.html.twig:31
 msgid "Quantité"
 msgstr "Quantity"
 
@@ -37,6 +37,3 @@ msgstr "%title% logo"
 #: partials/header.html.twig:15
 msgid "Votre compte"
 msgstr "Your account"
-
-#~ msgid "Ajouter au panier"
-#~ msgstr "Add to cart"

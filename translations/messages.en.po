@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
-"POT-Creation-Date: 2022-09-24 02:16+0200\n"
-"PO-Revision-Date: 2022-09-24 02:16+0200\n"
+"POT-Creation-Date: 2022-10-20 23:38+0200\n"
+"PO-Revision-Date: 2022-10-20 23:38+0200\n"
 "Last-Translator: Arnaud Ligny <arnaud@ligny.org>\n"
 "Language-Team: \n"
 "Language: en\n"
@@ -26,9 +26,13 @@ msgstr "Quantity"
 msgid "Tous droits réservés"
 msgstr "All rights reserved"
 
-#: partials/footer.html.twig:11
-msgid "Boutique propulsée par"
-msgstr "Shop powered by"
+#: partials/footer.html.twig:14
+msgid "Paiement 100%% sécurisé par %stripe_link%"
+msgstr "100%% secure payment by %stripe_link%"
+
+#: partials/footer.html.twig:14
+msgid "Boutique propulsée par %powered_by%"
+msgstr "Shop powered by %powered_by%"
 
 #: partials/header.html.twig:11
 msgid "Logo de %title%"

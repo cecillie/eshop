@@ -13,10 +13,10 @@ menus:
     - id: products
       enabled: false
   footer:
-    - id: newsletter
-      name: Newsletter
-      url: https://mailchi.mp/a7fb0a1ad278/nl-shop-cecillie/
-      weight: 3
+    #- id: newsletter
+    #  name: Newsletter
+    #  url: https://mailchi.mp/a7fb0a1ad278/nl-shop-cecillie/
+    #  weight: 3
     - id: twitter
       name: Twitter
       url: https://twitter.com/onibd

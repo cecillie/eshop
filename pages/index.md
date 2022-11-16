@@ -3,7 +3,7 @@
 ---
 # La boutique en ligne
 
-#### Offrez et offrez-vous les cartes et affiches de ma série d'illustrations "Paysages à Vélo"
+## Offrez et offrez-vous les cartes et affiches de ma série d'illustrations "Paysages à Vélo"
 
 Pour toute commande passée jusqu'au 20 décembre 2022, **une carte en édition limitée vous est offerte__ ! *
 

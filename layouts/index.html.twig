@@ -5,7 +5,7 @@
         {{~ page.content ~}}
       </div>
       <div class="products">
-        {%- for product in site.pages.all|filter_by('section', 'products')|sort_by_weight|reverse ~%}
+        {%- for product in site.pages.all|filter_by('section', 'products')|sort_by_weight ~%}
           {%~ include 'components/product.html.twig' with {'product': product, 'home': true} only ~%}
         {%- endfor ~%}
       </div>

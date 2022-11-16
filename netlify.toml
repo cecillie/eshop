@@ -8,8 +8,8 @@
 [context.production.environment]
   CECIL_ENV = "production"
 
-[[context.production.plugins]]
-  package = "netlify-plugin-cecil-cache"
+#[[context.production.plugins]]
+#  package = "netlify-plugin-cecil-cache"
 
 [context.deploy-preview.environment]
   CECIL_ENV = "preview"

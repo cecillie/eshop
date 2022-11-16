@@ -8,19 +8,22 @@
           {%- endfor ~%}
         </div>
         <div class="footer__copyright">
-          <a href="{{ site.author.url }}">{{ site.author.name }}</a> {{ 'now'|date('Y') }} - {% trans "Tous droits réservés" %}<br>{% trans "Boutique propulsée par" %} <a href="{{ cecil.url }}">Cecil</a> & <a href="https://snipcart.com">Snipcart</a>{% if page.translations|length >= 1 %} - {% include 'partials/languages.html.twig' %}{% endif ~%}
+          <a href="{{ site.author.url }}">{{ site.author.name }}</a> {{ 'now'|date('Y') }} - {% trans %}Tous droits réservés{% endtrans %}<br>
+          {%- set stripe_link = '<a href="https://stripe.com">Stripe</a>' -%}
+          {%- set powered_by = '<a href="' ~ cecil.url ~ '">Cecil</a> &amp; <a href="https://snipcart.com">Snipcart</a>' -%}
+          {% trans %}Paiement 100%% sécurisé par %stripe_link%{% endtrans %} - {% trans %}Boutique propulsée par %powered_by%{% endtrans %}{% if page.translations|length >= 1 %} - {% include 'partials/languages.html.twig' %}{% endif ~%}
         </div>
       </div>
     </footer>
     {#- Snipcart ~#}
     <div hidden id="snipcart" data-api-key="{{ site.snipcart.apikey }}" data-config-modal-style="side" data-templates-url="/snipcart/templates.tpl"></div>
-    <script src="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.js',{minify:false}) }}" defer></script>
+    <script src="{{ asset('https://cdn.snipcart.com/themes/v' ~ site.snipcart.version ~ '/default/snipcart.js', {minify: false}) }}" defer></script>
     <script>{%- apply minify_js ~%}
       document.addEventListener('snipcart.ready', function() {
         // Language
-        fetch('/snipcart/{{ language }}.json')
+        fetch('/snipcart/{{ site.language }}.json')
           .then(response => response.json())
-          .then(translation => Snipcart.api.session.setLanguage('{{ language }}', translation));
+          .then(translation => Snipcart.api.session.setLanguage('{{ site.language }}', translation));
         // Payment form
         Snipcart.api.theme.customization.registerPaymentFormCustomization({
           input: {

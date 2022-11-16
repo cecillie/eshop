@@ -1,5 +1,8 @@
-# La boutique en ligne
+---
 
-Bienvenue sur la boutique des Paysages à Vélo ! Vous y retrouverez les cartes et affiches de la [campagne Ulule](https://fr.ulule.com/paysages-a-velo/), mais aussi de nouvelles illustrations inédites, imaginées au gré de mon inspiration et de mes rêveries à vélo.
+---
+# Bienvenue sur la boutique en ligne
 
-cecillie
+Cartes et affiches de la série d'illustrations "Paysages à Vélo" de Cécile Ricordeau
+
+Pour toute commande passée jusqu'au 20 décembre 2022, la carte "Animaux à Vélo" en édition limitée vous est offerte !

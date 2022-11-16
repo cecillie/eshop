@@ -1,11 +1,10 @@
 ---
 title: La collection complète
 description: Lot de 7 cartes comprenant l'intégralité des Paysages à Vélo.
-name: "#00 La collection complète"
-image: "/images/products/default.png"
-#gallery:
-#- "/images/products/01-Pink-gravel-A5_S.png"
-#- "/images/products/01-Pink-gravel-ZOOM_S.png"
+name: "La collection complète"
+image: "/images/products/Pack-A6_S.png"
+gallery:
+- "/images/products/Pack-Zoom_S.png"
 price: 25
 variants:
   - name: Format

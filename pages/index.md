@@ -7,7 +7,7 @@
 
 Pour toute commande passée jusqu'au 20 décembre 2022, **une carte en édition limitée vous est offerte__ ! *
 
-![](/images/animaux.jpg)
+![](/images/animaux-velo.jpg)
 
 "Animaux à Vélo", illustration réalisée pour les [24 Jours de Web](https://www.24joursdeweb.fr/ "24 Jours de Web"). 
 

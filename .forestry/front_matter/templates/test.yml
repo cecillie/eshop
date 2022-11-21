@@ -1,4 +1,25 @@
 ---
 label: Test
 hide_body: true
-fields: []
+fields:
+- name: baseline
+  type: text
+  config:
+    required: false
+  label: Baseline
+- name: short_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: Short text
+- name: block
+  type: blocks
+  label: Block
+  template_types: []
+  config:
+    min: 
+    max: 

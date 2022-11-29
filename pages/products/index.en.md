@@ -10,7 +10,7 @@ cascade:
           price: 0
         - value: A5
           html: A5 card - 6 €
-          price: -15
+          price: -16
   maxquantity: 10
   stackable: auto
   taxes:

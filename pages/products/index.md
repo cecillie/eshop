@@ -1,15 +1,15 @@
 ---
 redirect: "/"
 cascade:
-  price: 22
+  price: 20
   variants:
     - name: Format
       options:
         - value: A3
-          html: Affiche A3 - 22 €
+          html: Affiche A3 - 20 €
           price: 0
         - value: A5
-          html: Carte A5 - 7 €
+          html: Carte A5 - 6 €
           price: -15
   maxquantity: 10
   stackable: auto

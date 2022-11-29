@@ -9,7 +9,7 @@ cascade:
           html: A3 poster - 22 €
           price: 0
         - value: A5
-          html: A5 card - 7 €
+          html: A5 card - 6 €
           price: -15
   maxquantity: 10
   stackable: auto

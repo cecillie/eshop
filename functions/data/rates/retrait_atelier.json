@@ -1,6 +1,6 @@
 {
   "cost": 0,
-  "description": "Retrait à l’atelier (Paris 11ème)",
+  "description": "Retrait à l’atelier (9 rue des Caillots, 93100 Montreuil)",
   "guaranteedDaysToDelivery": 5,
   "userDefinedId": "retrait",
   "slug": "retrait"

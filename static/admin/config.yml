@@ -1,0 +1,134 @@
+backend:
+  name: git-gateway
+  branch: main
+  squash_merges: true
+local_backend: true # npx netlify-cms-proxy-server
+publish_mode: editorial_workflow
+media_folder: "assets/images"
+public_folder: "/images"
+logo_url: https://cecil.app/images/cecil-logo-netlify-cms.png
+show_preview_links: true
+slug:
+  encoding: "ascii"
+  clean_accents: true
+  sanitize_replacement: "-"
+collections:
+  # Products
+  - label: "Products"
+    name: "products"
+    label_singular: "Product"
+    description: >
+      Products.
+    folder: "pages/products"
+    create: true
+    preview_path: "products/{{title}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Description", name: "description", widget: "string"}
+      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - label: "Gallery"
+        name: "gallery"
+        widget: "list"
+        summary: '{{fields.image}}'
+        field: {label: Image, name: image, widget: file}
+      - {label: "Price", name: "price", widget: "number"}
+
+      - label: "Variants"
+        name: "variants"
+        widget: "list"
+        fields:
+          - {label: "Name", name: "name", widget: "list", allow_add: false, default: ["Format"]}
+          - label: "Options"
+            name: "options"
+            widget: "list"
+            summary: "{{fields.value}} ({{fields.price | default('0')}} €)"
+            collapsed: true
+            fields:
+              - {label: "Value", name: "value", widget: "string"}
+              - {label: "HTML", name: "html", widget: "string"}
+              - {label: "Price", name: "price", widget: "number", default: 0}
+
+      - {label: "Details", name: "details", widget: "text"}
+      - {label: "Text", name: "body", widget: "markdown"}
+      - {label: "Date", name: "date", widget: "datetime"}
+      - {label: "Draft", name: "draft", widget: "boolean", default: true, required: true}
+    sortable_fields: ['title', 'date']
+    view_filters:
+      - label: Draft
+        field: draft
+        pattern: true
+  # Single pages
+  - label: "Pages"
+    name: "pages"
+    label_singular: "Page"
+    description: >
+      Single pages.
+    delete: false
+    preview_path: "{{title}}"
+    files:
+      - label: "Product default"
+        name: "index"
+        file: "pages/products/index.md"
+        fields:
+          - {label: "Redirect", name: "redirect", widget: "string", default: "/"}
+          - label: "Cascade"
+            name: "cascade"
+            widget: "object"
+            fields:
+              - {label: "Price", name: "price", widget: "number", default: "22"}
+              - label: "Variants"
+                name: "variants"
+                widget: "list"
+                fields:
+                  - {label: "Name", name: "name", widget: "list", allow_add: false, default: ["Format"]}
+                  - label: "Options"
+                    name: "options"
+                    widget: "list"
+                    summary: "{{fields.value}} ({{fields.price | default('0')}} €)"
+                    collapsed: true
+                    fields:
+                      - {label: "Value", name: "value", widget: "string"}
+                      - {label: "HTML", name: "html", widget: "string"}
+                      - {label: "Price", name: "price", widget: "number", default: 0}
+              - {label: "Max quantity", name: "maxquantity", widget: "number", default: "10"}
+              - {label: "Stackable", name: "stackable", widget: "select", options: ["auto"]}
+              - label: "Taxes"
+                name: taxes
+                widget: "object"
+                fields:
+                  - {label: "Taxable", name: "taxable", widget: "boolean", default: false}
+              - {label: "Details", name: "details", widget: "text"}
+      - label: "Le projet"
+        name: "le-projet"
+        file: "pages/le-projet.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Text", name: "body", widget: "markdown"}
+          - {label: "Menu", name: "menu", widget: "string", default: "main"}
+          - {label: "Draft", name: "draft", widget: "boolean", default: true, required: true}
+  # Configuration
+  - label: "Settings"
+    name: "settings"
+    description: >
+      Site settings.
+    delete: false
+    editor:
+      preview: false
+    files:
+      - label: "Configuration"
+        name: "config"
+        file: "config.yml"
+        fields:
+          - {label: "Title", name: "title", widget: "string", default: "Cecil", required: true}
+          - {label: "Baseline", name: "baseline", widget: "string", default: "Your blog's butler.", required: true}
+          - {label: "Description", name: "description", widget: "string", default: "A ready to use static blog, powered by Cecil and Hyde.", required: true}
+          - {label: "Base URL", name: "baseurl", widget: "string", default: "/", required: true, hint: "With a trailing slash."}
+          - {label: "Use canonical URL", name: "canonicalurl", widget: "boolean", default: true, required: true}
+          - {label: "Theme", name: "theme", widget: "list", required: true}
+          #- label: "Date"
+          #  name: "date"
+          #  widget: "object"
+          #  fields:
+          #    - {label: "Format", name: "format", widget: "string", default: "j F Y", required: true}
+          #    - {label: "Time zone", name: "timezone", widget: "string", default: "Europe/Paris", required: true}

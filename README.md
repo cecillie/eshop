@@ -4,11 +4,10 @@ La boutique e-commerce _Paysages à vélo_, propulsée par [Cecil](https://cecil
 
 ## Développement
 
-Télécharger Cecil et servir le site localement :
-
 ```bash
-curl -LO https://cecil.app/cecil.phar
-php cecil.phar serve -vv
+curl -LO https://cecil.app/cecil.phar # download Cecil
+composer install                      # install themes
+php cecil.phar serve -v --open        # build, run local server and open browser
 ```
 
 ## Prévisualisation

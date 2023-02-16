@@ -9,8 +9,8 @@ cascade:
           html: Affiche A3 - 22 €
           price: 0
         - value: A5
-          html: Carte A5 - 7 €
-          price: -15
+          html: Carte A5 - 6 €
+          price: -16
   maxquantity: 10
   stackable: auto
   taxes:

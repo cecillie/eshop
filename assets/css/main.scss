@@ -153,6 +153,10 @@ h2 {
 .main {
   @include fit-to-layout-and-center;
   padding-top: $size--unit * 6;
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 .hero {

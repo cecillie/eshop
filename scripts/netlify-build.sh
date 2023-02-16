@@ -12,6 +12,7 @@ if [[ $CECIL_ENV != "production" ]]; then
   echo "User-agent: *" > _site/robots.txt
   echo "Disallow: /" >> _site/robots.txt
 else
+  php cecil.phar clear -v
   php cecil.phar build -v --baseurl=$URL --postprocess
 fi
 

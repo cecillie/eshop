@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "011d6ce36247016734b2bfbc69703cf0",
+    "content-hash": "8f8fa014b7162d838a685a2dc00f0206",
     "packages": [
         {
             "name": "cecil/theme-installer",
@@ -129,6 +129,61 @@
                 }
             ],
             "time": "2022-09-01T15:29:31+00:00"
+        },
+        {
+            "name": "cecil/theme-netlifycms",
+            "version": "1.7.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Cecilapp/theme-netlifycms.git",
+                "reference": "25a8aae849ae53c07024d98b0fb72e56af5afeb8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Cecilapp/theme-netlifycms/zipball/25a8aae849ae53c07024d98b0fb72e56af5afeb8",
+                "reference": "25a8aae849ae53c07024d98b0fb72e56af5afeb8",
+                "shasum": ""
+            },
+            "require": {
+                "cecil/theme-installer": "^1.4"
+            },
+            "type": "cecil-theme",
+            "extra": {
+                "name": "netlify-cms",
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Cecil component theme Netlify CMS",
+            "keywords": [
+                "cecil",
+                "cms",
+                "netlify",
+                "theme"
+            ],
+            "support": {
+                "issues": "https://github.com/Cecilapp/theme-netlifycms/issues",
+                "source": "https://github.com/Cecilapp/theme-netlifycms/tree/1.7.1"
+            },
+            "funding": [
+                {
+                    "url": "https://www.paypal.me/narno",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/ArnaudLigny",
+                    "type": "github"
+                },
+                {
+                    "url": "https://opencollective.com/cecil",
+                    "type": "open_collective"
+                }
+            ],
+            "time": "2023-02-16T09:36:49+00:00"
         }
     ],
     "packages-dev": [],

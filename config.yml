@@ -61,6 +61,7 @@ fonts:
   - url: https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap
 theme:
   - netlify
+  - netlify-cms
 snipcart:
   version: 3.2.1
   apikey: ZTVlZWYzMTgtYjBkYS00MmE2LTgwNmYtMTcxZjliNWUxYjhmNjM3NDc0MzIyNTY4MjM5MzY2

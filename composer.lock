@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8f8fa014b7162d838a685a2dc00f0206",
+    "content-hash": "01a483799805f42dec15385a6f091d41",
     "packages": [
         {
             "name": "cecil/theme-installer",
@@ -78,16 +78,16 @@
         },
         {
             "name": "cecil/theme-netlify",
-            "version": "1.4.0",
+            "version": "1.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-netlify.git",
-                "reference": "e5fa01c7aac664d596709185fdb31b0a20031f13"
+                "reference": "5dee6bf92bb8332c646ad6ac5b1135832e02e1f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-netlify/zipball/e5fa01c7aac664d596709185fdb31b0a20031f13",
-                "reference": "e5fa01c7aac664d596709185fdb31b0a20031f13",
+                "url": "https://api.github.com/repos/Cecilapp/theme-netlify/zipball/5dee6bf92bb8332c646ad6ac5b1135832e02e1f8",
+                "reference": "5dee6bf92bb8332c646ad6ac5b1135832e02e1f8",
                 "shasum": ""
             },
             "require": {
@@ -112,13 +112,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-netlify/issues",
-                "source": "https://github.com/Cecilapp/theme-netlify/tree/1.4.0"
+                "source": "https://github.com/Cecilapp/theme-netlify/tree/1.5.3"
             },
             "funding": [
-                {
-                    "url": "https://www.paypal.me/narno",
-                    "type": "custom"
-                },
                 {
                     "url": "https://github.com/ArnaudLigny",
                     "type": "github"
@@ -128,7 +124,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-02-22T00:32:07+00:00"
+            "time": "2023-10-23T17:16:56+00:00"
         },
         {
             "name": "cecil/theme-netlifycms",
@@ -194,5 +190,5 @@
     "prefer-lowest": false,
     "platform": [],
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

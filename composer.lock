@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "01a483799805f42dec15385a6f091d41",
+    "content-hash": "cf71fba5f208845b6a84191c076c5500",
     "packages": [
         {
             "name": "cecil/theme-installer",
@@ -78,26 +78,26 @@
         },
         {
             "name": "cecil/theme-netlify",
-            "version": "1.5.3",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-netlify.git",
-                "reference": "5dee6bf92bb8332c646ad6ac5b1135832e02e1f8"
+                "reference": "c74e2c8f4dd07f4d132d14a95a95eedf35ff67fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-netlify/zipball/5dee6bf92bb8332c646ad6ac5b1135832e02e1f8",
-                "reference": "5dee6bf92bb8332c646ad6ac5b1135832e02e1f8",
+                "url": "https://api.github.com/repos/Cecilapp/theme-netlify/zipball/c74e2c8f4dd07f4d132d14a95a95eedf35ff67fa",
+                "reference": "c74e2c8f4dd07f4d132d14a95a95eedf35ff67fa",
                 "shasum": ""
             },
             "require": {
-                "cecil/theme-installer": "^1.4"
+                "cecil/theme-installer": "^1.4|^2.0"
             },
             "type": "cecil-theme",
             "extra": {
                 "name": "netlify",
                 "branch-alias": {
-                    "dev-master": "1.x-dev"
+                    "dev-master": "2.x-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -112,7 +112,7 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-netlify/issues",
-                "source": "https://github.com/Cecilapp/theme-netlify/tree/1.5.3"
+                "source": "https://github.com/Cecilapp/theme-netlify/tree/2.1.0"
             },
             "funding": [
                 {
@@ -124,20 +124,20 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-10-23T17:16:56+00:00"
+            "time": "2024-11-26T01:37:24+00:00"
         },
         {
             "name": "cecil/theme-netlifycms",
-            "version": "1.7.2",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Cecilapp/theme-netlifycms.git",
-                "reference": "ab01f7e7cde2a2f03536e785ba02d7b4aecbac3d"
+                "reference": "422d822f8e97bd10b79bb335de53ab7ea3afd416"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Cecilapp/theme-netlifycms/zipball/ab01f7e7cde2a2f03536e785ba02d7b4aecbac3d",
-                "reference": "ab01f7e7cde2a2f03536e785ba02d7b4aecbac3d",
+                "url": "https://api.github.com/repos/Cecilapp/theme-netlifycms/zipball/422d822f8e97bd10b79bb335de53ab7ea3afd416",
+                "reference": "422d822f8e97bd10b79bb335de53ab7ea3afd416",
                 "shasum": ""
             },
             "require": {
@@ -163,13 +163,9 @@
             ],
             "support": {
                 "issues": "https://github.com/Cecilapp/theme-netlifycms/issues",
-                "source": "https://github.com/Cecilapp/theme-netlifycms/tree/1.7.2"
+                "source": "https://github.com/Cecilapp/theme-netlifycms/tree/2.0.1"
             },
             "funding": [
-                {
-                    "url": "https://www.paypal.me/narno",
-                    "type": "custom"
-                },
                 {
                     "url": "https://github.com/ArnaudLigny",
                     "type": "github"
@@ -179,16 +175,16 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2023-03-21T14:39:13+00:00"
+            "time": "2024-03-12T10:55:59+00:00"
         }
     ],
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
-    "platform-dev": [],
+    "platform": {},
+    "platform-dev": {},
     "plugin-api-version": "2.6.0"
 }

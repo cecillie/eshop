@@ -99,7 +99,7 @@ assets:
 
 netlify:
   redirects:
-    - from: https://bikeeshop.netlify.com/*
+    - from: https://bikeeshop.netlify.app/*
       to: https://shop.cecillie.fr/:splat
       status: 301
       force: true

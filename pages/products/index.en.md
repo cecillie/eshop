@@ -1,16 +1,16 @@
 ---
 redirect: "en/"
 cascade:
-  price: 22
+  price: 18
   variants:
     - name: Format
       options:
         - value: A3
-          html: A3 poster - 22 €
+          html: A3 poster - 18 €
           price: 0
         - value: A5
-          html: A5 card - 6 €
-          price: -16
+          html: A5 card - 4 €
+          price: -14
   maxquantity: 10
   stackable: auto
   taxes:

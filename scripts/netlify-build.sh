@@ -13,7 +13,7 @@ if [[ $CECIL_ENV != "production" ]]; then
   echo "Disallow: /" >> _site/robots.txt
 else
   php cecil.phar clear -v
-  php cecil.phar build -v --baseurl=$URL --postprocess
+  php cecil.phar build -v --baseurl=$URL
 fi
 
 # build success? can deploy?

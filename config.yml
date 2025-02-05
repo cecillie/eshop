@@ -17,10 +17,10 @@ menus:
     #  name: Newsletter
     #  url: https://mailchi.mp/a7fb0a1ad278/nl-shop-cecillie/
     #  weight: 3
-    - id: twitter
-      name: Twitter
-      url: https://twitter.com/onibd
-      weight: 4
+    #- id: twitter
+    #  name: Twitter
+    #  url: https://twitter.com/onibd
+    #  weight: 4
     - id: instagram
       name: Instagram
       url: https://www.instagram.com/cecile.ricordeau/

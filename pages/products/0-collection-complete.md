@@ -5,15 +5,15 @@ name: "La collection complète"
 image: "/images/products/Pack-A6_S.png"
 gallery:
 - "/images/products/Pack-Zoom_S.png"
-price: 30
+price: 20
 variants:
   - name: Format
     options:
       - value: A5
-        html: 7 cartes A5 - 30 €
+        html: 7 cartes A5 - 20 €
         price: 0
       - value: A6
-        html: 7 cartes postales A6 - 20 €
+        html: 7 cartes postales A6 - 10 €
         price: -10
 details: _Impression numérique sans bordure sur papier couché premium semi mat 300 g (A5) ou finition soft touch 380 g (A6)._
 date: 2022-11-29

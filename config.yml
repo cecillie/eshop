@@ -51,9 +51,9 @@ languages:
 social:
   twitter:
     creator: onibd
+
 theme:
   - netlify
-  - netlify-cms
 
 fonts:
   - url: https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap
@@ -72,30 +72,23 @@ webchat:
   enabled: false
   id: cc14b8df-44b8-4956-8ae2-1ea4e2f3d5a6
 
-pagination:
-  enabled: false
 static:
   load: true
 metatags:
-  jsonld:
-    enabled: true
+  jsonld: true
 pages:
+  pagination: false
   body:
     images:
-      caption:
-        enabled: true
-      resize:
-        enabled: true
-      responsive:
-        enabled: true
-      formats: [webp]
+      caption: true
+      resize: true
+      responsive: true
+      formats: [avif, webp]
 assets:
   images:
-    optimize:
-      enabled: true
-    responsive:
-      enabled: true
-    formats: [webp]
+    optimize: true
+    responsive: true
+    formats: [avif, webp]
 
 netlify:
   redirects:

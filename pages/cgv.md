@@ -23,7 +23,7 @@ Adresse e-mail de contact : [velo@cecillie.fr](mailto:velo@cecillie.fr)
 Responsable de la publication : [Cécile Ricordeau](https://www.cecillie.fr)  
 Contact : [velo@cecillie.fr](mailto:velo@cecillie.fr)  
 Hébergement : Gandi  
-Plate-forme : [Cecil](https://cecil.app), Snipcart  
+Plate-forme : [Cecil](https://cecil.app)  
 Paiement sécurisé : Stripe  
 Réalisation : [Arnaud Ligny](https://arnaudligny.fr)
 
@@ -37,7 +37,7 @@ Le site tel qu’il a été conçu, n’a pas pour vocation de collecter les don
 
 ## ☑ COOKIES
 
-L’installation des cookies Snipcart sont strictement nécessaires pour finaliser et confirmer le service de vente proposé. Ces traceurs sont dispensés du recueil de consentement.
+Le contenu du panier est enregistré uniquement dans votre navigateur (stockage local), et la page de paiement Stripe utilise des cookies strictement nécessaires pour finaliser et sécuriser le paiement. Ces traceurs sont dispensés du recueil de consentement.
 
 Aucun autre stockage d’information n’est utilisé sur le site, ni mesure d’audience, de partage, de publicité ou technique.
 

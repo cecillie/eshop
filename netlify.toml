@@ -2,6 +2,9 @@
   publish = "_site"
   command = "chmod +x ./scripts/netlify-build.sh && bash ./scripts/netlify-build.sh"
 
+[functions]
+  directory = "functions"
+
 [build.environment]
   PHP_VERSION = "8.3"
 
@@ -13,4 +16,3 @@
 
 [context.deploy-preview.environment]
   CECIL_ENV = "preview"
-  CECIL_SNIPCART_APIKEY = "ZTVlZWYzMTgtYjBkYS00MmE2LTgwNmYtMTcxZjliNWUxYjhmNjM3NDc0MzIyNTY4MjM5MzY2"

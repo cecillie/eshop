@@ -1,0 +1,23 @@
+{#- Catalogue produits : utilisé par le panier et par la fonction de paiement (source de vérité des prix) -#}
+{%- set products = {} -%}
+{%- for product in site.pages.all|filter_by('section', 'products') -%}
+  {%- set formats = {} -%}
+  {%- for variant in product.variants|default([])|filter(v => v.name == 'Format' and v.options is defined) -%}
+    {%- for option in variant.options -%}
+      {%- set formats = formats|merge({(option.value): product.price + option.price}) -%}
+    {%- endfor -%}
+  {%- endfor -%}
+  {%- set products = products|merge({(product.id|replace({(product.section ~ '/'): ''})): {
+    name: product.name,
+    price: product.price,
+    formats: formats,
+    maxquantity: product.maxquantity|default(10),
+    image: asset(product.image)|resize(400)|url({canonical: true}),
+    url: url(product, {canonical: true}),
+  }}) -%}
+{%- endfor -%}
+{{- {
+  currency: site.checkout.currency|lower,
+  countries: site.checkout.countries,
+  products: products,
+}|json_encode(constant('JSON_UNESCAPED_SLASHES') b-or constant('JSON_UNESCAPED_UNICODE'))|raw -}}

@@ -1,0 +1,41 @@
+    {#- Panier (voir assets/js/main.js) ~#}
+    <div class="cart" id="cart" hidden
+      data-catalog-url="{{ url('catalog.json') }}"
+      data-checkout-url="/.netlify/functions/checkout"
+      data-locale="{{ site.language }}">
+      <div class="cart__overlay" data-cart-close></div>
+      <aside class="cart__panel" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+        <div class="cart__header">
+          <h2 class="cart__title" id="cart-title">{% trans %}Votre panier{% endtrans %}</h2>
+          <button type="button" class="cart__close" data-cart-close aria-label="{% trans %}Fermer{% endtrans %}">&times;</button>
+        </div>
+        <p class="cart__empty">{% trans %}Votre panier est vide.{% endtrans %}</p>
+        <ul class="cart__items"></ul>
+        <template id="cart-item">
+          <li class="cart__item">
+            <img class="cart__item-image" src="" alt="" width="64" height="64">
+            <div class="cart__item-info">
+              <a class="cart__item-name" href=""></a>
+              <span class="cart__item-format"></span>
+              <span class="cart__item-price"></span>
+            </div>
+            <div class="cart__item-actions">
+              <label><span class="visually-hidden">{% trans %}Quantity{% endtrans %}</span><input type="number" class="cart__item-qty" min="1" value="1"></label>
+              <button type="button" class="cart__item-remove">{% trans %}Retirer{% endtrans %}</button>
+            </div>
+          </li>
+        </template>
+        <form class="cart__footer" novalidate>
+          <p class="cart__subtotal">{% trans %}Sous-total{% endtrans %} <strong class="cart__subtotal-amount"></strong></p>
+          <label for="cart-country">{% trans %}Pays de livraison{% endtrans %}</label>
+          <select id="cart-country" class="cart__country" required></select>
+          <div class="cart__postcode" hidden>
+            <label for="cart-postcode">{% trans %}Code postal{% endtrans %} <small>({% trans %}facultatif, pour la livraison à vélo à Montreuil{% endtrans %})</small></label>
+            <input type="text" id="cart-postcode" class="cart__postcode-input" inputmode="numeric" autocomplete="postal-code" maxlength="5" pattern="[0-9]{5}">
+          </div>
+          <p class="cart__notice">{% trans %}Les frais de livraison sont calculés à l’étape suivante.{% endtrans %}</p>
+          <p class="cart__error" role="alert" hidden>{% trans %}Le paiement n’a pas pu démarrer. Merci de réessayer ou de nous contacter.{% endtrans %}</p>
+          <button type="submit" class="buy-button cart__checkout">{% trans %}Commander{% endtrans %}</button>
+        </form>
+      </aside>
+    </div>

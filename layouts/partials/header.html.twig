@@ -11,12 +11,9 @@
           <img src="{{ asset('images/logo.svg') }}" width="200" height="60.8" alt="{% trans with {'%title%': site.title} %}Logo de %title%{% endtrans %}" class="header__logo">
         </a>
         <div class="header__actions">
-          {%- if site.snipcart.account|default(false) ~%}
-          <button class="snipcart-customer-signin login-button">{% trans %}Votre compte{% endtrans %}</button>
-          {%- endif ~%}
-          <button class="header__checkout snipcart-checkout">
-            <img src="{{ asset('images/shopping-bag.svg') }}" width="28" height="28" alt="Shopping cart" class="header__checkout-fill">
-            <span class="snipcart-items-count">0</span>
+          <button type="button" class="header__checkout" data-cart-open aria-controls="cart">
+            <img src="{{ asset('images/shopping-bag.svg') }}" width="28" height="28" alt="{% trans %}Votre panier{% endtrans %}" class="header__checkout-fill">
+            <span class="cart-count">0</span>
           </button>
         </div>
       </div>
